@@ -40,7 +40,7 @@
     
     
       
-        <title>Review Questions - Problem Solving with Python</title>
+        <title>Array Creation - Problem Solving with Python</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#review-questions" tabindex="1" class="md-skip">
+      <a href="#array-creation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Problem Solving with Python
               </span>
               <span class="md-header-nav__topic">
-                Review Questions
+                Array Creation
               </span>
             
           
@@ -561,8 +561,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02-Jupyter-Notebooks/02.06-Magic-Cells/" title="Magic Cells" class="md-nav__link">
-      Magic Cells
+    <a href="../../02-Jupyter-Notebooks/02.06-Magic-Commands/" title="Magic Commands" class="md-nav__link">
+      Magic Commands
     </a>
   </li>
 
@@ -848,11 +848,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
-      Chapter 5 Matricies and Arrays
+      Chapter 5 NumPy and Arrays
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        Chapter 5 Matricies and Arrays
+        Chapter 5 NumPy and Arrays
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -909,11 +909,174 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../05.04-Array-Creation/" title="Array Creation" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Array Creation
+      </label>
+    
+    <a href="./" title="Array Creation" class="md-nav__link md-nav__link--active">
       Array Creation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array-creation" title="Array Creation" class="md-nav__link">
+    Array Creation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays-of-regularly-spaced-numbers" title="Arrays of Regularly Spaced Numbers" class="md-nav__link">
+    Arrays of Regularly Spaced Numbers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nparange" title="np.arange()" class="md-nav__link">
+    np.arange()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nplinspace" title="np.linspace()" class="md-nav__link">
+    np.linspace()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nplogspace" title="np.logspace()" class="md-nav__link">
+    np.logspace()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npzeros" title="np.zeros()" class="md-nav__link">
+    np.zeros()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npones" title="np.ones()" class="md-nav__link">
+    np.ones()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays-of-random-numbers" title="Arrays of Random Numbers" class="md-nav__link">
+    Arrays of Random Numbers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-of-random-integers" title="Array of Random Integers" class="md-nav__link">
+    Array of Random Integers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-of-random-floats" title="Array of Random Floats" class="md-nav__link">
+    Array of Random Floats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-array-choice-from-a-list" title="Random Array Choice from  a List" class="md-nav__link">
+    Random Array Choice from  a List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-array-with-a-normal-distribution" title="Random Array with a Normal Distribution" class="md-nav__link">
+    Random Array with a Normal Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-d-arrays" title="2-D Arrays" class="md-nav__link">
+    2-D Arrays
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npmeshgrid" title="np.meshgrid()" class="md-nav__link">
+    np.meshgrid()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npmgrid" title="np.mgrid[]" class="md-nav__link">
+    np.mgrid[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-summary" title="Section Summary" class="md-nav__link">
+    Section Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -981,93 +1144,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Review Questions
-      </label>
-    
-    <a href="./" title="Review Questions" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../05.10-Review-Questions/" title="Review Questions" class="md-nav__link">
       Review Questions
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#review-questions" title="Review Questions" class="md-nav__link">
-    Review Questions
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#array-creation" title="Array Creation" class="md-nav__link">
-    Array Creation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#array-manipulation" title="Array Manipulation" class="md-nav__link">
-    Array Manipulation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#array-slicing" title="Array Slicing" class="md-nav__link">
-    Array Slicing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#meshgrids" title="Meshgrids" class="md-nav__link">
-    Meshgrids
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#array-operations" title="Array Operations" class="md-nav__link">
-    Array Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linear-algebra" title="Linear Algebra" class="md-nav__link">
-    Linear Algebra
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1365,7 +1446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07-Functions-and-Modules/07.01-Why-functions/" title="Why Functions?" class="md-nav__link">
+    <a href="../../07-Functions-and-Modules/07.01-Why-Functions/" title="Why Functions?" class="md-nav__link">
       Why Functions?
     </a>
   </li>
@@ -1377,7 +1458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07-Functions-and-Modules/07.02-First-function/" title="First Function" class="md-nav__link">
+    <a href="../../07-Functions-and-Modules/07.02-First-Function/" title="First Function" class="md-nav__link">
       First Function
     </a>
   </li>
@@ -1521,8 +1602,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08-If-Else-Try-Except/08.02-If-Statements/" title="If statements" class="md-nav__link">
-      If statements
+    <a href="../../08-If-Else-Try-Except/08.02-Selection-Statements/" title="Selection Statements" class="md-nav__link">
+      Selection Statements
     </a>
   </li>
 
@@ -1533,8 +1614,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08-If-Else-Try-Except/08.02-Selection-Statements/" title="Selection Statements" class="md-nav__link">
-      Selection Statements
+    <a href="../../08-If-Else-Try-Except/08.03-If-Statements/" title="If statements" class="md-nav__link">
+      If statements
     </a>
   </li>
 
@@ -2205,8 +2286,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction/" title="Problem Solving with Python 3.7 Edition Book Construction" class="md-nav__link">
-      Problem Solving with Python 3.7 Edition Book Construction
+    <a href="../../99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction/" title="Problem Solving with Python Book Construction" class="md-nav__link">
+      Problem Solving with Python Book Construction
     </a>
   </li>
 
@@ -2271,51 +2352,132 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#review-questions" title="Review Questions" class="md-nav__link">
-    Review Questions
+  <a href="#array-creation" title="Array Creation" class="md-nav__link">
+    Array Creation
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#array-creation" title="Array Creation" class="md-nav__link">
-    Array Creation
+  <a href="#arrays-of-regularly-spaced-numbers" title="Arrays of Regularly Spaced Numbers" class="md-nav__link">
+    Arrays of Regularly Spaced Numbers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nparange" title="np.arange()" class="md-nav__link">
+    np.arange()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#array-manipulation" title="Array Manipulation" class="md-nav__link">
-    Array Manipulation
+  <a href="#nplinspace" title="np.linspace()" class="md-nav__link">
+    np.linspace()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#array-slicing" title="Array Slicing" class="md-nav__link">
-    Array Slicing
+  <a href="#nplogspace" title="np.logspace()" class="md-nav__link">
+    np.logspace()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#meshgrids" title="Meshgrids" class="md-nav__link">
-    Meshgrids
+  <a href="#npzeros" title="np.zeros()" class="md-nav__link">
+    np.zeros()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#array-operations" title="Array Operations" class="md-nav__link">
-    Array Operations
+  <a href="#npones" title="np.ones()" class="md-nav__link">
+    np.ones()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays-of-random-numbers" title="Arrays of Random Numbers" class="md-nav__link">
+    Arrays of Random Numbers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-of-random-integers" title="Array of Random Integers" class="md-nav__link">
+    Array of Random Integers
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linear-algebra" title="Linear Algebra" class="md-nav__link">
-    Linear Algebra
+  <a href="#array-of-random-floats" title="Array of Random Floats" class="md-nav__link">
+    Array of Random Floats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-array-choice-from-a-list" title="Random Array Choice from  a List" class="md-nav__link">
+    Random Array Choice from  a List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-array-with-a-normal-distribution" title="Random Array with a Normal Distribution" class="md-nav__link">
+    Random Array with a Normal Distribution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-d-arrays" title="2-D Arrays" class="md-nav__link">
+    2-D Arrays
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npmeshgrid" title="np.meshgrid()" class="md-nav__link">
+    np.meshgrid()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npmgrid" title="np.mgrid[]" class="md-nav__link">
+    np.mgrid[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-summary" title="Section Summary" class="md-nav__link">
+    Section Summary
   </a>
   
 </li>
@@ -2341,141 +2503,842 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/edit/master/docs/05-Matricies-and-Arrays/05.10-Review-Questions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/edit/master/docs/05-NumPy-and-Arrays/05.04-Array-Creation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Review Questions</h1>
+                  <h1>Array Creation</h1>
                 
-                <h2 id="review-questions">Review Questions</h2>
-<h4 id="array-creation">Array Creation</h4>
-<p>Q05.01 Create an array of the numbers <code>1</code>, <code>5</code>, <code>19</code>, <code>30</code></p>
-<p>Q05.02 Create an array of the numbers <code>-3</code>, <code>15</code>,<code>0.001</code>, <code>6.02e23</code></p>
-<p>Q05.03 Create an array of integers between -10 and 10</p>
-<p>Q05.04 Create an array of 10 equally spaced angles between 0 and 2<span><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span></p>
-<p>Q05.05 Create an array of logarithmically spaced numbers between 1 and 1 million. Hint: remember to pass exponents to the <code>np.logspace()</code> function.</p>
-<p>Q05.06 Create an array of 20 random integers between 1 and 10</p>
-<p>Q05.07 Create an array of 30 random numbers with a normal distribution</p>
-<p>Q05.08 Create an array of 30 random numbers with a normal distribution that has an mean <span><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> of 78.5 and a standard deviation <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> of 5.2</p>
-<p>Q05.09 Create an array of 18 random floating point numbers between 0 and 1</p>
-<p>Q05.10 Create an array of 18 random floating point numbers between -1 and 0</p>
-<p>Q05.11 Create an array of 18 random floating point numbers between 0 and 10</p>
-<p>Q05.12 Create a variable <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> that is an NumPy array which contains values 0, 0.1, 0.2, ..., 4.9, 5.0.  Hard coding the values one will be time consuming, use a NumPy function to create the array instead.</p>
-<p>Q05.13 Create a Python list containing the values 1, 2, 5.6, and 9 and store the Python list in a variable called <code>x</code>.  Then create a NumPy array of the same values and store it in a variable called <code>y</code>.</p>
-<p>Q05.14 Create an array called <code>r</code> of 200 evenly spaced numbers between and including 0 to 2<span><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span>, then create an array <code>y</code> such that <span><span class="MathJax_Preview">y=10sin(3r)</span><script type="math/tex">y=10sin(3r)</script></span>.</p>
-<p>Q05.15 Create an array of 25 regularly spaced values beginning at 10 and ending with 18.</p>
-<p>Q05.16 Create an array of regularly spaced numbers beginning at 10, ending with 18.4 using an increment of 0.6.</p>
-<h4 id="array-manipulation">Array Manipulation</h4>
-<p>Q05.20 Create a NumPy array called <code>A</code> and store the values 5, 8, -8, 99, and 0 in array <code>A</code> in a single row, five columns. Reshape <code>A</code> to an array with one column and 5 rows.</p>
-<h4 id="array-slicing">Array Slicing</h4>
-<p>Q05.30 Create an array <code>B</code> that contains integers 0 to 24 (including 24) in one row.  Then reshape <code>B</code> into a 5 row by 5 column array.</p>
-<p>(a) Extract the 2nd row from <code>B</code>.  Store it as a one column array called <code>x</code>.</p>
-<p>(b) Store the number of elements in array <code>x</code> in a new variable called <code>y</code>. </p>
-<p>(c) Extract the last column of <code>B</code> and store it in an array called <code>z</code>.  </p>
-<p>(d) Store a transposed version of <code>B</code> in an array called <code>t</code>.</p>
-<p>Q05.31 Run the following code to create a NumPy array <code>C</code></p>
-<p><code>C = np.array(range(11)) + 5</code></p>
-<p>(a) Extract the 4th value in array <code>C</code> into a variable called <code>x</code>.</p>
-<p>(b) Extract the 2nd-to-last value in array <code>C</code> into a variable called <code>y</code>.</p>
-<p>(c) Extract the values from array <code>C</code> starting from the 3rd value up to and including the 7th value into a variable called <code>z</code>.</p>
-<p>Q05.32 Run the following code to create a NumPy array <code>D</code></p>
-<p><code>D = np.array(range(18)) + 3</code></p>
-<p>(a) Extract every other value from array <code>D</code> starting from the 2nd value through the 10th value.  Store the result in a variable called <code>x</code>.</p>
-<p>(b) Extract every other value from array <code>D</code> starting from the 10th value through the 2nd value.  Store the result a variable called <code>y</code>.</p>
-<p>(c) Create a variable <code>z</code> that contains all of the values in <code>D</code> in reverse order.</p>
-<p>Q05.33 The 1D NumPy array <code>F</code> is defined below.  But construct your code to work with any 1D NumPy array filled with numbers.</p>
-<p><code>F = np.array([5, -4.7, 99, 50, 6, -1, 0, 50, -78, 27, 10])</code></p>
-<p>(a) Select all the elements from <code>F</code> that are greater than <code>5</code> and store them in <code>x</code>.</p>
-<p>(b) Select all of the elements from <code>F</code> that are between <code>5</code> and <code>30</code>.  Store them in <code>y</code>.</p>
-<p>(c) Select all of the elements from <code>F</code> that are between <code>5</code> and <code>30</code> or that are equal to <code>50</code>.  Store them in <code>z</code>.</p>
-<p>Hint: To perform the logical <code>OR</code> or <code>AND</code> operations, on boolean arrays of the same dimensions, NumPy functions are needed.  The standard Python <code>"or"</code> and <code>"and"</code> will not work. </p>
-<p>Hint: You can use either logical indexing or <code>np.where()</code> to get the appropriate values from <code>A</code>.</p>
-<p>Q05.34 The 1D NumPy array <code>B</code> is defined below.  But your code should work with any 1D NumPy array filled with numeric values.</p>
-<p><code>G = np.array([5, -4.7, 99, 50, 6, -1, 0, 50, -78, 27, 10])</code></p>
-<p>(a) Select all of the positive numbers in <code>G</code> and store them in <code>x</code>.</p>
-<p>(b) Select all the numbers in <code>G</code> between <code>0</code> and  <code>30</code> and store them in <code>y</code>.</p>
-<p>(c) Select all of the numbers in <code>G</code> that are either less than <code>-50</code> or greater than <code>50</code> and store them in <code>z</code>.</p>
-<p>Q05.35 Define an integer <code>c</code> which is a random integer between <code>100</code> and <code>999</code> (including <code>100</code> and <code>999</code>)</p>
-<p>(a) pull the first digit out of <code>c</code> and assign it to the variable <code>x</code></p>
-<p>(b) pull the second digit out of <code>c</code> and assign it to the variable <code>y</code></p>
-<p>(c) pull the third digit out of <code>c</code> and assign it the the variable <code>z</code>.</p>
-<h4 id="meshgrids">Meshgrids</h4>
-<p>Q05.40 Create two 2D arrays from the two 1D arrays below using NumPy's <code>np.meshgrid()</code> function. </p>
-<pre><code class="text">
-x = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+                <h2 id="array-creation">Array Creation</h2>
+<p>NumPy arrays are created with the <code>np.array()</code> function. The arguments provided to <code>np.array()</code> needs to be a list or iterable. An example is below. Note how the list <code>[1,2,3]</code> is passed into the function with square brackets at either end.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
 
-y = [0, 2, 4, 6]
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 2, 3])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+The data type can be passed into the <code>np.array()</code> function as a second optional keyword argument. Available data types include <code>'int64'</code>, <code>'float'</code>, <code>'complex'</code> and <code>'&gt;U32'</code> (a string data type).
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1., 2., 3.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+The data type used in a NumPy array can be determined using the <code>.dtype</code> attribute. For instance, an array of <code>floats</code> returns <code>float64</code>.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+<span class="n">my_array</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dtype(&#39;float64&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+In addition to <code>np.array()</code>, there are other functions you can use to create NumPy arrays.</p>
+<h3 id="arrays-of-regularly-spaced-numbers">Arrays of Regularly Spaced Numbers</h3>
+<p>There are multiple ways to create arrays of regularly spaced numbers with NumPy. The next section introduces five NumPy functions to create regular arrays.</p>
+<h4 id="nparange">np.arange()</h4>
+<p>NumPy's <code>np.arange()</code> function creates a NumPy array according the arguments <code>start</code>, <code>stop</code>,<code>step</code>.</p>
+<pre><code class="python">my_array = np.arange(start, stop, step)
 </code></pre>
 
-<p>Q05.41 Create a meshgrid of the two arrays below:</p>
-<pre><code class="text">
-x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+<p>The <code>np.arange()</code> function is useful for creating an array of regularly spaced numbers where you know the step size. </p>
+<p>Consider creating a NumPy array of even numbers between <code>0</code> and <code>10</code>. Note that just like counting in Python, counting in NumPy starts at <code>0</code> and ends at <code>n-1</code>.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
 
-y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0,  2,  4,  6,  8, 10])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="nplinspace">np.linspace()</h4>
+<p>NumPy's <code>np.linspace()</code> function creates a NumPy array according the arguments <code>start</code>, <code>stop</code>,<code>number of elements</code>.</p>
+<pre><code class="python">my_array = np.linspace(start, stop, number of elements)
 </code></pre>
 
-<p>Use element-wise multiplication to multiply each element in the first resulting 2D array with the corresponding element is the second array to build a multiplication table.</p>
-<h4 id="array-operations">Array Operations</h4>
-<p>Q05.50 Create the two arrays below and perform each calculation.</p>
-<p><code>a = [2 4 6]</code></p>
-<p><code>b = [-1 0 1]</code></p>
-<p>(a) <span><span class="MathJax_Preview">a + b</span><script type="math/tex">a + b</script></span></p>
-<p>(b) <span><span class="MathJax_Preview">1.5a -2b</span><script type="math/tex">1.5a -2b</script></span></p>
-<p>(c) <span><span class="MathJax_Preview">0.5ab</span><script type="math/tex">0.5ab</script></span></p>
-<p>(d) <span><span class="MathJax_Preview">\frac{b^2}{a}</span><script type="math/tex">\frac{b^2}{a}</script></span></p>
-<p>Q05.51 Create an array of angles between (and including) 0 and 2<span><span class="MathJax_Preview">\pi</span><script type="math/tex">\pi</script></span> radians in increments of <span><span class="MathJax_Preview">\pi/2</span><script type="math/tex">\pi/2</script></span> radians.</p>
-<p>(a) Calculate the sine of each angle in the array</p>
-<p>(b) Calculate the cosine of each angle in the array</p>
-<p>(c) Convert each angle in the array to degrees</p>
-<p>Q05.52 Create the two arrays <code>F1</code>, <code>F2</code> below and then perform the following operations.</p>
-<p><code>F1 = [-1, 0, 2]</code></p>
-<p><code>F2 = [5, -2, 0]</code></p>
-<p>(a) Calculate the dot product of <code>F1</code> and <code>F2</code></p>
-<p>(b) Calculate cross product of <code>F1</code> and <code>F2</code></p>
-<p>(c) Calculate the element-wise product (element-wise multiplication of <code>F1</code> and <code>F2</code>)</p>
-<p>Q05.53 Compute all possible prices of flooring that can have lengths of <code>2</code>, <code>4</code>, <code>6</code>, and <code>8</code> meters and widths of <code>1</code>, <code>1.5</code>, and <code>2</code> meters if the flooring costs $32.19 per square meter. Store the result in a 2D array. The lengths should increase from top to bottom and widths should increase from left to right.</p>
-<p>Q05.54 Create an array <code>H</code> defined by the code below:</p>
-<p><code>H = np.array([-5, 10, 12, 500, 20, 10, -46, 16])</code></p>
-<p>(a) Create a boolean array <code>x</code> based on the variable <code>H</code>.  <code>x</code> should be <code>True</code> everywhere <code>H</code> equals <code>10</code> and <code>False</code> everywhere else.</p>
-<p>(b) Create a boolean array <code>y</code> based on the variable <code>H</code>.  <code>y</code> should be <code>True</code> everywhere <code>H</code> is not equal to <code>10</code>.  <code>y</code> should be <code>False</code> everywhere else.</p>
-<p>(c) Create a boolean array <code>z</code> based on the variable <code>H</code>.  <code>z</code> should be <code>True</code> everywhere <code>H</code> is less than or equal to <code>20</code>.  <code>z</code> should be <code>False</code> everywhere else.</p>
-<p>Q05.55 Create an array <code>J</code> using the code below:</p>
-<pre><code>J = np.array(range(7*5)).reshape((7, 5))
-J[4, 3] = 500
+<p>The <code>np.linspace()</code> function is useful for creating an array of regularly spaced numbers where the spacing is not known, but the number of values is. Consider creating a NumPy array of 10 numbers between <code>0</code> and <code>2pi</code>.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.        , 0.6981317 , 1.3962634 , 2.0943951 , 2.7925268 ,
+       3.4906585 , 4.1887902 , 4.88692191, 5.58505361, 6.28318531])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="nplogspace">np.logspace()</h4>
+<p>NumPy's <code>np.logspace()</code> function creates a NumPy array according the arguments <code>start</code>, <code>stop</code>,<code>number of elements</code>, but unlike <code>np.linspace()</code>, <code>np.logspace()</code> produces a logarithmically spaced array.</p>
+<pre><code class="python">my_array = np.logspace(start, stop, number of elements, base=&lt;num&gt;)
 </code></pre>
 
-<p>(a) Store the row index of the number <code>500</code> in a variable called <code>row_500</code>.</p>
-<p>(b) Store the column index of the number <code>500</code> in a variable called <code>col_500</code>.</p>
-<p>Q05.56 Create an array <code>K</code> using the code below:</p>
-<pre><code>K = np.random.randint(100, 500, 7*7).reshape(7, 7)
-K[2, 6] = 250
+<p>The <code>np.logspace()</code> function is useful for creating an array of logarithmically spaced numbers where the spacing interval is not known but the number of values is. Consider creating a NumPy array of 4 logarithmically spaced numbers between <code>10</code> and <code>100</code>. The function call is <code>np.logspace(1, 2, 4)</code>. The <code>start</code> is <span><span class="MathJax_Preview">10^1 = 10</span><script type="math/tex">10^1 = 10</script></span> and the <code>stop</code> is <span><span class="MathJax_Preview">10^2 = 100</span><script type="math/tex">10^2 = 100</script></span>, and the number of elements is <code>4</code>. Be careful about putting large numbers in for <code>stop</code> because the stop argument is the power of 10, not the stop value.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 10.        ,  21.5443469 ,  46.41588834, 100.        ])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+Large numbers passed to <code>np.logspace()</code> will produce errors. Remember to pass exponents to <code>np.logspace()</code>. The code below throws an error because <span><span class="MathJax_Preview">10^{1000}</span><script type="math/tex">10^{1000}</script></span> is bigger than the largest floating point number supported by a 64 bit computer.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\peter.kazarinoff\AppData\Local\Continuum\Anaconda3\lib\site-packages\numpy\core\function_base.py:279: RuntimeWarning: overflow encountered in power
+  return _nx.power(base, y)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1.e+10,    inf,    inf,    inf])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="npzeros">np.zeros()</h4>
+<p>NumPy's <code>np.zeros()</code> function creates a NumPy array containing all  zeros of a specific size. <code>np.zeros()</code> is useful when the size of an array is known, but the values that will go into the array have not been created yet.</p>
+<pre><code class="python">my_array = np.zeros((rows,cols))
 </code></pre>
 
-<p>(a) Extract all of the values from <code>K</code> that are greater or equal to <code>250```` and store them in an array called</code>x```. </p>
-<p>(b) Extract all of the values from <code>K</code> that are less than <code>250</code> and store them in an array called <code>y</code>.</p>
-<p>(c) Programmatically determine which column and which row the number <code>250</code> is stored inside of <code>K</code>. </p>
-<h4 id="linear-algebra">Linear Algebra</h4>
-<p>Q05.70 Use the system of linear equations below to calculate the values of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> and <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>.</p>
-<div>
-<div class="MathJax_Preview"> 4x - 2y = -42 </div>
-<script type="math/tex; mode=display"> 4x - 2y = -42 </script>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
 </div>
-<div>
-<div class="MathJax_Preview"> -6x + y = 31 </div>
-<script type="math/tex; mode=display"> -6x + y = 31 </script>
 </div>
-<p>Q05.71 Use the system of linear equations below to calculate the values of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> and <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>.</p>
-<div>
-<div class="MathJax_Preview"> \frac{x}{2} +2y - z = 5 </div>
-<script type="math/tex; mode=display"> \frac{x}{2} +2y - z = 5 </script>
 </div>
-<div>
-<div class="MathJax_Preview"> x + 3y - 4z = -1 </div>
-<script type="math/tex; mode=display"> x + 3y - 4z = -1 </script>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0.]])</pre>
 </div>
-<div>
-<div class="MathJax_Preview"> -x - 3y + 2z = -5 </div>
-<script type="math/tex; mode=display"> -x - 3y + 2z = -5 </script>
+
 </div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="npones">np.ones()</h4>
+<p>NumPy's <code>np.ones()</code> function creates a NumPy array containing all 1's of a specific size. Like <code>np.zeros()</code>, <code>np.ones()</code> is useful when the size of an array is known, but the values that will go into the array have not been created yet.</p>
+<pre><code class="python">my_array = np.ones((rows,cols))
+</code></pre>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<p>In the next section, you'll learn how to create array of random numbers with NumPy.</p>
+<h3 id="arrays-of-random-numbers">Arrays of Random Numbers</h3>
+<p>NumPy has functions to create arrays of many different types of random numbers in the <code>np.random</code> module. A few of the common random number types are detailed below.</p>
+<h4 id="array-of-random-integers">Array of Random Integers</h4>
+<p>Arrays of random integers can be created with NumPy's <code>np.random.randint()</code> function. The general syntax is:</p>
+<pre><code class="python">np.random.randint(lower limit, upper limit, number of values)
+</code></pre>
+
+<p>The code below creates an array of 5 random integers, each random integer between 1 and 10:
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([9, 8, 2, 5, 2])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+Array dimensions can be provided as the third argument to the <code>np.random.randint()</code> function. The code below creates a 5 <span><span class="MathJax_Preview">\times</span><script type="math/tex">\times</script></span> 5 array of random numbers between 1 and 10:
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1, 6, 7, 8, 2],
+       [2, 0, 6, 3, 2],
+       [8, 8, 2, 3, 9],
+       [8, 4, 7, 2, 0],
+       [1, 3, 5, 9, 9]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="array-of-random-floats">Array of Random Floats</h4>
+<p>Arrays of random floating point numbers can be created with NumPy's <code>np.random.rand()</code> function. The general syntax is:</p>
+<pre><code class="python">np.random.rand(number of values)
+</code></pre>
+
+<p>To create an array of 5 random floats between 0 and 1:
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.74876036, 0.5403639 , 0.87934604, 0.08373662, 0.18713551])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+The upper and lower ranges of random floats can me modified with arithmetic.</p>
+<p>To expand the range of random floats to between <code>0</code> and <code>10</code>, multiply the result by <code>10</code>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([4.07650792, 5.94007487, 3.83427467, 1.0336569 , 3.40368341])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+To change the range to between <code>11</code> and <code>13</code>, we multiply the range by <code>2</code> (range 0-3), then add <code>11</code> to the result.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">11</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([12.51534171, 12.27391119, 12.11401002, 11.55578106, 12.6999884 ])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="random-array-choice-from-a-list">Random Array Choice from  a List</h4>
+<pre><code class="python">np.random.choice(list of choices, number of choices)
+</code></pre>
+
+<p>To choose three numbers at random from a list of <code>[1,5,9,11]</code> use:
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([11,  1, 11])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h4 id="random-array-with-a-normal-distribution">Random Array with a Normal Distribution</h4>
+<p><code>np.random.randn()</code> returns an array of  random numbers with a normal distribution, assuming a mean of 0 and variance of 1.  </p>
+<pre><code class="python">np.random.randn(number of values)
+</code></pre>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([-0.8587019 ,  0.51022209,  1.52989165, -0.62763827,  0.42359871,
+       -0.12794222, -0.05960913,  0.1018347 , -0.13226924,  1.21221629])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<p>To specify a mean <code>mu</code> and a standard deviation <code>sigma</code>, the function can be wrapped with:
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">6.6</span></p>
+<p><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="n">mu</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([83.08982467, 63.75617079, 54.80340275, 65.64987114, 60.86298488,
+       71.15108776, 72.68180092, 67.74486107, 62.88712717, 71.53153691])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+Matplotlib's <code>plt.hist()</code> function can be used to quickly plot a normal distribution created with NumPy's <code>np.random.randn()</code> function.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline</p>
+<p><span class="n">mu</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">6.6</span></p>
+<p><span class="n">sample</span> <span class="o">=</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="n">mu</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+The next section introduces methods to create 2D NumPy arrays.</p>
+<h3 id="2-d-arrays">2-D Arrays</h3>
+<h4 id="npmeshgrid">np.meshgrid()</h4>
+<p>NumPy's <code>np.meshgrid()</code> function takes in two positional arguments which are 1D NumPy arrays. The two input arrays do not have to contain the same number of elements. The outputs of the <code>np.meshgrid()</code> function are two 2D arrays. One of the 2D arrays has the same values in each row; the other 2D array has the same values in each column. </p>
+<pre><code class="python">np.meshgrid(array1, array2)
+</code></pre>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0 1 2 3 4 5]
+ [0 1 2 3 4 5]
+ [0 1 2 3 4 5]
+ [0 1 2 3 4 5]
+ [0 1 2 3 4 5]
+ [0 1 2 3 4 5]]
+[[ 0  0  0  0  0  0]
+ [ 2  2  2  2  2  2]
+ [ 4  4  4  4  4  4]
+ [ 6  6  6  6  6  6]
+ [ 8  8  8  8  8  8]
+ [10 10 10 10 10 10]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<p>Note how the first array <code>X</code> has the same numbers in each row, and the second array <code>Y</code> has the same numbers in each column.</p>
+<h4 id="npmgrid">np.mgrid[]</h4>
+<p>NumPy's <code>np.mgrid[]</code> function is similar to <code>np.meshgrid()</code>, but has a "MATLAB-like" syntax and behavior. </p>
+<p>Use square brackets <code>[ ]</code> after the <code>np.mgrid</code> function name. Separate the two "lists" passed as input arguments with a comma and use the <code>start:stop:step</code> indexing method. The outputs of the <code>np.mgrid[]</code> function are two 2D arrays. The first 2D array has the same values in each row; the second 2D array has the same values in each column. </p>
+<pre><code class="python">np.mgrid[start:stop:step, start:stop:step]
+</code></pre>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0 0 0 0 0 0]
+ [1 1 1 1 1 1]
+ [2 2 2 2 2 2]
+ [3 3 3 3 3 3]
+ [4 4 4 4 4 4]]
+[[ 0  2  4  6  8 10]
+ [ 0  2  4  6  8 10]
+ [ 0  2  4  6  8 10]
+ [ 0  2  4  6  8 10]
+ [ 0  2  4  6  8 10]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h3 id="section-summary">Section Summary</h3>
+<p>Below is a list of NumPy functions and associated descriptions used in this section.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.array([list, of, numbers])</code></td>
+<td>Array from a list</td>
+</tr>
+<tr>
+<td><code>np.arange(start, stop, step)</code></td>
+<td>Array with know step</td>
+</tr>
+<tr>
+<td><code>np.linspace(start, stop, num)</code></td>
+<td>Array with known num</td>
+</tr>
+<tr>
+<td><code>np.logspace(start, stop, num)</code></td>
+<td>Logorithmically spaced array</td>
+</tr>
+<tr>
+<td><code>np.zeros((rows, cols))</code></td>
+<td>Array of zeros</td>
+</tr>
+<tr>
+<td><code>np.ones((rows, cols))</code></td>
+<td>Array of ones</td>
+</tr>
+<tr>
+<td><code>np.random.randint(start, stop, num)</code></td>
+<td>Random integers</td>
+</tr>
+<tr>
+<td><code>np.random.rand(num)</code></td>
+<td>Random float 0 to 1</td>
+</tr>
+<tr>
+<td><code>np.random.choice(list, num)</code></td>
+<td>Randome choice from a list</td>
+</tr>
+<tr>
+<td><code>np.random.randn(num)</code></td>
+<td>Random normal distribution</td>
+</tr>
+<tr>
+<td><code>np.meshgrid(array1, array2)</code></td>
+<td>Two 2D arrays from two 1D arrays</td>
+</tr>
+<tr>
+<td><code>np.mgrid[start:stop:step, start:stop:step]</code></td>
+<td>MATLAB meshgrid</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -2496,7 +3359,7 @@ K[2, 6] = 250
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../05.09-Summary/" title="Summary" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../05.03-Python-Lists-and-NumPy-Arrays/" title="Python Lists and NumPy Arrays" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2505,19 +3368,19 @@ K[2, 6] = 250
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Summary
+                Python Lists and NumPy Arrays
               </span>
             </div>
           </a>
         
         
-          <a href="../../06-Plotting-with-Matplotlib/06.00-Introduction/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../05.05-Array-Indexing/" title="Array Indexing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Introduction
+                Array Indexing
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

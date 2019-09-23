@@ -40,7 +40,7 @@
     
     
       
-        <title>NumPy - Problem Solving with Python</title>
+        <title>Python Lists and NumPy Arrays - Problem Solving with Python</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#numpy" tabindex="1" class="md-skip">
+      <a href="#python-lists-and-numpy-arrays" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Problem Solving with Python
               </span>
               <span class="md-header-nav__topic">
-                NumPy
+                Python Lists and NumPy Arrays
               </span>
             
           
@@ -561,8 +561,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02-Jupyter-Notebooks/02.06-Magic-Cells/" title="Magic Cells" class="md-nav__link">
-      Magic Cells
+    <a href="../../02-Jupyter-Notebooks/02.06-Magic-Commands/" title="Magic Commands" class="md-nav__link">
+      Magic Commands
     </a>
   </li>
 
@@ -848,11 +848,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
-      Chapter 5 Matricies and Arrays
+      Chapter 5 NumPy and Arrays
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        Chapter 5 Matricies and Arrays
+        Chapter 5 NumPy and Arrays
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -873,45 +873,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        NumPy
-      </label>
-    
-    <a href="./" title="NumPy" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../05.01-NumPy/" title="NumPy" class="md-nav__link">
       NumPy
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#numpy" title="NumPy" class="md-nav__link">
-    NumPy
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -931,11 +897,79 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../05.03-Python-Lists-and-NumPy-Arrays/" title="Python Lists and NumPy Arrays" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Python Lists and NumPy Arrays
+      </label>
+    
+    <a href="./" title="Python Lists and NumPy Arrays" class="md-nav__link md-nav__link--active">
       Python Lists and NumPy Arrays
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-lists-and-numpy-arrays" title="Python Lists and NumPy Arrays" class="md-nav__link">
+    Python Lists and NumPy Arrays
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-lists" title="Python Lists" class="md-nav__link">
+    Python Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy-arrays" title="NumPy Arrays" class="md-nav__link">
+    NumPy Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-multiplication" title="Array Multiplication" class="md-nav__link">
+    Array Multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing-arrays" title="Timing Arrays" class="md-nav__link">
+    Timing Arrays
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1317,7 +1351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07-Functions-and-Modules/07.01-Why-functions/" title="Why Functions?" class="md-nav__link">
+    <a href="../../07-Functions-and-Modules/07.01-Why-Functions/" title="Why Functions?" class="md-nav__link">
       Why Functions?
     </a>
   </li>
@@ -1329,7 +1363,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07-Functions-and-Modules/07.02-First-function/" title="First Function" class="md-nav__link">
+    <a href="../../07-Functions-and-Modules/07.02-First-Function/" title="First Function" class="md-nav__link">
       First Function
     </a>
   </li>
@@ -1473,8 +1507,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08-If-Else-Try-Except/08.02-If-Statements/" title="If statements" class="md-nav__link">
-      If statements
+    <a href="../../08-If-Else-Try-Except/08.02-Selection-Statements/" title="Selection Statements" class="md-nav__link">
+      Selection Statements
     </a>
   </li>
 
@@ -1485,8 +1519,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08-If-Else-Try-Except/08.02-Selection-Statements/" title="Selection Statements" class="md-nav__link">
-      Selection Statements
+    <a href="../../08-If-Else-Try-Except/08.03-If-Statements/" title="If statements" class="md-nav__link">
+      If statements
     </a>
   </li>
 
@@ -2157,8 +2191,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction/" title="Problem Solving with Python 3.7 Edition Book Construction" class="md-nav__link">
-      Problem Solving with Python 3.7 Edition Book Construction
+    <a href="../../99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction/" title="Problem Solving with Python Book Construction" class="md-nav__link">
+      Problem Solving with Python Book Construction
     </a>
   </li>
 
@@ -2223,9 +2257,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#numpy" title="NumPy" class="md-nav__link">
-    NumPy
+  <a href="#python-lists-and-numpy-arrays" title="Python Lists and NumPy Arrays" class="md-nav__link">
+    Python Lists and NumPy Arrays
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-lists" title="Python Lists" class="md-nav__link">
+    Python Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy-arrays" title="NumPy Arrays" class="md-nav__link">
+    NumPy Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-multiplication" title="Array Multiplication" class="md-nav__link">
+    Array Multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing-arrays" title="Timing Arrays" class="md-nav__link">
+    Timing Arrays
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2245,13 +2313,294 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/edit/master/docs/05-Matricies-and-Arrays/05.01-NumPy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/edit/master/docs/05-NumPy-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>NumPy</h1>
+                  <h1>Python Lists and NumPy Arrays</h1>
                 
-                <h2 id="numpy">NumPy</h2>
-<p>NumPy is a Python package used for numerical computation. NumPy is one of the foundational packages for scientific computing with Python. NumPy's core data type is the array and NumPy functions operate on arrays.</p>
+                <h2 id="python-lists-and-numpy-arrays">Python Lists and NumPy Arrays</h2>
+<p>NumPy is a Python package used for numerical calculations, working with arrays of homogeneous values, and scientific computing. This section introduces NumPy arrays then explains the difference between Python lists and NumPy arrays.</p>
+<h3 id="python-lists">Python Lists</h3>
+<p>NumPy is used to construct homogeneous arrays and perform mathematical operations on arrays. A NumPy array is different from a Python list. The data types stored in a Python list can all be different.</p>
+<pre><code class="python">python_list = [ 1, -0.038, 'gear', True]
+</code></pre>
+
+<p>The Python list above contains four different data types: <code>1</code> is an integer, <code>-0.038</code> is a float, <code>'gear'</code> is a string, and <code>'True'</code> is a boolean.</p>
+<p>The code below prints the data type of each value store in <code>python_list</code>.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">python_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">python_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;bool&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<h3 id="numpy-arrays">NumPy Arrays</h3>
+<p>The values stored in a NumPy array must all share the same data type. Consider the NumPy array below:</p>
+<pre><code class="python">np.array([1.0, 3.1, 5e-04, 0.007])
+</code></pre>
+
+<p>All four values stored in the NumPy array above share the same data type: <code>1.0</code>, <code>3.1</code>, <code>5e-04</code>, and <code>0.007</code> are all floats.</p>
+<p>The code below prints the data type of each value stored in the NumPy array above.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span></p>
+<p><span class="n">np_array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">5e-04</span><span class="p">,</span> <span class="mf">0.007</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;numpy.float64&#39;&gt;
+&lt;class &#39;numpy.float64&#39;&gt;
+&lt;class &#39;numpy.float64&#39;&gt;
+&lt;class &#39;numpy.float64&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<p></div>
+If the same four elements stored in the previous Python list are stored in a NumPy array, NumPy forces all of the four items in the list to conform to the same data type. </p>
+<p>In the next code section, all four items are converted to type <code>'&lt;U32'</code>, which is a string data type in NumPy (the <code>U</code> refers Unicode strings; all strings in Python are Unicode by default).
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;1&#39;, &#39;-0.038&#39;, &#39;gear&#39;, &#39;True&#39;], dtype=&#39;&lt;U32&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+NumPy arrays can also be two-dimensional, three-dimensional, or up to n-dimensional. In practice, computer resources limit array size.  Remember that regardless of size, all elements in a NumPy array must be the same type.
+NumPy arrays are useful because mathematical operations can be run on an entire array simultaneously. If numbers are stored in a regular Python list and the list is multiplied by a scalar, the list extends and repeats- instead of multiplying each number in the list by the scalar.</p>
+<p>The code below demonstrates list repetition using the multiplication operator, <code>*</code>.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">lst</span><span class="o">*</span><span class="mi">2</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 1, 2, 3, 4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+To multiply each element in a Python list by the number <code>2</code>, a loop can be used:
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
+<span class="n">lst</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[2, 4, 6, 8]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+The method above is relatively cumbersome and is also quite <em>computationally expensive</em>. An operation that is computationally expensive is an operation that takes a lot of processing time or storage resources like RAM and CPU bandwidth.</p>
+<p>Another way of completing the same action as the loop above is to use a NumPy array.</p>
+<h3 id="array-multiplication">Array Multiplication</h3>
+<p>An entire NumPy array can be multiplied by a scalar in one step. The scalar multiplication operation below produces an array with each element multiplied by the scalar <code>2</code>.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nparray</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="mi">2</span><span class="o">*</span><span class="n">nparray</span>
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2, 4, 6, 8])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<p></div>
+If we have a very long list of numbers, we can compare the amount of time it takes each of the two computation methods above, a list with a loop compared to array multiplication to complete the same operation. This comparison highlights an advantage of arrays compared to lists- speed.</p>
+<h3 id="timing-arrays">Timing Arrays</h3>
+<p>Jupyter notebooks have a nice built-in method to time how long a line of code takes to execute. In a Jupyter notebook, when a line starts with <code>%timeit</code> followed by code, the kernel runs the line of code multiple times and outputs an average of the time spent to execute the line of code.</p>
+<p>We can use <code>%timit</code> to compare a mathematical operation on a Python list using a for loop to the same mathematical operation on a NumPy array.
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">))</span>
+<span class="o">%</span><span class="k">timeit</span> for i, item in enumerate(lst): lst[i] = lst[i]*2
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3.09 ms ± 927 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<p></div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nparray</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">%</span><span class="k">timeit</span> 2*nparray
+</pre></div></p>
+<p></div>
+</div>
+</div></p>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7.21 µs ± 105 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+<p></div>
+With 10,000 integers, the Python list and for loop takes an average of single milliseconds, while the NumPy array completes the same operation in tens of microseconds. This is a speed increase of over 100x by using the NumPy array (1 millisecond = 1000 microseconds).</p>
+<p>For larger lists of numbers, the speed increase using NumPy is considerable.</p>
                 
                   
                 
@@ -2272,7 +2621,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../05.00-Introduction/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../05.02-Installing-NumPy/" title="Installing NumPy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2281,19 +2630,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Installing NumPy
               </span>
             </div>
           </a>
         
         
-          <a href="../05.02-Installing-NumPy/" title="Installing NumPy" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../05.04-Array-Creation/" title="Array Creation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installing NumPy
+                Array Creation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
