@@ -1240,6 +1240,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
         Review Questions
@@ -1253,55 +1255,37 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#review-questions" title="Review Questions" class="md-nav__link">
-    Review Questions
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#line-plots" title="Line plots" class="md-nav__link">
     Line plots
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#bar-charts-and-pie-charts" title="Bar Charts and Pie Charts" class="md-nav__link">
     Bar Charts and Pie Charts
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#histograms-box-plots-and-violin-plots" title="Histograms, Box Plots, and Violin Plots" class="md-nav__link">
     Histograms, Box Plots, and Violin Plots
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#scatter-plots" title="Scatter Plots" class="md-nav__link">
     Scatter Plots
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subplots" title="Subplots" class="md-nav__link">
-    Subplots
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2259,55 +2243,37 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#review-questions" title="Review Questions" class="md-nav__link">
-    Review Questions
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#line-plots" title="Line plots" class="md-nav__link">
     Line plots
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#bar-charts-and-pie-charts" title="Bar Charts and Pie Charts" class="md-nav__link">
     Bar Charts and Pie Charts
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#histograms-box-plots-and-violin-plots" title="Histograms, Box Plots, and Violin Plots" class="md-nav__link">
     Histograms, Box Plots, and Violin Plots
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#scatter-plots" title="Scatter Plots" class="md-nav__link">
     Scatter Plots
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#subplots" title="Subplots" class="md-nav__link">
-    Subplots
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2329,8 +2295,6 @@
                 
                   <a href="https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/edit/master/docs/06-Plotting-with-Matplotlib/06.18-Review-Questions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
-                
-                  <h1>Review Questions</h1>
                 
                 <h2 id="review-questions">Review Questions</h2>
 <h4 id="line-plots">Line plots</h4>
@@ -2576,14 +2540,14 @@ y = np.append(y1,y2)
 </code></pre>
 
 <p>Plot the arrays <code>x</code> and <code>y</code> on a scatter plot. Set the color of the marker's on the scatter plot red. Set the marker opacity to <code>0.5</code>.</p>
-<h4 id="subplots">Subplots</h4>
+<h1 id="subplots">Subplots</h1>
 <p>Q06.70 Create a figure that has four subplots all in one row. In each of the subplots plot the function:</p>
 <div>
 <div class="MathJax_Preview"> y = e^x </div>
 <script type="math/tex; mode=display"> y = e^x </script>
 </div>
 <p>Use the same values of x and y in each subplot. Set the values of x with NumPy's <code>arange()</code> function with the line <code>x = np.arange(0.01, 20.0, 0.01)</code> In the first subplot, use Matplotlibs's <code>ax.plot()</code> method. In the second subplot use Matplotlib's <code>ax.semilogy()</code> method. In the thrid subplot use Matplotlib's <code>ax.semilogx()</code> method. In the four subplot use Matplotlib's <code>ax.loglog()</code> method. Label each subplot with a title that shows the plot type.</p>
-<p>Q06.70 Use the data in Q06.31 to create a figure with two subplots. In the first subplot, build a bar chart of the data in Q06.31. In the second subplot, build a pie chart of he data in Q06.31.</p>
+<p>Q06.71 Use the data in Q06.31 to create a figure with two subplots. In the first subplot, build a bar chart of the data in Q06.31. In the second subplot, build a pie chart of he data in Q06.31.</p>
                 
                   
                 
@@ -2641,7 +2605,7 @@ y = np.append(y1,y2)
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017 - 2018 Peter D. Kazarinoff
+            GNU General Public License v3.0
           </div>
         
         powered by
