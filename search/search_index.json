@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Problem Solving with Python\n\n\nIf you like this book, please consider purchasing a hard copy version on \namazon.com\n.\n\n\nOverview\n\n\n\n\nYou will find the book chapters on the left hand menu\n\n\nYou will find navigation within a section of a chapter (one webpage) on the righthand menu\n\n\nSources for this text are stored on GitHub at \ngithub.com/professorkazarinoff/Problem-Solving-with-Python-37-Edition\n\n\n\n\nCopywrite\n\n\nCopyright \u00a9 2018 - 2019 Peter D. Kazarinoff",
+            "text": "Problem Solving with Python\n\n\nIf you like this book, please consider purchasing a hard copy version on \namazon.com\n.\n\n\nOverview\n\n\n\n\nYou will find the book chapters on the left hand menu\n\n\nYou will find navigation within a section of a chapter (one webpage) on the righthand menu\n\n\nSources for this text are stored on GitHub at \ngithub.com/professorkazarinoff/Problem-Solving-with-Python-37-Edition\n\n\n\n\nHard Copy\n\n\nIf you find the text useful, please consider supporting the work by \npurchasing a hard copy of the text\n.\n\n\nLicense\n\n\nThis work is licensed under a \nGNU General Public License v3.0",
             "title": "Home"
         },
         {
@@ -16,9 +16,14 @@
             "title": "Overview"
         },
         {
-            "location": "/#copywrite",
-            "text": "Copyright \u00a9 2018 - 2019 Peter D. Kazarinoff",
-            "title": "Copywrite"
+            "location": "/#hard-copy",
+            "text": "If you find the text useful, please consider supporting the work by  purchasing a hard copy of the text .",
+            "title": "Hard Copy"
+        },
+        {
+            "location": "/#license",
+            "text": "This work is licensed under a  GNU General Public License v3.0",
+            "title": "License"
         },
         {
             "location": "/00-Preface/00.00-Motivation/",
