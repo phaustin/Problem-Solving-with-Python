@@ -1,0 +1,17 @@
+#######################################################################################
+# Book settings
+title: ""
+logo: images/logo.png
+author: The Jupyter Book Community
+email: choldgraf@berkeley.edu
+description: >- # this means to ignore newlines until "baseurl:"
+  This is an example book built with Jupyter Books.
+
+execute:
+  execute_notebooks: cache
+
+exclude_patterns: ["*ipynb"]
+
+html:
+  home_page_in_navbar: false
+  baseurl: https://jupyterbook.org/
