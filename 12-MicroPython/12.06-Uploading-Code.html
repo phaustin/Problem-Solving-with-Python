@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Uploading Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="canonical" href="https://jupyterbook.org/12-MicroPython/12.06-Uploading-Code.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Summary" href="12.07-Summary.html" />
+    <link rel="prev" title="Reading a Sensor" href="12.05-Reading-a-Sensor.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://jupyterbook.org/12-MicroPython/12.06-Uploading-Code.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Uploading Code" />
+<meta property="og:description" content="Uploading Code  In this section, you will learn how to upload code to an ESP8266-based microcontroller with a tool called ampy. The code in this section was wri" />
+<meta property="og:image"       content="https://jupyterbook.org/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../00-Preface/00.00-Motivation.html">Preface</a>
+  </li>
+  <li class="">
+    <a href="../01-Orientation/01.00-Welcome.html">Orientation</a>
+  </li>
+  <li class="">
+    <a href="../02-Jupyter-Notebooks/02.00-Introduction.html">Jupyter Notebooks</a>
+  </li>
+  <li class="">
+    <a href="../03-The-Python-REPL/03.00-Introduction.html">The Python REPL</a>
+  </li>
+  <li class="">
+    <a href="../04-Data-Types-and-Variables/04.00-Introduction.html">Data Types and Variables</a>
+  </li>
+  <li class="">
+    <a href="../05-NumPy-and-Arrays/05.00-Introduction.html">NumPy and Arrays</a>
+  </li>
+  <li class="">
+    <a href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">Plotting with Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="../07-Functions-and-Modules/07.00-Introduction.html">Functions and Modules</a>
+  </li>
+  <li class="">
+    <a href="../08-If-Else-Try-Except/08.00-Introduction.html">If Else Try Except</a>
+  </li>
+  <li class="">
+    <a href="../09-Loops/09.00-Introduction.html">Loops</a>
+  </li>
+  <li class="">
+    <a href="../10-Symbolic-Math/10.00-Introduction.html">Symbolic Math</a>
+  </li>
+  <li class="">
+    <a href="../11-Python-and-External-Hardware/11.00-Introduction.html">Python and External Hardware</a>
+  </li>
+  <li class="active">
+    <a href="12.00-Introduction.html">MicroPython</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="12.01-What-is-MicroPython.html">What is MicroPython?</a>
+    </li>
+    <li class="">
+      <a href="12.02-Installing-MicroPython.html">Installing MicroPython</a>
+    </li>
+    <li class="">
+      <a href="12.03-MicroPython-REPL.html">The MicroPython REPL</a>
+    </li>
+    <li class="">
+      <a href="12.04-Blinking-a-LED.html">Blinking a LED</a>
+    </li>
+    <li class="">
+      <a href="12.05-Reading-a-Sensor.html">Reading a Sensor</a>
+    </li>
+    <li class="active">
+      <a href="">Uploading Code</a>
+    </li>
+    <li class="">
+      <a href="12.07-Summary.html">Summary</a>
+    </li>
+    <li class="">
+      <a href="12.08-Project-Ideas.html">Project Ideas</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../99-Appendix/99.00-Appendix.html">Appendix</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/12-MicroPython/12.06-Uploading-Code.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#summary-of-steps" class="nav-link">Summary of Steps</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#install-ampy-with-pip" class="nav-link">Install ampy with pip</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#write-micropython-code" class="nav-link">Write MicroPython Code</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#upload-micropython-code-to-the-esp8266-microcontroller-with-ampy" class="nav-link">Upload MicroPython Code to the ESP8266 Microcontroller with ampy</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#unplug-and-then-power-up-the-feather-huzzah-and-watch-the-temperature-scroll-by" class="nav-link">Unplug and then power up the Feather Huzzah and watch the temperature scroll by</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="uploading-code">
+<h1>Uploading Code<a class="headerlink" href="#uploading-code" title="Permalink to this headline">¶</a></h1>
+<p>In this section, you will learn how to upload code to an ESP8266-based microcontroller with a tool called <strong>ampy</strong>. The code in this section was written to turn the ESP8266-based microcontroller in a scrolling thermometer. The same upload method shown in this section can be used to upload MicroPython code you write to a ESP8266-based microcontroller.</p>
+<p>Before MicroPython code is uploaded on the ESP8266-based microcontroller, MicroPython needs to be installed on the board. PuTTY also needs to be installed on you computer in order for the computer to communicate with the microcontroller over a serial connection.</p>
+<p>A previous section in this chapter detailed how to install MicroPython on an ESP9266 microcontroller and how to install PuTTY on a Windows. The procedures in this section are specific to the Adafruit Feather Huzzah ESP8266 microcontroller and the MCP9808 temperature sensor, both of which were used in a previous section. Other ESP8266-based microcontrollers and I2C sensors could be used instead, but the specifics of the procedure may be different from what’s shown in this section.</p>
+<div class="section" id="summary-of-steps">
+<h2>Summary of Steps<a class="headerlink" href="#summary-of-steps" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Install <strong>ampy</strong> with <strong>pip</strong></p></li>
+<li><p>Write MicroPython code</p></li>
+<li><p>Upload the MicroPython on code on the microcontroller with <strong>ampy</strong></p></li>
+<li><p>Unplug and then power up the Feather Huzzah and watch the temperature scroll by</p></li>
+</ol>
+</div>
+<div class="section" id="install-ampy-with-pip">
+<h2>Install ampy with pip<a class="headerlink" href="#install-ampy-with-pip" title="Permalink to this headline">¶</a></h2>
+<p><strong>Ampy</strong> is a Python package developed by Adafruit, a company that makes MicroPython compatible hardware. <strong>Ampy</strong> is used to push code stored on a computer onto a microcontroller running MicroPython. <strong>Ampy</strong> can be installed using the <strong>Anaconda Prompt</strong>. Alternatively, a terminal can be used to install <strong>ampy</strong>. If you are using a virtual environment, active the virtual environment first then proceed with <strong>ampy</strong> package installation.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt; conda activate micropython
+(micropython) &gt; pip install adafruit-ampy
+(micropython) &gt; ampy --help
+</pre></div>
+</div>
+</div>
+<div class="section" id="write-micropython-code">
+<h2>Write MicroPython Code<a class="headerlink" href="#write-micropython-code" title="Permalink to this headline">¶</a></h2>
+<p>Now write the MicroPython code which you will uploaded on the microcontroller. The Adafruit Feather Huzzah ESP8266 microcontroller contains two main Python files: <strong><em>boot.py</em></strong> and <strong><em>main.py</em></strong>. But additional files can also be uploaded to the microcontroller. <strong><em>boot.py</em></strong> is the file that runs first when the board is powered up. First <strong><em>boot.py</em></strong> runs, then <strong>main.py</strong> runs. An additional <strong><em>.py</em></strong> file can be added to the board to provide <strong><em>main.py</em></strong> with a function to run.</p>
+<p>Two different <strong><em>.py</em></strong> files will be constructed in this section. One <strong><em>.py</em></strong> file contains a function that reads the temperature off the temperature sensor. A second <strong><em>.py</em></strong> file calls the function in the first <strong><em>.py</em></strong> file and prints the temperature to the terminal window with a loop.</p>
+<p>The first <strong><em>MCP9808.py</em></strong> file includes one function called <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code>. The <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> function reads temperature recorded by the MCP9808 temperature sensor.  The <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> function parses out the temperature data from the I2C bus on the MCP9808 temperature sensor and outputs the temperature in degrees C as a float.</p>
+<p>At the top of <strong><em>MCP9808.py</em></strong> we need to import the <code class="docutils literal notranslate"><span class="pre">machine</span></code> module to use the I2C bus. The <code class="docutils literal notranslate"><span class="pre">machine</span></code> module provides a class to create a new I2C object.</p>
+<p>When the I2C object is instantiated, the <code class="docutils literal notranslate"><span class="pre">scl</span></code> and <code class="docutils literal notranslate"><span class="pre">sda</span></code> pins that the MCP9808 temperature sensor is connected to need to be specified. <code class="docutils literal notranslate"><span class="pre">scl</span></code> is the I2C clock line and <code class="docutils literal notranslate"><span class="pre">sda</span></code> is the I2C data line.  <code class="docutils literal notranslate"><span class="pre">scl</span></code> and <code class="docutils literal notranslate"><span class="pre">sda</span></code>  are pin 5 and pin 4 on the Adafruit Feather Huzzah ESP8266.</p>
+<p>The next part of the <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> function creates a byte array. Data from the MCP9808 temperature sensor will be stored in the byte array.</p>
+<p>The next part of the <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> function in the <strong><em>MCP9808.py</em></strong> file uses the <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method to read the temperature off the sensor. The first argument passed to the <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method is the I2C bus address of the sensor. On the MCP9808 temperature sensor, the I2C bus address is <code class="docutils literal notranslate"><span class="pre">24</span></code>(if you type the line <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">i2c.scan()</span></code> into the MicroPython REPL, the I2C bus address is returned). The next parameter passed to the  <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method is the register on the MCP9808 temperature sensor where the measured temperature is stored. On the MCP9808, the temperature is stored in register <code class="docutils literal notranslate"><span class="pre">5</span></code>. The third parameter passed to the  <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method is the variable we want to store the temperature data in. The <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method <em>changes</em> the variable passed into the method as the third argument. Most Python methods modify the object the method operates on, but MicroPython’s <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method changes the third variable passed to it, in our case the variable <code class="docutils literal notranslate"><span class="pre">byte_data</span></code>. That’s why we created the <code class="docutils literal notranslate"><span class="pre">byte_data</span></code> variable before we called the <code class="docutils literal notranslate"><span class="pre">i2c.readfrom_mem_into()</span></code> method.</p>
+<p>The last part of the <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> function includes post-processing needed to convert the byte array into a temperature in degrees C. The final temperature in degrees C is a float</p>
+<p>The entire contents of the <strong><em>MCP9808.py</em></strong> file are below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># MCP9808.py</span>
+
+<span class="c1"># Functions for the  MCP9808 temperature sensor</span>
+<span class="c1"># learn.adafruit.com/micropython-hardware-i2c-devices/i2c-master</span>
+
+<span class="k">def</span> <span class="nf">readtemp</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">machine</span>
+    <span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+    <span class="n">byte_data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">i2c</span><span class="o">.</span><span class="n">readfrom_mem_into</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">byte_data</span><span class="p">)</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">byte_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">byte_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">value</span> <span class="o">&amp;</span> <span class="mh">0xFFF</span><span class="p">)</span> <span class="o">/</span> <span class="mf">16.0</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&amp;</span> <span class="mh">0x1000</span><span class="p">:</span>
+        <span class="n">temp</span> <span class="o">-=</span> <span class="mf">256.0</span>
+    <span class="k">return</span> <span class="n">temp</span>
+</pre></div>
+</div>
+<p>Now construct a MicroPython script called <strong><em>main.py</em></strong> which will use the function <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> stored in <strong><em>MCP9808.py</em></strong>.</p>
+<p>The <strong><em>main.py</em></strong> script will import the <strong><em>MCP9808.py</em></strong> module and use the <code class="docutils literal notranslate"><span class="pre">readtemp()</span></code> function to read the temperature from the MCP9808 temperature sensor.</p>
+<p>Inside <strong><em>main.py</em></strong> will be a loop that runs  for a total of 120 seconds. Each second the temperature is recorded. Inside the loop, the temperature is read off the MCP9808 temperature sensing using the <code class="docutils literal notranslate"><span class="pre">MCP9808.readtemp()</span></code> function.  <code class="docutils literal notranslate"><span class="pre">time.sleep(1)</span></code> is inserted into the loop to wait one second between each measurement.</p>
+<p>The complete <strong><em>main.py</em></strong> file is below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># main.py</span>
+
+<span class="kn">import</span> <span class="nn">MCP9808</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">120</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">MCP9808</span><span class="o">.</span><span class="n">readtemp</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="upload-micropython-code-to-the-esp8266-microcontroller-with-ampy">
+<h2>Upload MicroPython Code to the ESP8266 Microcontroller with <strong>ampy</strong><a class="headerlink" href="#upload-micropython-code-to-the-esp8266-microcontroller-with-ampy" title="Permalink to this headline">¶</a></h2>
+<p>Once the <strong><em>MCP9808.py</em></strong> file and the <strong><em>main.py</em></strong> files are saved, both files can be uploaded on the Adafruit Feather Huzzah ESP8266 microcontroller.</p>
+<p>Ensure the microcontroller is connected with a USB cable, and be aware of which serial port the microcontroller is connected to.</p>
+<p>Upload the <strong><em>MCP9808.py</em></strong> file and the <strong><em>main.py</em></strong> file to the board using <strong>ampy</strong>. Make sure you are in the directory with the <strong><em>.py</em></strong> files and that you are working in a virtual environment that has <code class="docutils literal notranslate"><span class="pre">ampy</span></code> installed in it. In the example code below, the <code class="docutils literal notranslate"><span class="pre">(micropython)</span></code> virtual environment is active. The command <code class="docutils literal notranslate"><span class="pre">ampy</span> <span class="pre">--port</span> <span class="pre">COM4</span> <span class="pre">ls</span></code> lists the files stored on the microcontroller.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(micropython) &gt; ampy --port COM4 put MCP9808.py
+(micropython) &gt; ampy --port COM4 put main.py
+(micropython) &gt; ampy --port COM4 ls
+boot.py
+MCP9808.py
+main.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="unplug-and-then-power-up-the-feather-huzzah-and-watch-the-temperature-scroll-by">
+<h2>Unplug and then power up the Feather Huzzah and watch the temperature scroll by<a class="headerlink" href="#unplug-and-then-power-up-the-feather-huzzah-and-watch-the-temperature-scroll-by" title="Permalink to this headline">¶</a></h2>
+<p>The Feather Huzzah needs to be restarted to run the <strong><em>main.py</em></strong> file uploaded with <strong>ampy</strong>.</p>
+<p>To restart the board, unplug and then replug in the board’s power (the USB cable). Once power is restored, the board will run through the <strong><em>boot.py</em></strong> script then start the <strong><em>main.py</em></strong> script. When the board runs the <strong><em>main.py</em></strong> script, the board will read the temperature from the MCP9808 temperature sensor then print the temperature out to the terminal. After two minutes the program should end.</p>
+<p>The output below demonstrates the results shown in a terminal window.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>...
+25.6875
+25.75
+25.6875
+25.6875
+25.75
+25.6875
+25.75
+25.75
+25.75
+25.75
+25.75
+25.8125
+25.8125
+25.8125
+25.75
+25.75
+25.8125
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="12.05-Reading-a-Sensor.html" title="previous page">Reading a Sensor</a>
+    <a class='right-next' id="next-link" href="12.07-Summary.html" title="next page">Summary</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Peter D. Kazarinoff, PhD<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

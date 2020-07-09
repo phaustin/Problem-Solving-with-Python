@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Controlling an LED with Python</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="canonical" href="https://jupyterbook.org/11-Python-and-External-Hardware/11.03-Controlling-an-LED.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reading a Sensor with Python" href="11.04-Reading-a-Sensor-with-Python.html" />
+    <link rel="prev" title="Bytes and Unicode Strings" href="11.02-Bytes-and-Unicode-Strings.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://jupyterbook.org/11-Python-and-External-Hardware/11.03-Controlling-an-LED.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Controlling an LED with Python" />
+<meta property="og:description" content="Controlling an LED with Python  In this section, you will learn how to control an LED connected to an external piece of hardware (an Arduino) using Python. To a" />
+<meta property="og:image"       content="https://jupyterbook.org/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../00-Preface/00.00-Motivation.html">Preface</a>
+  </li>
+  <li class="">
+    <a href="../01-Orientation/01.00-Welcome.html">Orientation</a>
+  </li>
+  <li class="">
+    <a href="../02-Jupyter-Notebooks/02.00-Introduction.html">Jupyter Notebooks</a>
+  </li>
+  <li class="">
+    <a href="../03-The-Python-REPL/03.00-Introduction.html">The Python REPL</a>
+  </li>
+  <li class="">
+    <a href="../04-Data-Types-and-Variables/04.00-Introduction.html">Data Types and Variables</a>
+  </li>
+  <li class="">
+    <a href="../05-NumPy-and-Arrays/05.00-Introduction.html">NumPy and Arrays</a>
+  </li>
+  <li class="">
+    <a href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">Plotting with Matplotlib</a>
+  </li>
+  <li class="">
+    <a href="../07-Functions-and-Modules/07.00-Introduction.html">Functions and Modules</a>
+  </li>
+  <li class="">
+    <a href="../08-If-Else-Try-Except/08.00-Introduction.html">If Else Try Except</a>
+  </li>
+  <li class="">
+    <a href="../09-Loops/09.00-Introduction.html">Loops</a>
+  </li>
+  <li class="">
+    <a href="../10-Symbolic-Math/10.00-Introduction.html">Symbolic Math</a>
+  </li>
+  <li class="active">
+    <a href="11.00-Introduction.html">Python and External Hardware</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="11.01-PySerial.html">PySerial</a>
+    </li>
+    <li class="">
+      <a href="11.02-Bytes-and-Unicode-Strings.html">Bytes and Unicode Strings</a>
+    </li>
+    <li class="active">
+      <a href="">Controlling an LED with Python</a>
+    </li>
+    <li class="">
+      <a href="11.04-Reading-a-Sensor-with-Python.html">Reading a Sensor with Python</a>
+    </li>
+    <li class="">
+      <a href="11.05-Summary.html">Summary</a>
+    </li>
+    <li class="">
+      <a href="11.06-Project-Ideas.html">Project Ideas</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../12-MicroPython/12.00-Introduction.html">MicroPython</a>
+  </li>
+  <li class="">
+    <a href="../99-Appendix/99.00-Appendix.html">Appendix</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../_sources/11-Python-and-External-Hardware/11.03-Controlling-an-LED.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#wire-the-led-to-the-arduino" class="nav-link">Wire the LED to the Arduino</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#upload-code-to-the-arduino" class="nav-link">Upload code to the Arduino</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#connect-the-arduino-to-the-computer" class="nav-link">Connect the Arduino to the Computer</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#turn-the-led-on-and-off-with-the-arduino-serial-monitor" class="nav-link">Turn the LED on and off with the Arduino Serial Monitor</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#use-the-python-repl-to-turn-the-arduino-led-on-and-off" class="nav-link">Use the Python REPL to turn the Arduino LED on and off</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#write-a-python-script-to-turn-the-led-on-and-off" class="nav-link">Write a Python Script to turn the LED on and off</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off" class="nav-link">Write a Python script to allow a user to turn the LED on and off</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="controlling-an-led-with-python">
+<h1>Controlling an LED with Python<a class="headerlink" href="#controlling-an-led-with-python" title="Permalink to this headline">¶</a></h1>
+<p>In this section, you will learn how to control an LED connected to an external piece of hardware (an Arduino) using Python. To accomplish this task, the following hardware is required:</p>
+<ul class="simple">
+<li><p>A computer running Python</p></li>
+<li><p>An Arduino</p></li>
+<li><p>An LED</p></li>
+<li><p>Wires, a resistor and a breadboard to connect the LED to the Arduino</p></li>
+<li><p>A USB cable to connect the Arduino to the computer</p></li>
+</ul>
+<p>You will also need to download the Arduino IDE (Integrated Development Environment). Download the Arduino IDE using the following link:</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a></p>
+</div></blockquote>
+<p>If you are working on a computer that you don’t have administrator privileges to install software on, be sure to select: [Windows ZIP for non-admin install].</p>
+<p><img alt="Arduino IDE Download Page" src="../_images/arduino_download_page.png" /></p>
+<div class="section" id="wire-the-led-to-the-arduino">
+<h2>Wire the LED to the Arduino<a class="headerlink" href="#wire-the-led-to-the-arduino" title="Permalink to this headline">¶</a></h2>
+<p>Connect the LED to the Arduino using a resistor, wires and a breadboard. Note the short leg of the LED is connected to ground, and the long leg of the resistor is connected through a resistor to PIN 13. A resistor is needed to prevent too much current from flowing through the LED. This type of resistor is called a <em>pull up resistor</em>.</p>
+<p><img alt="Arduino with LED" src="../_images/redboard_LED_bb.png" /></p>
+</div>
+<div class="section" id="upload-code-to-the-arduino">
+<h2>Upload code to the Arduino<a class="headerlink" href="#upload-code-to-the-arduino" title="Permalink to this headline">¶</a></h2>
+<p>Upload the following code to the Arduino using the Arduino IDE. The code is same as in the example sketch called <code class="docutils literal notranslate"><span class="pre">Physical</span> <span class="pre">Pixel</span></code>. The <code class="docutils literal notranslate"><span class="pre">Physical</span> <span class="pre">Pixel</span></code> sketch is found in the Arduino IDE under File –&gt; Examples –&gt; 04.Communication –&gt; PhysicalPixel</p>
+<p><img alt="Physical Pixel Example Sketch in the Arduino IDE" src="../_images/file-examples-communication-physicalpixel.png" /></p>
+<p>The code for the Physical Pixel Sketch is shown below.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>// Arduino IDE: 
+// File -&gt; Examples -&gt; 04.Communication -&gt; PhysicalPixel
+
+const int ledPin = 13; // pin the LED is attached to
+int incomingByte;      // variable stores  serial data
+
+void setup() {
+  // initialize serial communication:
+  Serial.begin(9600);
+  // initialize the LED pin as an output:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // see if there&#39;s incoming serial data:
+  if (Serial.available() &gt; 0) {
+    // read the oldest byte in the serial buffer:
+    incomingByte = Serial.read();
+    // if it&#39;s a capital H (ASCII 72), turn on the LED:
+    if (incomingByte == &#39;H&#39;) {
+      digitalWrite(ledPin, HIGH);
+    }
+    // if it&#39;s an L (ASCII 76) turn off the LED:
+    if (incomingByte == &#39;L&#39;) {
+      digitalWrite(ledPin, LOW);
+    }
+  }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="connect-the-arduino-to-the-computer">
+<h2>Connect the Arduino to the Computer<a class="headerlink" href="#connect-the-arduino-to-the-computer" title="Permalink to this headline">¶</a></h2>
+<p>Connect the Arduino to the computer using a USB cable. Ensure two settings in the Arduino IDE are set correctly.</p>
+<ul class="simple">
+<li><p>Make sure the <code class="docutils literal notranslate"><span class="pre">Port</span></code> is selected properly in the Arduino IDE under Tools –&gt; Port.</p></li>
+<li><p>Make sure the <code class="docutils literal notranslate"><span class="pre">Board</span></code> is selected in the Arduino IDE under Tools –&gt; Board –&gt; Arduino/Genuino Uno</p></li>
+</ul>
+<p>In the Arduino IDE, click the [checkmark] to verify and the [arrow] to upload. If the sketch does not upload, check which COM port is selected in Tools –&gt; Port.</p>
+<p><img alt="Arduino IDE Check to Verify" src="../_images/Check_to_Verify.png" /></p>
+<p><img alt="Arduino IDE Arrow to Upload" src="../_images/Arrow_to_Upload.png" /></p>
+</div>
+<div class="section" id="turn-the-led-on-and-off-with-the-arduino-serial-monitor">
+<h2>Turn the LED on and off with the Arduino Serial Monitor<a class="headerlink" href="#turn-the-led-on-and-off-with-the-arduino-serial-monitor" title="Permalink to this headline">¶</a></h2>
+<p>Open the Arduino Serial Monitor using Tools –&gt; Serial Monitor. In the Serial Monitor type <code class="docutils literal notranslate"><span class="pre">L</span></code> or <code class="docutils literal notranslate"><span class="pre">H</span></code> and click [Send]. Observe the LED turn on and off. Send <code class="docutils literal notranslate"><span class="pre">H</span></code> to turn the LED on. Send <code class="docutils literal notranslate"><span class="pre">L</span></code> to turn the LED off.</p>
+<p><img alt="Arduino Serial Monitor" src="../_images/serial_monitor_L.png" /></p>
+</div>
+<div class="section" id="use-the-python-repl-to-turn-the-arduino-led-on-and-off">
+<h2>Use the Python REPL to turn the Arduino LED on and off<a class="headerlink" href="#use-the-python-repl-to-turn-the-arduino-led-on-and-off" title="Permalink to this headline">¶</a></h2>
+<p>Next,  use the Python REPL to turn the Arduino on and off. (You can open the Python REPL by typing <code class="docutils literal notranslate"> <span class="pre">&gt;</span> <span class="pre">python</span></code> at the <strong>Anaconda Prompt</strong>) At the Python REPL, type the following commands. If a REPL prompt <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> precedes the command, type the command into the REPL. If the line does not start with a REPL prompt, the line represents expected output.</p>
+<p>When you type the command: <code class="docutils literal notranslate"><span class="pre">ser</span> <span class="pre">=</span> <span class="pre">serial.Serial('COM4',</span> <span class="pre">9800,</span> <span class="pre">timeout=1)</span></code>, ensure the <code class="docutils literal notranslate"><span class="pre">'COM#'</span></code> corresponds to the port that worked with the Arduino IDE in Tools –&gt; Port.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">serial</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;COM4&#39;</span><span class="p">,</span> <span class="mi">9600</span><span class="p">)</span>  <span class="c1"># open serial port</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                      <span class="c1"># wait 2 seconds</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+<span class="go">&#39;COM4&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+<span class="go"># LED turns on</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
+<span class="go"># LED turns off</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>
+<span class="go"># LED turns on</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
+<span class="go"># LED turns off</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Ensure the command <code class="docutils literal notranslate"><span class="pre">ser.close()</span></code> is issued before exiting the Python REPL.</p>
+</div>
+<div class="section" id="write-a-python-script-to-turn-the-led-on-and-off">
+<h2>Write a Python Script to turn the LED on and off<a class="headerlink" href="#write-a-python-script-to-turn-the-led-on-and-off" title="Permalink to this headline">¶</a></h2>
+<p>After the LED turns on and off based on sending <code class="docutils literal notranslate"><span class="pre">H</span></code> and <code class="docutils literal notranslate"><span class="pre">L</span></code> with the Arduino Serial Monitor and you can turn the LED on and off with the Python REPL, it’s time to write a Python script to turn the LED on and off. Again, the serial communication between the Python script and the Arduino is facilitated by the PySerial package. Ensure PySerial is installed before running the Python script.</p>
+<p>At the top of the Python script, import the PySerial package. Note that even though the package is called PySerial, the line <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">serial</span></code> is used. Python’s built-in <code class="docutils literal notranslate"><span class="pre">time</span></code> module is also imported as the <code class="docutils literal notranslate"><span class="pre">time.sleep()</span></code> function will be used in the script.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># blink.py</span>
+
+<span class="kn">import</span> <span class="nn">serial</span>
+<span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+</div>
+<p>In the next part of the Python script, connect to the Arduino over the serial port. In the line <code class="docutils literal notranslate"><span class="pre">ser</span> <span class="pre">=</span> <span class="pre">serial.Serial('COM4',</span> <span class="pre">9800,</span> <span class="pre">timeout=1)</span></code>, ensure the <code class="docutils literal notranslate"><span class="pre">'COM#'</span></code> corresponds to the port that worked with the Arduino IDE. Then create a loop that blinks the Arduino LED on and off for about 5 seconds.  Notice the byte string <code class="docutils literal notranslate"><span class="pre">b'H'</span></code> is sent to the Arduino, not the Unicode string <code class="docutils literal notranslate"><span class="pre">'H'</span></code>. The Unicode string <code class="docutils literal notranslate"><span class="pre">'H'</span></code> is prepended with the letter <code class="docutils literal notranslate"><span class="pre">b</span></code> in the line <code class="docutils literal notranslate"><span class="pre">ser.writelines(b'H')</span></code>. This line of code turns the Unicode string into a byte string before it is sent to the Arduino.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;COM4&#39;</span><span class="p">,</span> <span class="mi">9800</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">ser</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>   <span class="c1"># send a byte</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>        <span class="c1"># wait 0.5 seconds</span>
+    <span class="n">ser</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>   <span class="c1"># send a byte</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Run the entire Python script and watch the Arduino LED blink ten times. A common problem is the serial port was not closed before the script starts. Make sure the Arduino Serial Monitor is closed and try running <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">ser.close()</span></code> at the Python REPL.</p>
+</div>
+<div class="section" id="write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off">
+<h2>Write a Python script to allow a user to turn the LED on and off<a class="headerlink" href="#write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off" title="Permalink to this headline">¶</a></h2>
+<p>Once the LED blinks on and off successfully using a for loop in a Python script, you can write a new Python script that allows a user to turn the LED on and off. At the top of the new Python script import the <strong>PySerial</strong> package and built-in <code class="docutils literal notranslate"><span class="pre">time</span></code> module.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">serial</span>
+<span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+</div>
+<p>Next, give the user instructions. If the user types <code class="docutils literal notranslate"><span class="pre">H</span></code>, the LED turns on. If the user types <code class="docutils literal notranslate"><span class="pre">L</span></code> the LED turns off. If the user types <code class="docutils literal notranslate"><span class="pre">q</span></code>, the program terminates.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This program allows a user to turn an LED on and off&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;type H to turn the LED on&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;type L to turn the LED off&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;type q to quit&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, the script needs a while loop to ask the user to enter the letter <code class="docutils literal notranslate"><span class="pre">H</span></code>, <code class="docutils literal notranslate"><span class="pre">L</span></code> or <code class="docutils literal notranslate"><span class="pre">q</span></code>. Once the user enters the letter, the letter is converted to a byte string. Next, the byte string is sent over the serial line to the Arduino. A delay is added so that the Arduino can process the command before reading with the next one.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;COM4&#39;</span><span class="p">,</span> <span class="mi">9800</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">user_input</span> <span class="o">=</span> <span class="s1">&#39;L&#39;</span>
+<span class="k">while</span> <span class="n">user_input</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;H = on, L = off, q = quit&#39;</span> <span class="p">:</span> <span class="p">)</span>
+    <span class="n">byte_command</span> <span class="o">=</span> <span class="n">encode</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span>
+    <span class="n">ser</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">byte_command</span><span class="p">)</span>   <span class="c1"># send a byte</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># wait 0.5 seconds</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;q entered. Exiting the program&#39;</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Run the Python script. Type <code class="docutils literal notranslate"><span class="pre">H</span></code> and <code class="docutils literal notranslate"><span class="pre">L</span></code> and observe the LED turn on and off. Type <code class="docutils literal notranslate"><span class="pre">q</span></code> to end the program.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="11.02-Bytes-and-Unicode-Strings.html" title="previous page">Bytes and Unicode Strings</a>
+    <a class='right-next' id="next-link" href="11.04-Reading-a-Sensor-with-Python.html" title="next page">Reading a Sensor with Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Peter D. Kazarinoff, PhD<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
