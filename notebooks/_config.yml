@@ -2,10 +2,11 @@
 # Book settings
 title: ""
 logo: images/logo.png
-author: The Jupyter Book Community
-email: choldgraf@berkeley.edu
+author: Peter D. Kazarinoff, PhD
+email: peter.kazarinoff@pcc.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  This is an example book built with Jupyter Books.
+  A jupyter-book port of "Problem Solving with Python"
+  [https://www.amazon.com/dp/1693405415](https://www.amazon.com/dp/1693405415)
 
 execute:
   execute_notebooks: cache

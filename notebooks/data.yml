@@ -1,160 +1,149 @@
-- file: 00-Preface/index
+- file: index.md
+  
+- file: 00-Preface/00.00-Motivation.md
   sections:
-  - file: 00-Preface/00.00-Motivation.ipynb
-  - file: 00-Preface/00.02-Acknowledgments.ipynb
-  - file: 00-Preface/00.03-Supporting-Materials.ipynb
-  - file: 00-Preface/00.04-Formatting-Conventions.ipynb
-  - file: 00-Preface/00.05-Errata.ipynb
-- file: 01-Orientation/index
+  - file: 00-Preface/00.02-Acknowledgments.md
+  - file: 00-Preface/00.03-Supporting-Materials.md
+  - file: 00-Preface/00.04-Formatting-Conventions.md
+  - file: 00-Preface/00.05-Errata.md
+- file: 01-Orientation/01.00-Welcome.md
   sections:
-  - file: 01-Orientation/01.00-Welcome.ipynb
-  - file: 01-Orientation/01.01-Why-Python.ipynb
-  - file: 01-Orientation/01.02-The-Anaconda-Distribution-of-Python.ipynb
-  - file: 01-Orientation/01.03-Installing-Anaconda-on-Windows.ipynb
-  - file: 01-Orientation/01.04-Installing-Anaconda-on-MacOS.ipynb
-  - file: 01-Orientation/01.05-Installing-Anaconda-on-Linux.ipynb
-  - file: 01-Orientation/01.06-Installing-Python-from-Python-dot-org.ipynb
-  - file: 01-Orientation/01.07-Summary.ipynb
-  - file: 01-Orientation/01.08-Review-Questions.ipynb
-- file: 02-Jupyter-Notebooks/index
+  - file: 01-Orientation/01.01-Why-Python.md
+  - file: 01-Orientation/01.02-The-Anaconda-Distribution-of-Python.md
+  - file: 01-Orientation/01.03-Installing-Anaconda-on-Windows.md
+  - file: 01-Orientation/01.04-Installing-Anaconda-on-MacOS.md
+  - file: 01-Orientation/01.05-Installing-Anaconda-on-Linux.md
+  - file: 01-Orientation/01.06-Installing-Python-from-Python-dot-org.md
+  - file: 01-Orientation/01.07-Summary.md
+  - file: 01-Orientation/01.08-Review-Questions.md
+- file: 02-Jupyter-Notebooks/02.00-Introduction.md
   sections:
-  - file: 02-Jupyter-Notebooks/02.00-Introduction.ipynb
-  - file: 02-Jupyter-Notebooks/02.01-What-is-a-Jupyter-Notebook.ipynb
-  - file: 02-Jupyter-Notebooks/02.02-Why-Jupyter-Notebooks.ipynb
-  - file: 02-Jupyter-Notebooks/02.03-Installing-Juypter.ipynb
-  - file: 02-Jupyter-Notebooks/02.04-Opening-a-Jupyter-Notebook.ipynb
-  - file: 02-Jupyter-Notebooks/02.05-The-Jupyter-Notebook-Interface.ipynb
-  - file: 02-Jupyter-Notebooks/02.06-Magic-Commands.ipynb
-  - file: 02-Jupyter-Notebooks/02.07-Getting-Help-in-a-Jupyter-Notebook.ipynb
-  - file: 02-Jupyter-Notebooks/02.08-Summary.ipynb
-  - file: 02-Jupyter-Notebooks/02.09-Review-Questions.ipynb
-- file: 03-The-Python-REPL/index
+  - file: 02-Jupyter-Notebooks/02.01-What-is-a-Jupyter-Notebook.md
+  - file: 02-Jupyter-Notebooks/02.02-Why-Jupyter-Notebooks.md
+  - file: 02-Jupyter-Notebooks/02.03-Installing-Juypter.md
+  - file: 02-Jupyter-Notebooks/02.04-Opening-a-Jupyter-Notebook.md
+  - file: 02-Jupyter-Notebooks/02.05-The-Jupyter-Notebook-Interface.md
+  - file: 02-Jupyter-Notebooks/02.06-Magic-Commands.md
+  - file: 02-Jupyter-Notebooks/02.07-Getting-Help-in-a-Jupyter-Notebook.md
+  - file: 02-Jupyter-Notebooks/02.08-Summary.md
+  - file: 02-Jupyter-Notebooks/02.09-Review-Questions.md
+- file: 03-The-Python-REPL/03.00-Introduction.md
   sections:
-  - file: 03-The-Python-REPL/03.00-Introduction.ipynb
-  - file: 03-The-Python-REPL/03.01-Python-as-a-Calculator.ipynb
-  - file: 03-The-Python-REPL/03.02-Variables.ipynb
-  - file: 03-The-Python-REPL/03.03-String-Operations.ipynb
-  - file: 03-The-Python-REPL/03.04-Print-Statements.ipynb
-  - file: 03-The-Python-REPL/03.05-Summary.ipynb
-  - file: 03-The-Python-REPL/03.06-Review-Questions.ipynb
-- file: 04-Data-Types-and-Variables/index
+  - file: 03-The-Python-REPL/03.01-Python-as-a-Calculator.md
+  - file: 03-The-Python-REPL/03.02-Variables.md
+  - file: 03-The-Python-REPL/03.03-String-Operations.md
+  - file: 03-The-Python-REPL/03.04-Print-Statements.md
+  - file: 03-The-Python-REPL/03.05-Summary.md
+  - file: 03-The-Python-REPL/03.06-Review-Questions.md
+- file: 04-Data-Types-and-Variables/04.00-Introduction.md
   sections:
-  - file: 04-Data-Types-and-Variables/04.00-Introduction.ipynb
-  - file: 04-Data-Types-and-Variables/04.01-Numeric-Data-Types.ipynb
-  - file: 04-Data-Types-and-Variables/04.02-Boolean-Data-Type.ipynb
-  - file: 04-Data-Types-and-Variables/04.03-Strings.ipynb
-  - file: 04-Data-Types-and-Variables/04.04-Lists.ipynb
-  - file: 04-Data-Types-and-Variables/04.05-Dictionaries-and-Tuples.ipynb
-  - file: 04-Data-Types-and-Variables/04.06-Summary.ipynb
-  - file: 04-Data-Types-and-Variables/04.07-Review-Questions.ipynb
-- file: 05-NumPy-and-Arrays/index
+  - file: 04-Data-Types-and-Variables/04.01-Numeric-Data-Types.md
+  - file: 04-Data-Types-and-Variables/04.02-Boolean-Data-Type.md
+  - file: 04-Data-Types-and-Variables/04.03-Strings.md
+  - file: 04-Data-Types-and-Variables/04.04-Lists.md
+  - file: 04-Data-Types-and-Variables/04.05-Dictionaries-and-Tuples.md
+  - file: 04-Data-Types-and-Variables/04.06-Summary.md
+  - file: 04-Data-Types-and-Variables/04.07-Review-Questions.md
+- file: 05-NumPy-and-Arrays/05.00-Introduction.md
   sections:
-  - file: 05-NumPy-and-Arrays/05.00-Introduction.ipynb
-  - file: 05-NumPy-and-Arrays/05.01-NumPy.ipynb
-  - file: 05-NumPy-and-Arrays/05.02-Installing-NumPy.ipynb
-  - file: 05-NumPy-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.ipynb
-  - file: 05-NumPy-and-Arrays/05.04-Array-Creation.ipynb
-  - file: 05-NumPy-and-Arrays/05.05-Array-Indexing.ipynb
-  - file: 05-NumPy-and-Arrays/05.06-Array-Slicing.ipynb
-  - file: 05-NumPy-and-Arrays/05.07-Array-Opperations.ipynb
-  - file: 05-NumPy-and-Arrays/05.08-Systems-of-Linear-Equations.ipynb
-  - file: 05-NumPy-and-Arrays/05.09-Summary.ipynb
-  - file: 05-NumPy-and-Arrays/05.10-Review-Questions.ipynb
-- file: 06-Plotting-with-Matplotlib/index
+  - file: 05-NumPy-and-Arrays/05.01-NumPy.md
+  - file: 05-NumPy-and-Arrays/05.02-Installing-NumPy.md
+  - file: 05-NumPy-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.md
+  - file: 05-NumPy-and-Arrays/05.04-Array-Creation.md
+  - file: 05-NumPy-and-Arrays/05.05-Array-Indexing.md
+  - file: 05-NumPy-and-Arrays/05.06-Array-Slicing.md
+  - file: 05-NumPy-and-Arrays/05.07-Array-Opperations.md
+  - file: 05-NumPy-and-Arrays/05.08-Systems-of-Linear-Equations.md
+  - file: 05-NumPy-and-Arrays/05.09-Summary.md
+  - file: 05-NumPy-and-Arrays/05.10-Review-Questions.md
+- file: 06-Plotting-with-Matplotlib/06.00-Introduction.md
   sections:
-  - file: 06-Plotting-with-Matplotlib/06.00-Introduction.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.01-What-is-Matplotlib.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.02-Installing Matplotlib.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.03-Line-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.04-Saving-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.05-Multi-Line-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.06-Bar-Charts-and-Pie-Charts.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.07-Error-Bars.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.08-Histograms.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.09-Box-Plots-and-Violin-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.10-Scatter-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.11-Plot-Annotations.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.12-Subplots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.13-Plot-Styles.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.14-Contour-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.15-Quiver-and-Stream-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.16-3D-Surface-Plots.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.17-Summary.ipynb
-  - file: 06-Plotting-with-Matplotlib/06.18-Review-Questions.ipynb
-- file: 07-Functions-and-Modules/index
+  - file: 06-Plotting-with-Matplotlib/06.01-What-is-Matplotlib.md
+  - file: 06-Plotting-with-Matplotlib/06.02-Installing Matplotlib.md
+  - file: 06-Plotting-with-Matplotlib/06.03-Line-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.04-Saving-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.05-Multi-Line-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.06-Bar-Charts-and-Pie-Charts.md
+  - file: 06-Plotting-with-Matplotlib/06.07-Error-Bars.md
+  - file: 06-Plotting-with-Matplotlib/06.08-Histograms.md
+  - file: 06-Plotting-with-Matplotlib/06.09-Box-Plots-and-Violin-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.10-Scatter-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.11-Plot-Annotations.md
+  - file: 06-Plotting-with-Matplotlib/06.12-Subplots.md
+  - file: 06-Plotting-with-Matplotlib/06.13-Plot-Styles.md
+  - file: 06-Plotting-with-Matplotlib/06.14-Contour-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.15-Quiver-and-Stream-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.16-3D-Surface-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06.17-Summary.md
+  - file: 06-Plotting-with-Matplotlib/06.18-Review-Questions.md
+- file: 07-Functions-and-Modules/07.00-Introduction.md
   sections:
-  - file: 07-Functions-and-Modules/07.00-Introduction.ipynb
-  - file: 07-Functions-and-Modules/07.01-Why-Functions.ipynb
-  - file: 07-Functions-and-Modules/07.02-First-Function.ipynb
-  - file: 07-Functions-and-Modules/07.03-Functions-with-multiple-arguments.ipynb
-  - file: 07-Functions-and-Modules/07.04-Functions-with-default-arguments.ipynb
-  - file: 07-Functions-and-Modules/07.05-Calling-Functions-from-Other-Files.ipynb
-  - file: 07-Functions-and-Modules/07.06-Docstrings-in-Functions.ipynb
-  - file: 07-Functions-and-Modules/07.07-Positional-and-Keyword-Arguments.ipynb
-  - file: 07-Functions-and-Modules/07.08-Summary.ipynb
-  - file: 07-Functions-and-Modules/07.09-Review-Questions.ipynb
-- file: 08-If-Else-Try-Except/index
+  - file: 07-Functions-and-Modules/07.01-Why-Functions.md
+  - file: 07-Functions-and-Modules/07.02-First-Function.md
+  - file: 07-Functions-and-Modules/07.03-Functions-with-multiple-arguments.md
+  - file: 07-Functions-and-Modules/07.04-Functions-with-default-arguments.md
+  - file: 07-Functions-and-Modules/07.05-Calling-Functions-from-Other-Files.md
+  - file: 07-Functions-and-Modules/07.06-Docstrings-in-Functions.md
+  - file: 07-Functions-and-Modules/07.07-Positional-and-Keyword-Arguments.md
+  - file: 07-Functions-and-Modules/07.08-Summary.md
+  - file: 07-Functions-and-Modules/07.09-Review-Questions.md
+- file: 08-If-Else-Try-Except/08.00-Introduction.md
   sections:
-  - file: 08-If-Else-Try-Except/08.00-Introduction.ipynb
-  - file: 08-If-Else-Try-Except/08.01-User-Input.ipynb
-  - file: 08-If-Else-Try-Except/08.02-Selection-Statements.ipynb
-  - file: 08-If-Else-Try-Except/08.03-If-Statements.ipynb
-  - file: 08-If-Else-Try-Except/08.04-If-Else-Statements.ipynb
-  - file: 08-If-Else-Try-Except/08.05-Try-Except-Statements.ipynb
-  - file: 08-If-Else-Try-Except/08.06-Flowcharts.ipynb
-  - file: 08-If-Else-Try-Except/08.07-Summary.ipynb
-  - file: 08-If-Else-Try-Except/08.08-Review-Questions.ipynb
-- file: 09-Loops/index
+  - file: 08-If-Else-Try-Except/08.01-User-Input.md
+  - file: 08-If-Else-Try-Except/08.02-Selection-Statements.md
+  - file: 08-If-Else-Try-Except/08.03-If-Statements.md
+  - file: 08-If-Else-Try-Except/08.04-If-Else-Statements.md
+  - file: 08-If-Else-Try-Except/08.05-Try-Except-Statements.md
+  - file: 08-If-Else-Try-Except/08.06-Flowcharts.md
+  - file: 08-If-Else-Try-Except/08.07-Summary.md
+  - file: 08-If-Else-Try-Except/08.08-Review-Questions.md
+- file: 09-Loops/09.00-Introduction.md
   sections:
-  - file: 09-Loops/09.00-Introduction.ipynb
-  - file: 09-Loops/09.01-For-Loops.ipynb
-  - file: 09-Loops/09.02-While-Loops.ipynb
-  - file: 09-Loops/09.03-Break-and-Continue.ipynb
-  - file: 09-Loops/09.04-Flowcharts-Describing-Loops.ipynb
-  - file: 09-Loops/09.05-Summary.ipynb
-  - file: 09-Loops/09.06-Review-Questions.ipynb
-- file: 10-Symbolic-Math/index
+  - file: 09-Loops/09.01-For-Loops.md
+  - file: 09-Loops/09.02-While-Loops.md
+  - file: 09-Loops/09.03-Break-and-Continue.md
+  - file: 09-Loops/09.04-Flowcharts-Describing-Loops.md
+  - file: 09-Loops/09.05-Summary.md
+  - file: 09-Loops/09.06-Review-Questions.md
+- file: 10-Symbolic-Math/10.00-Introduction.md
   sections:
-  - file: 10-Symbolic-Math/10.00-Introduction.ipynb
-  - file: 10-Symbolic-Math/10.01-SymPy.ipynb
-  - file: 10-Symbolic-Math/10.02-Installing-SymPy.ipynb
-  - file: 10-Symbolic-Math/10.03-Defining-Variables.ipynb
-  - file: 10-Symbolic-Math/10.04-Expressions-and-Substitutions.ipynb
-  - file: 10-Symbolic-Math/10.05-Equations.ipynb
-  - file: 10-Symbolic-Math/10.06-Solving-Equations.ipynb
-  - file: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.ipynb
-  - file: 10-Symbolic-Math/10.08-Summary.ipynb
-  - file: 10-Symbolic-Math/10.09-Review-Questions.ipynb
-- file: 11-Python-and-External-Hardware/index
+  - file: 10-Symbolic-Math/10.01-SymPy.md
+  - file: 10-Symbolic-Math/10.02-Installing-SymPy.md
+  - file: 10-Symbolic-Math/10.03-Defining-Variables.md
+  - file: 10-Symbolic-Math/10.04-Expressions-and-Substitutions.md
+  - file: 10-Symbolic-Math/10.05-Equations.md
+  - file: 10-Symbolic-Math/10.06-Solving-Equations.md
+  - file: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.md
+  - file: 10-Symbolic-Math/10.08-Summary.md
+  - file: 10-Symbolic-Math/10.09-Review-Questions.md
+- file: 11-Python-and-External-Hardware/11.00-Introduction.md
   sections:
-  - file: 11-Python-and-External-Hardware/11.00-Introduction.ipynb
-  - file: 11-Python-and-External-Hardware/11.01-PySerial.ipynb
-  - file: 11-Python-and-External-Hardware/11.02-Bytes-and-Unicode-Strings.ipynb
-  - file: 11-Python-and-External-Hardware/11.03-Controlling-an-LED.ipynb
-  - file: 11-Python-and-External-Hardware/11.04-Reading-a-Sensor-with-Python.ipynb
-  - file: 11-Python-and-External-Hardware/11.05-Summary.ipynb
-  - file: 11-Python-and-External-Hardware/11.06-Project-Ideas.ipynb
-- file: 12-MicroPython/index
+  - file: 11-Python-and-External-Hardware/11.01-PySerial.md
+  - file: 11-Python-and-External-Hardware/11.02-Bytes-and-Unicode-Strings.md
+  - file: 11-Python-and-External-Hardware/11.03-Controlling-an-LED.md
+  - file: 11-Python-and-External-Hardware/11.04-Reading-a-Sensor-with-Python.md
+  - file: 11-Python-and-External-Hardware/11.05-Summary.md
+  - file: 11-Python-and-External-Hardware/11.06-Project-Ideas.md
+- file: 12-MicroPython/12.00-Introduction.md
   sections:
-  - file: 12-MicroPython/12.00-Introduction.ipynb
-  - file: 12-MicroPython/12.01-What-is-MicroPython.ipynb
-  - file: 12-MicroPython/12.02-Installing-MicroPython.ipynb
-  - file: 12-MicroPython/12.03-MicroPython-REPL.ipynb
-  - file: 12-MicroPython/12.04-Blinking-a-LED.ipynb
-  - file: 12-MicroPython/12.05-Reading-a-Sensor.ipynb
-  - file: 12-MicroPython/12.06-Uploading-Code.ipynb
-  - file: 12-MicroPython/12.07-Summary.ipynb
-  - file: 12-MicroPython/12.08-Project-Ideas.ipynb
-- file: 99-Appendix/index
+  - file: 12-MicroPython/12.01-What-is-MicroPython.md
+  - file: 12-MicroPython/12.02-Installing-MicroPython.md
+  - file: 12-MicroPython/12.03-MicroPython-REPL.md
+  - file: 12-MicroPython/12.04-Blinking-a-LED.md
+  - file: 12-MicroPython/12.05-Reading-a-Sensor.md
+  - file: 12-MicroPython/12.06-Uploading-Code.md
+  - file: 12-MicroPython/12.07-Summary.md
+  - file: 12-MicroPython/12.08-Project-Ideas.md
+- file: 99-Appendix/99.00-Appendix.md
   sections:
-  - file: 99-Appendix/99.00-Appendix.ipynb
-  - file: 99-Appendix/99.01-Reserved-and-Key-Words-in-Python.ipynb
-  - file: 99-Appendix/99.02-ASCII-Character-Codes.ipynb
-  - file: 99-Appendix/99.03-Virtual-Environments.ipynb
-  - file: 99-Appendix/99.04-NumPy-Math-Functions.ipynb
-  - file: 99-Appendix/99.05-Git-and-GitHub.ipynb
-  - file: 99-Appendix/99.06-LaTeX-Math.ipynb
-  - file: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.ipynb
-  - file: 99-Appendix/99.08-Contributions.ipynb
-  - file: 99-Appendix/99.09-Cover-Artwork.ipynb
-  - file: 99-Appendix/99.10-About-the-Author.ipynb
+  - file: 99-Appendix/99.01-Reserved-and-Key-Words-in-Python.md
+  - file: 99-Appendix/99.02-ASCII-Character-Codes.md
+  - file: 99-Appendix/99.03-Virtual-Environments.md
+  - file: 99-Appendix/99.04-NumPy-Math-Functions.md
+  - file: 99-Appendix/99.05-Git-and-GitHub.md
+  - file: 99-Appendix/99.06-LaTeX-Math.md
+  - file: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.md
+  - file: 99-Appendix/99.08-Contributions.md
+  - file: 99-Appendix/99.09-Cover-Artwork.md
+  - file: 99-Appendix/99.10-About-the-Author.md
+    

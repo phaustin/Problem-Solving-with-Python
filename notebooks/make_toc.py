@@ -18,7 +18,7 @@ pp = pprint.PrettyPrinter(indent=4)
 section_match = re.compile(".*\d\d\.(\d\d).*")
 
 all_files = list(Path().glob("**/*ipynb"))
-
+all_files = [item for item in all_files if item.as_posix().find("_build") < 0]
 
 def numsort(the_path):
     the_dir = Path(the_path).parent
@@ -27,7 +27,7 @@ def numsort(the_path):
     if the_match:
         section_number=the_match.group(1)
     else:
-        raise ValueError("could not match {the_path}")
+        raise ValueError(f"could not match {the_path}")
     return int(chapter_number),int(section_number)
 
 yaml_skeleton = Path("_toc.yml")
@@ -59,7 +59,7 @@ def file_sort(filename):
     if the_match:
         section_number=the_match.group(1)
     else:
-        raise ValueError("could not match {filename}")
+        raise ValueError(f"could not match {filename}")
     return int(section_number)
 
 
@@ -69,12 +69,12 @@ dir_list = [Path(item).parent for item in all_files]
 all_dirs = set(dir_list)
 
 
-# dirwrite=False
-# if dirwrite:
-#     for a_dir in all_dirs:
-#         new_file = a_dir / 'index.md'
-#         with open(new_file,'w') as outfile:
-#             outfile.write(text)
+dirwrite=True
+if dirwrite:
+    for a_dir in all_dirs:
+        new_file = a_dir / 'index.md'
+        with open(new_file,'w') as outfile:
+            outfile.write(text)
 
 # new_list = list()
 # for the_dir in key_list:
