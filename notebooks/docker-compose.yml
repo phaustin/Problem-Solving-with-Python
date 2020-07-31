@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: docker_webserver/Dockerfile
+
+    image: phaustin/webserver_intropy
+    container_name: webserver_intropy
+    ports:
+      - "9800:6666"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - jupyterhub_data:/srv/jupyterhub
+    networks:
+      - dask_net
+      
+      
+# the actual name will be <directory_name>_<network_name>
+networks:
+    dask_net:
+      driver: bridge
+      
+volumes:
+  jupyterhub_data:
+
