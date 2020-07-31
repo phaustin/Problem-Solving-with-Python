@@ -1,12 +1,4 @@
-FROM nginx:alpine
+FROM httpd:2.4
+COPY _build/html/ /usr/local/apache2/htdocs/
 
-
-ENV HOME=/static
-RUN mkdir $HOME
-COPY _build/html $HOME/
-WORKDIR $HOME
-COPY docker_webserver/nginx.conf /etc/nginx/nginx.conf
-RUN ls -la /static/*
-
-CMD ["nginx", "-g", "daemon off;"]
 

@@ -9,7 +9,7 @@ services:
     image: phaustin/webserver_intropy
     container_name: webserver_intropy
     ports:
-      - "9800:6666"
+      - "9800:80"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - jupyterhub_data:/srv/jupyterhub
