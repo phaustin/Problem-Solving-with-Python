@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   webserver:
@@ -11,7 +11,10 @@ services:
     ports:
       - "9800:80"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - type: bind
+        source: ./_build/html
+        target: /usr/local/apache2/htdocs
+      - "/var/run/docker.sock:/var/run/docker.sock"
       - jupyterhub_data:/srv/jupyterhub
     networks:
       - dask_net
