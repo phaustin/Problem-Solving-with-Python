@@ -1,0 +1,37 @@
+name: jbenv
+channels:
+  - eoas_ubc
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.*
+  - click
+  - sphinx=2.4.4
+  - jupyter
+  - git
+  - jupytext
+  - sqlalchemy
+  - pyyaml
+  - docutils>=0.15
+  - setuptools
+  - scipy
+  - sympy
+  - matplotlib
+  - nbformat
+  - nbconvert
+  - nbclient
+  - pillow
+  - pip
+  - pip:
+      - git+https://github.com/executablebooks/jupyter-cache.git
+      - git+https://github.com/executablebooks/MyST-NB.git
+      - git+https://github.com/phaustin/jupyter-book@posix_path
+      - git+https://github.com/jupyter/jupyter-sphinx.git
+      - click_log
+      - click_completion
+      - jupyter-sphinx
+      - myst-parser~=0.8
+      - sphinx_togglebutton
+      - sphinx-copybutton
+      - sphinxcontrib-bibtex
+      - sphinx_book_theme~=0.0
