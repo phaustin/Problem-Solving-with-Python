@@ -30,8 +30,8 @@ dependencies:
       - click_log
       - click_completion
       - jupyter-sphinx
-      - myst-parser~=0.8
+      - myst-parser
       - sphinx_togglebutton
       - sphinx-copybutton
       - sphinxcontrib-bibtex
-      - sphinx_book_theme~=0.0
+      - sphinx_book_theme
