@@ -1,5 +1,0 @@
-# Orientation
-
-```{tableofcontents}
-```
-

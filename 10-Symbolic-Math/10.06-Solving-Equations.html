@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Solving Equations</title>
+    <title>11.1.6. Solving Equations &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -29,22 +29,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="https://jupyterbook.org/10-Symbolic-Math/10.06-Solving-Equations.html" />
+    <link rel="canonical" href="http://l127.0.0.1:8500/10-Symbolic-Math/10.06-Solving-Equations.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Solving Two Equations for Two Unknows" href="10.07-Solving-Two-Equations-for-Two-Unknowns.html" />
-    <link rel="prev" title="Equations" href="10.05-Equations.html" />
+    <link rel="next" title="11.1.7. Solving Two Equations for Two Unknows" href="10.07-Solving-Two-Equations-for-Two-Unknowns.html" />
+    <link rel="prev" title="11.1.5. Equations" href="10.05-Equations.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://jupyterbook.org/10-Symbolic-Math/10.06-Solving-Equations.html" />
+<meta property="og:url"         content="http://l127.0.0.1:8500/10-Symbolic-Math/10.06-Solving-Equations.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Solving Equations" />
 <meta property="og:description" content="Solving Equations  SymPy’s solve() function can be used to solve equations and expressions that contain symbolic math variables.  Equations with one solution  A" />
-<meta property="og:image"       content="https://jupyterbook.org/_static/logo.png" />
+<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -64,6 +64,8 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
+  <h1 class="site-logo" id="site-title">PSWP</h1>
+  
 </a>
 </div>
 
@@ -73,80 +75,126 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
-  <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../00-Preface/00.00-Motivation.html">Preface</a>
-  </li>
-  <li class="">
-    <a href="../01-Orientation/01.00-Welcome.html">Orientation</a>
-  </li>
-  <li class="">
-    <a href="../02-Jupyter-Notebooks/02.00-Introduction.html">Jupyter Notebooks</a>
-  </li>
-  <li class="">
-    <a href="../03-The-Python-REPL/03.00-Introduction.html">The Python REPL</a>
-  </li>
-  <li class="">
-    <a href="../04-Data-Types-and-Variables/04.00-Introduction.html">Data Types and Variables</a>
-  </li>
-  <li class="">
-    <a href="../05-NumPy-and-Arrays/05.00-Introduction.html">NumPy and Arrays</a>
-  </li>
-  <li class="">
-    <a href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">Plotting with Matplotlib</a>
-  </li>
-  <li class="">
-    <a href="../07-Functions-and-Modules/07.00-Introduction.html">Functions and Modules</a>
-  </li>
-  <li class="">
-    <a href="../08-If-Else-Try-Except/08.00-Introduction.html">If Else Try Except</a>
-  </li>
-  <li class="">
-    <a href="../09-Loops/09.00-Introduction.html">Loops</a>
-  </li>
-  <li class="active">
-    <a href="10.00-Introduction.html">Symbolic Math</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="10.01-SymPy.html">SymPy</a>
-    </li>
-    <li class="">
-      <a href="10.02-Installing-SymPy.html">Installing SymPy</a>
-    </li>
-    <li class="">
-      <a href="10.03-Defining-Variables.html">Defining Variables</a>
-    </li>
-    <li class="">
-      <a href="10.04-Expressions-and-Substitutions.html">Expressions and Substitutions</a>
-    </li>
-    <li class="">
-      <a href="10.05-Equations.html">Equations</a>
-    </li>
-    <li class="active">
-      <a href="">Solving Equations</a>
-    </li>
-    <li class="">
-      <a href="10.07-Solving-Two-Equations-for-Two-Unknowns.html">Solving Two Equations for Two Unknows</a>
-    </li>
-    <li class="">
-      <a href="10.08-Summary.html">Summary</a>
-    </li>
-    <li class="">
-      <a href="10.09-Review-Questions.html">Review Questions</a>
-    </li>
+  <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+   1. Preface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+   2. Orientation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+   3. Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+   4. The Python REPL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+   5. Data Types and Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+   6. NumPy and Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+   7. Plotting with Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+   8. Functions and Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+   9. If Else Try Except
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+   10. Loops
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="10.00-Introduction.html">
+   11. Symbolic Math
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.01-SymPy.html">
+     11.1.1. SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.02-Installing-SymPy.html">
+     11.1.2. Installing SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.03-Defining-Variables.html">
+     11.1.3. Defining Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.04-Expressions-and-Substitutions.html">
+     11.1.4. Expressions and Substitutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.05-Equations.html">
+     11.1.5. Equations
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     11.1.6. Solving Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.07-Solving-Two-Equations-for-Two-Unknowns.html">
+     11.1.7. Solving Two Equations for Two Unknows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.08-Summary.html">
+     11.1.8. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="10.09-Review-Questions.html">
+     11.1.9. Review Questions
+    </a>
+   </li>
   </ul>
-  </li>
-  <li class="">
-    <a href="../11-Python-and-External-Hardware/11.00-Introduction.html">Python and External Hardware</a>
-  </li>
-  <li class="">
-    <a href="../12-MicroPython/12.00-Introduction.html">MicroPython</a>
-  </li>
-  <li class="">
-    <a href="../99-Appendix/99.00-Appendix.html">Appendix</a>
-  </li>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+   12. Python and External Hardware
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+   13. MicroPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+   14. Appendix
+  </a>
+ </li>
 </ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -165,56 +213,65 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-            <div class="dropdown-buttons">
-                <!-- ipynb file if we had a myst markdown file -->
-                
-                <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../_sources/10-Symbolic-Math/10.06-Solving-Equations.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
-                <!-- Download PDF via print -->
-                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-            </div>
-            
-        </div>
-
-        <!-- Source interaction buttons -->
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/10-Symbolic-Math/10.06-Solving-Equations.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-        
+
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations-with-one-solution">
+   11.1.6.1. Equations with one solution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations-with-two-solutions">
+   11.1.6.2. Equations with two solutions
+  </a>
+ </li>
+</ul>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#equations-with-one-solution" class="nav-link">Equations with one solution</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#equations-with-two-solutions" class="nav-link">Equations with two solutions</a>
-        </li>
-    
-    </ul>
-</nav>
-
-
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -223,10 +280,10 @@
               <div>
                 
   <div class="section" id="solving-equations">
-<h1>Solving Equations<a class="headerlink" href="#solving-equations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11.1.6. </span>Solving Equations<a class="headerlink" href="#solving-equations" title="Permalink to this headline">¶</a></h1>
 <p>SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function can be used to solve equations and expressions that contain symbolic math variables.</p>
 <div class="section" id="equations-with-one-solution">
-<h2>Equations with one solution<a class="headerlink" href="#equations-with-one-solution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1.6.1. </span>Equations with one solution<a class="headerlink" href="#equations-with-one-solution" title="Permalink to this headline">¶</a></h2>
 <p>A simple equation that contains one variable like <span class="math notranslate nohighlight">\(x-4-2 = 0\)</span> can be solved using the SymPy’s  <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function. When only one value is part of the solution, the solution is in the form of a list.</p>
 <p>The code section below demonstrates SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function when an expression is defined with symbolic math variables.</p>
 <div class="cell docutils container">
@@ -293,7 +350,7 @@ https://github.com/sympy/sympy/issues/16587 for more info.
 </div>
 </div>
 <div class="section" id="equations-with-two-solutions">
-<h2>Equations with two solutions<a class="headerlink" href="#equations-with-two-solutions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1.6.2. </span>Equations with two solutions<a class="headerlink" href="#equations-with-two-solutions" title="Permalink to this headline">¶</a></h2>
 <p>Quadratic equations, like <span class="math notranslate nohighlight">\(x^2 - 5x + 6 = 0\)</span>, have two solutions. SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function can be used to solve an equation with two solutions. When an equation has two solutions, SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function outputs a list. The elements in the list are the two solutions.</p>
 <p>The code section below shows how an equation with two solutions is solved with SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function.</p>
 <div class="cell docutils container">
@@ -369,8 +426,8 @@ https://github.com/sympy/sympy/issues/16587 for more info.
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="10.05-Equations.html" title="previous page">Equations</a>
-    <a class='right-next' id="next-link" href="10.07-Solving-Two-Equations-for-Two-Unknowns.html" title="next page">Solving Two Equations for Two Unknows</a>
+    <a class='left-prev' id="prev-link" href="10.05-Equations.html" title="previous page"><span class="section-number">11.1.5. </span>Equations</a>
+    <a class='right-next' id="next-link" href="10.07-Solving-Two-Equations-for-Two-Unknowns.html" title="next page"><span class="section-number">11.1.7. </span>Solving Two Equations for Two Unknows</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

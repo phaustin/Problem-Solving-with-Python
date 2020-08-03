@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>The MicroPython REPL</title>
+    <title>13.1.3. The MicroPython REPL &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -29,22 +29,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="https://jupyterbook.org/12-MicroPython/12.03-MicroPython-REPL.html" />
+    <link rel="canonical" href="http://l127.0.0.1:8500/12-MicroPython/12.03-MicroPython-REPL.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Blinking a LED" href="12.04-Blinking-a-LED.html" />
-    <link rel="prev" title="Installing MicroPython" href="12.02-Installing-MicroPython.html" />
+    <link rel="next" title="13.1.4. Blinking a LED" href="12.04-Blinking-a-LED.html" />
+    <link rel="prev" title="13.1.2. Installing MicroPython" href="12.02-Installing-MicroPython.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://jupyterbook.org/12-MicroPython/12.03-MicroPython-REPL.html" />
+<meta property="og:url"         content="http://l127.0.0.1:8500/12-MicroPython/12.03-MicroPython-REPL.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="The MicroPython REPL" />
 <meta property="og:description" content="The MicroPython REPL  The last section detailed the installation of MicroPython on an ESP8266-based microcontroller using Python and a package called esptool. I" />
-<meta property="og:image"       content="https://jupyterbook.org/_static/logo.png" />
+<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
 
@@ -64,6 +64,8 @@
   <img src="../_static/logo.png" class="logo" alt="logo">
   
   
+  <h1 class="site-logo" id="site-title">PSWP</h1>
+  
 </a>
 </div>
 
@@ -73,77 +75,121 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
-  <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../00-Preface/00.00-Motivation.html">Preface</a>
-  </li>
-  <li class="">
-    <a href="../01-Orientation/01.00-Welcome.html">Orientation</a>
-  </li>
-  <li class="">
-    <a href="../02-Jupyter-Notebooks/02.00-Introduction.html">Jupyter Notebooks</a>
-  </li>
-  <li class="">
-    <a href="../03-The-Python-REPL/03.00-Introduction.html">The Python REPL</a>
-  </li>
-  <li class="">
-    <a href="../04-Data-Types-and-Variables/04.00-Introduction.html">Data Types and Variables</a>
-  </li>
-  <li class="">
-    <a href="../05-NumPy-and-Arrays/05.00-Introduction.html">NumPy and Arrays</a>
-  </li>
-  <li class="">
-    <a href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">Plotting with Matplotlib</a>
-  </li>
-  <li class="">
-    <a href="../07-Functions-and-Modules/07.00-Introduction.html">Functions and Modules</a>
-  </li>
-  <li class="">
-    <a href="../08-If-Else-Try-Except/08.00-Introduction.html">If Else Try Except</a>
-  </li>
-  <li class="">
-    <a href="../09-Loops/09.00-Introduction.html">Loops</a>
-  </li>
-  <li class="">
-    <a href="../10-Symbolic-Math/10.00-Introduction.html">Symbolic Math</a>
-  </li>
-  <li class="">
-    <a href="../11-Python-and-External-Hardware/11.00-Introduction.html">Python and External Hardware</a>
-  </li>
-  <li class="active">
-    <a href="12.00-Introduction.html">MicroPython</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="12.01-What-is-MicroPython.html">What is MicroPython?</a>
-    </li>
-    <li class="">
-      <a href="12.02-Installing-MicroPython.html">Installing MicroPython</a>
-    </li>
-    <li class="active">
-      <a href="">The MicroPython REPL</a>
-    </li>
-    <li class="">
-      <a href="12.04-Blinking-a-LED.html">Blinking a LED</a>
-    </li>
-    <li class="">
-      <a href="12.05-Reading-a-Sensor.html">Reading a Sensor</a>
-    </li>
-    <li class="">
-      <a href="12.06-Uploading-Code.html">Uploading Code</a>
-    </li>
-    <li class="">
-      <a href="12.07-Summary.html">Summary</a>
-    </li>
-    <li class="">
-      <a href="12.08-Project-Ideas.html">Project Ideas</a>
-    </li>
+  <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+   1. Preface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+   2. Orientation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+   3. Jupyter Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+   4. The Python REPL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+   5. Data Types and Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+   6. NumPy and Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+   7. Plotting with Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+   8. Functions and Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+   9. If Else Try Except
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+   10. Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+   11. Symbolic Math
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+   12. Python and External Hardware
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="12.00-Introduction.html">
+   13. MicroPython
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.01-What-is-MicroPython.html">
+     13.1.1. What is MicroPython?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.02-Installing-MicroPython.html">
+     13.1.2. Installing MicroPython
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     13.1.3. The MicroPython REPL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.04-Blinking-a-LED.html">
+     13.1.4. Blinking a LED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.05-Reading-a-Sensor.html">
+     13.1.5. Reading a Sensor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.06-Uploading-Code.html">
+     13.1.6. Uploading Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.07-Summary.html">
+     13.1.7. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12.08-Project-Ideas.html">
+     13.1.8. Project Ideas
+    </a>
+   </li>
   </ul>
-  </li>
-  <li class="">
-    <a href="../99-Appendix/99.00-Appendix.html">Appendix</a>
-  </li>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+   14. Appendix
+  </a>
+ </li>
 </ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -162,68 +208,80 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-            <div class="dropdown-buttons">
-                <!-- ipynb file if we had a myst markdown file -->
-                
-                <!-- Download raw file -->
-                <a class="dropdown-buttons" href="../_sources/12-MicroPython/12.03-MicroPython-REPL.md"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
-                <!-- Download PDF via print -->
-                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-            </div>
-            
-        </div>
-
-        <!-- Source interaction buttons -->
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/12-MicroPython/12.03-MicroPython-REPL.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-        
+
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-of-steps">
+   13.1.3.1. Summary of Steps
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-the-esp8266-based-microcontroller-to-your-computer-with-a-usb-cable">
+   13.1.3.2. Connect the ESP8266-based microcontroller to your computer with a USB cable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determine-which-com-port-the-microcontroller-is-connected-to-using-the-windows-device-manager">
+   13.1.3.3. Determine which COM port the microcontroller is connected to using the Windows Device Manager
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-putty-and-connect-to-the-esp8266-based-microcontroller">
+   13.1.3.4. Open PuTTY and connect to the ESP8266-based microcontroller
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-commands-at-the-micropython-repl">
+   13.1.3.5. Run commands at the MicroPython REPL
+  </a>
+ </li>
+</ul>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#summary-of-steps" class="nav-link">Summary of Steps</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#connect-the-esp8266-based-microcontroller-to-your-computer-with-a-usb-cable" class="nav-link">Connect the ESP8266-based microcontroller to your computer with a USB cable</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#determine-which-com-port-the-microcontroller-is-connected-to-using-the-windows-device-manager" class="nav-link">Determine which COM port the microcontroller is connected to using the Windows Device Manager</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#open-putty-and-connect-to-the-esp8266-based-microcontroller" class="nav-link">Open PuTTY and connect to the ESP8266-based microcontroller</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#run-commands-at-the-micropython-repl" class="nav-link">Run commands at the MicroPython REPL</a>
-        </li>
-    
-    </ul>
-</nav>
-
-
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -232,11 +290,11 @@
               <div>
                 
   <div class="section" id="the-micropython-repl">
-<h1>The MicroPython REPL<a class="headerlink" href="#the-micropython-repl" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">13.1.3. </span>The MicroPython REPL<a class="headerlink" href="#the-micropython-repl" title="Permalink to this headline">¶</a></h1>
 <p>The last section detailed the installation of MicroPython on an ESP8266-based microcontroller using Python and a package called <strong>esptool</strong>. In this section, you will learn how to write commands to the MicroPython REPL (the Micropython prompt) to turn an LED on and off.</p>
 <p>Before you can use the MicroPython REPL (the MicroPython prompt) running on a microcontroller, MicroPython needs to be installed on the board. A serial communication tool, like PuTTY,  also needs to be installed on your computer to communicate with the microcontroller over a serial line. The previous section detailed how to install MicroPython on an ESP8266-based microcontroller and how to install <a class="reference external" href="https://www.putty.org/">PuTTY</a> on Windows.</p>
 <div class="section" id="summary-of-steps">
-<h2>Summary of Steps<a class="headerlink" href="#summary-of-steps" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1.3.1. </span>Summary of Steps<a class="headerlink" href="#summary-of-steps" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Connect the ESP8266-based microcontroller to your computer with a USB cable</p></li>
 <li><p>Determine which COM port the microcontroller is connected to using the Windows Device Manager</p></li>
@@ -245,17 +303,17 @@
 </ol>
 </div>
 <div class="section" id="connect-the-esp8266-based-microcontroller-to-your-computer-with-a-usb-cable">
-<h2>Connect the ESP8266-based microcontroller to your computer with a USB cable<a class="headerlink" href="#connect-the-esp8266-based-microcontroller-to-your-computer-with-a-usb-cable" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1.3.2. </span>Connect the ESP8266-based microcontroller to your computer with a USB cable<a class="headerlink" href="#connect-the-esp8266-based-microcontroller-to-your-computer-with-a-usb-cable" title="Permalink to this headline">¶</a></h2>
 <p>Use a microUSB cable to connect the microcontroller to the computer. Make sure that the microUSB cable is a full USB data cable and not just a simple power cable. Cables that are just used to charge phones may only be power cables and may not be capable of transmitting data.</p>
 </div>
 <div class="section" id="determine-which-com-port-the-microcontroller-is-connected-to-using-the-windows-device-manager">
-<h2>Determine which COM port the microcontroller is connected to using the Windows Device Manager<a class="headerlink" href="#determine-which-com-port-the-microcontroller-is-connected-to-using-the-windows-device-manager" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1.3.3. </span>Determine which COM port the microcontroller is connected to using the Windows Device Manager<a class="headerlink" href="#determine-which-com-port-the-microcontroller-is-connected-to-using-the-windows-device-manager" title="Permalink to this headline">¶</a></h2>
 <p>Use the Windows Device Manager to determine which serial port the microcontroller is connected to. On Windows, the microcontroller usually comes up as <code class="docutils literal notranslate"><span class="pre">COM4</span></code>. You can find the serial port by looking in the Ports (COM &amp; LPT) category of the Windows Device Manager. Look for something like <strong>Silicon Labs CP210x USB to UART Bridge (COM4)</strong> in the <strong>Ports (COM &amp; LPT)</strong> menu. It is the <strong>COM#</strong> that’s needed to connect to the board.</p>
 <p><img alt="Find the Windows 10 Device Manager" src="../_images/find_device_manager.png" /></p>
 <p><img alt="Windows Device Manager" src="../_images/device_manager_menu.png" /></p>
 </div>
 <div class="section" id="open-putty-and-connect-to-the-esp8266-based-microcontroller">
-<h2>Open PuTTY and connect to the ESP8266-based microcontroller<a class="headerlink" href="#open-putty-and-connect-to-the-esp8266-based-microcontroller" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1.3.4. </span>Open PuTTY and connect to the ESP8266-based microcontroller<a class="headerlink" href="#open-putty-and-connect-to-the-esp8266-based-microcontroller" title="Permalink to this headline">¶</a></h2>
 <p>Ensure the microcontroller is connected to your computer with a USB cable. Then initialize serial communication between the microcontroller and your computer with PuTTY. In PuTTY set the proper serial port (COM#) and 115200 baud. Remember to use the <strong>[Serial[</strong> radio button under <strong>[Connection Type:]</strong> to select serial communication or PuTTY will attempt to communicate with the microcontroller over SSH which won’t work.</p>
 <p><img alt="PuTTY in Windows 10 start menu" src="../_images/putty_in_start_menu.png" /></p>
 <p><img alt="PuTTY configuration" src="../_images/putty_config.PNG" /></p>
@@ -263,7 +321,7 @@
 <p><img alt="MicroPython REPL prompt" src="../_images/REPL_prompt.PNG" /></p>
 </div>
 <div class="section" id="run-commands-at-the-micropython-repl">
-<h2>Run commands at the MicroPython REPL<a class="headerlink" href="#run-commands-at-the-micropython-repl" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.1.3.5. </span>Run commands at the MicroPython REPL<a class="headerlink" href="#run-commands-at-the-micropython-repl" title="Permalink to this headline">¶</a></h2>
 <p>At the MicroPython REPL (the MicroPython command prompt <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>) try the following commands:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; print(&#39;MicroPython for Engineers!&#39;)
 MicroPython for Engineers
@@ -308,8 +366,8 @@ Problem Solving with MicroPython!
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="12.02-Installing-MicroPython.html" title="previous page">Installing MicroPython</a>
-    <a class='right-next' id="next-link" href="12.04-Blinking-a-LED.html" title="next page">Blinking a LED</a>
+    <a class='left-prev' id="prev-link" href="12.02-Installing-MicroPython.html" title="previous page"><span class="section-number">13.1.2. </span>Installing MicroPython</a>
+    <a class='right-next' id="next-link" href="12.04-Blinking-a-LED.html" title="next page"><span class="section-number">13.1.4. </span>Blinking a LED</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

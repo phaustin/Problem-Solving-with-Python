@@ -1,13 +1,13 @@
 Traceback (most recent call last):
-  File "/Users/phil/a50037/envs/june22/lib/python3.7/site-packages/jupyter_cache/executors/basic.py", line 163, in execute
+  File "/Users/phil/a50037/envs/jbenv/lib/python3.7/site-packages/jupyter_cache/executors/basic.py", line 163, in execute
     executenb(nb_bundle.nb, cwd=tmpdirname, timeout=timeout)
-  File "/Users/phil/a50037/envs/june22/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 737, in executenb
+  File "/Users/phil/a50037/envs/jbenv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 737, in executenb
     return ep.preprocess(nb, resources, km=km)[0]
-  File "/Users/phil/a50037/envs/june22/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 405, in preprocess
+  File "/Users/phil/a50037/envs/jbenv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 405, in preprocess
     nb, resources = super(ExecutePreprocessor, self).preprocess(nb, resources)
-  File "/Users/phil/a50037/envs/june22/lib/python3.7/site-packages/nbconvert/preprocessors/base.py", line 69, in preprocess
+  File "/Users/phil/a50037/envs/jbenv/lib/python3.7/site-packages/nbconvert/preprocessors/base.py", line 69, in preprocess
     nb.cells[index], resources = self.preprocess_cell(cell, resources, index)
-  File "/Users/phil/a50037/envs/june22/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 448, in preprocess_cell
+  File "/Users/phil/a50037/envs/jbenv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 448, in preprocess_cell
     raise CellExecutionError.from_cell_and_msg(cell, out)
 nbconvert.preprocessors.execute.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -27,7 +27,7 @@ print('Loop exited')
 [1;32m      4[0m         [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m [0mprint[0m[0;34m([0m[0;34m'Loop exited'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m~/a50037/envs/june22/lib/python3.7/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[0;32m~/a50037/envs/jbenv/lib/python3.7/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
 [1;32m    856[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    857[0m             raise StdinNotImplementedError(
 [0;32m--> 858[0;31m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m

@@ -1,5 +1,0 @@
-# Preface
-
-```{tableofcontents}
-```
-
