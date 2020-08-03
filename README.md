@@ -18,11 +18,22 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
         cd Problem-Solving-with-Python-37-Edition
         git checkout -b jb origin/jb
 
-5) Install the jupyter-book tools (requires [miniconda python 3.8](https://docs.conda.io/en/latest/miniconda.html)) and build the book in notebooks/_build/html
+5) Log into the container to build the book:
 
-        conda env create -f environment_jb.yml
-        conda activate jbenv
+        docker exec -it base_pangeo bash
+
+
+   you should see a prompt that looks like:
+
+        jovyan@4466eaec6c1f:~$
+
+   which means that you're now user jovyan in the container.  To build the book:
+
         jb build notebooks
+
+   and you should see new files appear in the `notebooks/_build/html` folder
+
+   quit `Ctrl-d` to quit the container
 
 6) at the prompt, type:
 
