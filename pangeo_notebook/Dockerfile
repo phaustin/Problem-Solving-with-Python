@@ -1,0 +1,22 @@
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+ARG BASE_CONTAINER=jupyter/scipy-notebook
+FROM $BASE_CONTAINER
+
+LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+
+USER $NB_UID
+
+# Install Python 3 packages
+RUN conda install --quiet --yes \
+    'pip' \
+    'xarray' \
+    'zarr' \
+    && \
+    conda clean --all -f -y 
+
+RUN pip install jupytext[myst]
+
+USER $NB_UID
+
+WORKDIR $HOME

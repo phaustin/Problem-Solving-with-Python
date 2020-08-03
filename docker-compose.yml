@@ -4,7 +4,7 @@ services:
   webserver:
     build:
       context: .
-      dockerfile: docker_webserver/Dockerfile
+      dockerfile: apache_webserver/Dockerfile
     image: phaustin/webserver_intropy
     container_name: webserver_intropy
     ports:
@@ -18,18 +18,21 @@ services:
     networks:
       - dask_net
 
-  datascience-notebook:
-      image:    jupyter/minimal-notebook
+  pangeo-notebook:
+      build:
+        context: ./pangeo_notebook
+        dockerfile: Dockerfile
+      image: phaustin/base_pangeo
+      container_name: base_pangeo
       volumes:
-        - ${LOCAL_WORKING_DIR}:/home/jovyan/work
+        - ${LOCAL_NOTEBOOK_DIR}:/home/jovyan/notebooks
         - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
         - ${LOCAL_MODULES}:/home/jovyan/work/modules
-        - ${LOCAL_SSL_CERTS}:/etc/ssl/notebook
+        - "/var/run/docker.sock:/var/run/docker.sock"
       ports:
         - ${NB_PORT}:8888
       networks:
         - dask_net
-      container_name:   jupyter_notebook
       command: "start-notebook.sh \
          --NotebookApp.password=${ACCESS_TOKEN}"
 

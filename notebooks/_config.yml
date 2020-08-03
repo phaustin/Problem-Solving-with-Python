@@ -1,6 +1,6 @@
 #######################################################################################
 # Book settings
-title: ""
+title: "PSWP"
 logo: images/logo.png
 author: Peter D. Kazarinoff, PhD
 email: peter.kazarinoff@pcc.edu
@@ -13,6 +13,13 @@ execute:
 
 exclude_patterns: ["*ipynb"]
 
+# Jupyterhub link settings
+# launch_buttons:
+#   notebook_interface: "classic"  # or "jupyterlab"
+#   use_jupyterhub_button: true               # JupyterHub (that you provide)
+#   jupyterhub_url: "http://127.0.0.1:9500" # The URL for your JupyterHub. If no URL, use ""
+#   jupyterhub_interact_text: Interact (localhost)    # The text that interact buttons will contain.
+
 html:
   home_page_in_navbar: false
-  baseurl: https://jupyterbook.org/
+  baseurl: http://l127.0.0.1:8500
