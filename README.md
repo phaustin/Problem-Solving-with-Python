@@ -7,7 +7,7 @@ A print copy of the book is available on Amazon: [https://www.amazon.com/dp/1693
 
 This fork is an experimental repo to see how easy it is to serve a jupyter book as a docker image.  To run:
 
-1) install docker and docker-compose (with the wls2 backend if you are on windows)
+1) install docker and docker-compose (with the wsl2 backend if you are on windows)
 2) open a unix shell
 3) clone this repository  (do this from unix, not windows)
 
