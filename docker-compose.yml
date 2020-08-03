@@ -12,7 +12,7 @@ services:
       - "9800:80"
     volumes:
       - type: bind
-        source: ./_build/html
+        source: ./notebooks/_build/html
         target: /usr/local/apache2/htdocs
       - "/var/run/docker.sock:/var/run/docker.sock"
       - jupyterhub_data:/srv/jupyterhub
