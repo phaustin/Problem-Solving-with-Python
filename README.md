@@ -24,26 +24,26 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
         conda activate jbenv
         jb build notebooks
 
-5) at the prompt, type:
+6) at the prompt, type:
 
         docker-compose up
 
-6) if this succeeds, you should see two containers running when you do:
+7) if this succeeds, you should see two containers running when you do:
 
         docker ps
 
-7) The container `phaustin/base_pangeo` is running a jupyter notebook server on port 9500
+8) The container `phaustin/base_pangeo` is running a jupyter notebook server on port 9500
    and the container `phaustin/webserver_intropy` is running an apache webserver on port 8500
 
-8) To see the text of the jupyter-book, point your web browser at `localhost:8500`
+9) To see the text of the jupyter-book, point your web browser at `localhost:8500`
 
-9) To access the notebooks, point your web browser at `localhost:9500` and enter the password: `friend` at in the password box on that page.
+10) To access the notebooks, point your web browser at `localhost:9500` and enter the password: `friend` at in the password box on that page.
 
-10) to remove all volumes and containers do:
+11) to remove all volumes and containers do:
 
        bash bringdown.sh
 
-11) to remove all images do:
+12) to remove all images do:
 
        docker rmi $(docker images -q)
 
