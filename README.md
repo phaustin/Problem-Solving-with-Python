@@ -18,10 +18,11 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
         cd Problem-Solving-with-Python-37-Edition
         git checkout -b jb origin/jb
 
-5) Install the jupyter-book tools (requires [miniconda python 3.8](https://docs.conda.io/en/latest/miniconda.html)
+5) Install the jupyter-book tools (requires [miniconda python 3.8](https://docs.conda.io/en/latest/miniconda.html) and build the book in notebooks/_build/html
 
         conda env create -f environment_jb.yml
         conda activate jbenv
+        jb build notebooks
 
 6) at the prompt, type:
 
@@ -38,7 +39,7 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
 
 10) To access the notebooks, point your web browser at `localhost:9500` and enter the password: `friend` at in the password box on that page.
 
-10) to remove all volumes and containers do:
+11) to remove all volumes and containers do:
 
        bash bringdown.sh
 
