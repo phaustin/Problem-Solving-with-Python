@@ -18,10 +18,22 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
         cd Problem-Solving-with-Python-37-Edition
         git checkout -b jb origin/jb
 
-5) Log into the container to build the book:
+
+5) at the prompt, type:
+
+        docker-compose up
+
+6) if this succeeds, you should see two containers running when you do:
+
+        docker ps
+
+7) The container `phaustin/base_pangeo` is running a jupyter notebook server on port 9500
+   and the container `phaustin/webserver_intropy` is running an apache webserver on port 8500
+
+
+8) Log into the container to build the book:
 
         docker exec -it base_pangeo bash
-
 
    you should see a prompt that looks like:
 
@@ -33,18 +45,8 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
 
    and you should see new files appear in the `notebooks/_build/html` folder
 
-   quit `Ctrl-d` to quit the container
+   type `Ctrl-d` to quit the container
 
-6) at the prompt, type:
-
-        docker-compose up
-
-7) if this succeeds, you should see two containers running when you do:
-
-        docker ps
-
-8) The container `phaustin/base_pangeo` is running a jupyter notebook server on port 9500
-   and the container `phaustin/webserver_intropy` is running an apache webserver on port 8500
 
 9) To see the text of the jupyter-book, point your web browser at `localhost:8500`
 
