@@ -5,11 +5,10 @@ services:
     build:
       context: .
       dockerfile: docker_webserver/Dockerfile
-
     image: phaustin/webserver_intropy
     container_name: webserver_intropy
     ports:
-      - "9800:80"
+      - "${TEXT_PORT}:80"
     volumes:
       - type: bind
         source: ./notebooks/_build/html
@@ -18,13 +17,27 @@ services:
       - jupyterhub_data:/srv/jupyterhub
     networks:
       - dask_net
-      
-      
+
+  datascience-notebook:
+      image:    jupyter/minimal-notebook
+      volumes:
+        - ${LOCAL_WORKING_DIR}:/home/jovyan/work
+        - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
+        - ${LOCAL_MODULES}:/home/jovyan/work/modules
+        - ${LOCAL_SSL_CERTS}:/etc/ssl/notebook
+      ports:
+        - ${NB_PORT}:8888
+      networks:
+        - dask_net
+      container_name:   jupyter_notebook
+      command: "start-notebook.sh \
+         --NotebookApp.password=${ACCESS_TOKEN}"
+
 # the actual name will be <directory_name>_<network_name>
 networks:
     dask_net:
       driver: bridge
-      
+
 volumes:
   jupyterhub_data:
 
