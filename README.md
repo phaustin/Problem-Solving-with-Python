@@ -18,7 +18,7 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
         cd Problem-Solving-with-Python-37-Edition
         git checkout -b jb origin/jb
 
-5) Install the jupyter-book tools (requires [miniconda python 3.8](https://docs.conda.io/en/latest/miniconda.html) and build the book in notebooks/_build/html
+5) Install the jupyter-book tools (requires [miniconda python 3.8](https://docs.conda.io/en/latest/miniconda.html)) and build the book in notebooks/_build/html
 
         conda env create -f environment_jb.yml
         conda activate jbenv
