@@ -50,7 +50,7 @@ This fork is an experimental repo to see how easy it is to serve a jupyter book 
 
 9) To see the text of the jupyter-book, point your web browser at `localhost:8500`
 
-10) To access the notebooks, point your web browser at `localhost:9500` and enter the password: `friend` at in the password box on that page.
+10) To access the notebooks, point your web browser at `localhost:9500` and enter the password: `friend` in the password box on that page.
 
 11) to remove all volumes and containers do:
 
