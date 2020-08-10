@@ -20,9 +20,9 @@ services:
 
   user_notebook:
       build:
-        context: ./user_notebook
-        dockerfile: Dockerfile
-      image: phaustin/user_notebook:aug10
+        context: .
+        dockerfile: ./user_notebook/Dockerfile
+      image: phaustin/user_notebook:aug11
       container_name: user_notebook
       volumes:
         - ${LOCAL_NOTEBOOK_DIR}:/home/jovyan/notebooks
