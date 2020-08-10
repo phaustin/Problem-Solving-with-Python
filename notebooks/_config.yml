@@ -19,7 +19,7 @@ repository:
   path_to_book: notebooks
 
 launch_buttons:
-  notebook_interface: "jupyterlab" # The interface interactive links will activate ["classic", "jupyterlab"]
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
   binderhub_url: http://127.0.0.1:9500
   
 html:
