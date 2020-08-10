@@ -18,12 +18,12 @@ services:
     networks:
       - dask_net
 
-  pangeo-notebook:
+  user-notebook:
       build:
-        context: ./pangeo_notebook
+        context: ./user_notebook
         dockerfile: Dockerfile
-      image: phaustin/base_pangeo
-      container_name: base_pangeo
+      image: phaustin/user_notebook
+      container_name: user_notebook
       volumes:
         - ${LOCAL_NOTEBOOK_DIR}:/home/jovyan/notebooks
         - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
