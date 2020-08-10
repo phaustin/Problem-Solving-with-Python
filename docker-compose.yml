@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: apache_webserver/Dockerfile
-    image: phaustin/webserver_intropy
-    container_name: webserver_intropy
+    image: phaustin/webserver:aug10
+    container_name: webserver
     ports:
       - "${TEXT_PORT}:80"
     volumes:
