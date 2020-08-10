@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -30,8 +31,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="_static/searchtools.js"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/search.html" />
+    <link rel="canonical" href="http://127.0.0.1:8500/search.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="#" />
   <script src="searchindex.js" defer></script>
@@ -42,13 +50,13 @@
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/search.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/search.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="PSWP" />
 <meta property="og:description" content="" />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -80,72 +88,72 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01-Orientation/01.00-Welcome.html">
+  <a class="reference internal" href="01-Orientation/01_00-Welcome.html">
    2. Orientation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04-Data-Types-and-Variables/04.00-Introduction.html">
+  <a class="reference internal" href="04-Data-Types-and-Variables/04_00-Introduction.html">
    5. Data Types and Variables
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="05-NumPy-and-Arrays/05.00-Introduction.html">
+  <a class="reference internal" href="05-NumPy-and-Arrays/05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="06-Plotting-with-Matplotlib/06.00-Introduction.html">
+  <a class="reference internal" href="06-Plotting-with-Matplotlib/06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08-If-Else-Try-Except/08.00-Introduction.html">
+  <a class="reference internal" href="08-If-Else-Try-Except/08_00-Introduction.html">
    9. If Else Try Except
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="11-Python-and-External-Hardware/11.00-Introduction.html">
+  <a class="reference internal" href="11-Python-and-External-Hardware/11_00-Introduction.html">
    12. Python and External Hardware
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>

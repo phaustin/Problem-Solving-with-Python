@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>6.1.4. Array Creation &#8212; PSWP</title>
+    <title>Array Creation &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,24 +30,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/05-NumPy-and-Arrays/05.04-Array-Creation.html" />
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://127.0.0.1:8500/05-NumPy-and-Arrays/05.04-Array-Creation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1.5. Array Indexing" href="05.05-Array-Indexing.html" />
-    <link rel="prev" title="6.1.3. Python Lists and NumPy Arrays" href="05.03-Python-Lists-and-NumPy-Arrays.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/05-NumPy-and-Arrays/05.04-Array-Creation.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/05-NumPy-and-Arrays/05.04-Array-Creation.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Array Creation" />
 <meta property="og:description" content="Array Creation  NumPy arrays are created with the np.array() function. The arguments provided to np.array() needs to be a list or iterable. An example is below." />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,126 +81,74 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+  <a class="reference internal" href="../01-Orientation/01_00-Welcome.html">
    2. Orientation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04_00-Introduction.html">
    5. Data Types and Variables
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="05.00-Introduction.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.01-NumPy.html">
-     6.1.1. NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.02-Installing-NumPy.html">
-     6.1.2. Installing NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.03-Python-Lists-and-NumPy-Arrays.html">
-     6.1.3. Python Lists and NumPy Arrays
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     6.1.4. Array Creation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.05-Array-Indexing.html">
-     6.1.5. Array Indexing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.06-Array-Slicing.html">
-     6.1.6. Array Slicing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.07-Array-Opperations.html">
-     6.1.7. Array Operations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.08-Systems-of-Linear-Equations.html">
-     6.1.8. Systems of Linear Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.09-Summary.html">
-     6.1.9. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="05.10-Review-Questions.html">
-     6.1.10. Review Questions
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="../07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08_00-Introduction.html">
    9. If Else Try Except
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11_00-Introduction.html">
    12. Python and External Hardware
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>
@@ -236,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/05-NumPy-and-Arrays/05.04-Array-Creation.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/05-NumPy-and-Arrays/05.04-Array-Creation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -255,94 +209,111 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/05-NumPy-and-Arrays/05.04-Array-Creation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arrays-of-regularly-spaced-numbers">
-   6.1.4.1. Arrays of Regularly Spaced Numbers
+   Arrays of Regularly Spaced Numbers
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-arange">
-     6.1.4.1.1. np.arange()
+     np.arange()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-linspace">
-     6.1.4.1.2. np.linspace()
+     np.linspace()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-logspace">
-     6.1.4.1.3. np.logspace()
+     np.logspace()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-zeros">
-     6.1.4.1.4. np.zeros()
+     np.zeros()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-ones">
-     6.1.4.1.5. np.ones()
+     np.ones()
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arrays-of-random-numbers">
-   6.1.4.2. Arrays of Random Numbers
+   Arrays of Random Numbers
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#array-of-random-integers">
-     6.1.4.2.1. Array of Random Integers
+     Array of Random Integers
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#array-of-random-floats">
-     6.1.4.2.2. Array of Random Floats
+     Array of Random Floats
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#random-array-choice-from-a-list">
-     6.1.4.2.3. Random Array Choice from  a List
+     Random Array Choice from  a List
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#random-array-with-a-normal-distribution">
-     6.1.4.2.4. Random Array with a Normal Distribution
+     Random Array with a Normal Distribution
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-arrays">
-   6.1.4.3. 2-D Arrays
+   2-D Arrays
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-meshgrid">
-     6.1.4.3.1. np.meshgrid()
+     np.meshgrid()
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#np-mgrid">
-     6.1.4.3.2. np.mgrid[]
+     np.mgrid[]
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#section-summary">
-   6.1.4.4. Section Summary
+   Section Summary
   </a>
  </li>
 </ul>
@@ -356,7 +327,7 @@
               <div>
                 
   <div class="section" id="array-creation">
-<h1><span class="section-number">6.1.4. </span>Array Creation<a class="headerlink" href="#array-creation" title="Permalink to this headline">¶</a></h1>
+<h1>Array Creation<a class="headerlink" href="#array-creation" title="Permalink to this headline">¶</a></h1>
 <p>NumPy arrays are created with the <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> function. The arguments provided to <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> needs to be a list or iterable. An example is below. Note how the list <code class="docutils literal notranslate"><span class="pre">[1,2,3]</span></code> is passed into the function with square brackets at either end.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -402,10 +373,10 @@
 </div>
 <p>In addition to <code class="docutils literal notranslate"><span class="pre">np.array()</span></code>, there are other functions you can use to create NumPy arrays.</p>
 <div class="section" id="arrays-of-regularly-spaced-numbers">
-<h2><span class="section-number">6.1.4.1. </span>Arrays of Regularly Spaced Numbers<a class="headerlink" href="#arrays-of-regularly-spaced-numbers" title="Permalink to this headline">¶</a></h2>
+<h2>Arrays of Regularly Spaced Numbers<a class="headerlink" href="#arrays-of-regularly-spaced-numbers" title="Permalink to this headline">¶</a></h2>
 <p>There are multiple ways to create arrays of regularly spaced numbers with NumPy. The next section introduces five NumPy functions to create regular arrays.</p>
 <div class="section" id="np-arange">
-<h3><span class="section-number">6.1.4.1.1. </span>np.arange()<a class="headerlink" href="#np-arange" title="Permalink to this headline">¶</a></h3>
+<h3>np.arange()<a class="headerlink" href="#np-arange" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> function creates a NumPy array according the arguments <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>,<code class="docutils literal notranslate"><span class="pre">step</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
 </pre></div>
@@ -426,7 +397,7 @@
 </div>
 </div>
 <div class="section" id="np-linspace">
-<h3><span class="section-number">6.1.4.1.2. </span>np.linspace()<a class="headerlink" href="#np-linspace" title="Permalink to this headline">¶</a></h3>
+<h3>np.linspace()<a class="headerlink" href="#np-linspace" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code> function creates a NumPy array according the arguments <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>,<code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">elements</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">number</span> <span class="n">of</span> <span class="n">elements</span><span class="p">)</span>
 </pre></div>
@@ -447,7 +418,7 @@
 </div>
 </div>
 <div class="section" id="np-logspace">
-<h3><span class="section-number">6.1.4.1.3. </span>np.logspace()<a class="headerlink" href="#np-logspace" title="Permalink to this headline">¶</a></h3>
+<h3>np.logspace()<a class="headerlink" href="#np-logspace" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.logspace()</span></code> function creates a NumPy array according the arguments <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>,<code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">elements</span></code>, but unlike <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.logspace()</span></code> produces a logarithmically spaced array.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">number</span> <span class="n">of</span> <span class="n">elements</span><span class="p">,</span> <span class="n">base</span><span class="o">=&lt;</span><span class="n">num</span><span class="o">&gt;</span><span class="p">)</span>
 </pre></div>
@@ -474,7 +445,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="stderr docutils container">
-<pre class="stderr literal-block">/Users/phil/a50037/envs/june22/lib/python3.7/site-packages/numpy/core/function_base.py:274: RuntimeWarning: overflow encountered in power
+<pre class="stderr literal-block">/opt/conda/lib/python3.8/site-packages/numpy/core/function_base.py:265: RuntimeWarning: overflow encountered in power
   return _nx.power(base, y)
 </pre>
 </div>
@@ -485,7 +456,7 @@
 </div>
 </div>
 <div class="section" id="np-zeros">
-<h3><span class="section-number">6.1.4.1.4. </span>np.zeros()<a class="headerlink" href="#np-zeros" title="Permalink to this headline">¶</a></h3>
+<h3>np.zeros()<a class="headerlink" href="#np-zeros" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code> function creates a NumPy array containing all  zeros of a specific size. <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code> is useful when the size of an array is known, but the values that will go into the array have not been created yet.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">rows</span><span class="p">,</span><span class="n">cols</span><span class="p">))</span>
 </pre></div>
@@ -508,7 +479,7 @@
 </div>
 </div>
 <div class="section" id="np-ones">
-<h3><span class="section-number">6.1.4.1.5. </span>np.ones()<a class="headerlink" href="#np-ones" title="Permalink to this headline">¶</a></h3>
+<h3>np.ones()<a class="headerlink" href="#np-ones" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code> function creates a NumPy array containing all 1’s of a specific size. Like <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code> is useful when the size of an array is known, but the values that will go into the array have not been created yet.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">rows</span><span class="p">,</span><span class="n">cols</span><span class="p">))</span>
 </pre></div>
@@ -531,10 +502,10 @@
 </div>
 </div>
 <div class="section" id="arrays-of-random-numbers">
-<h2><span class="section-number">6.1.4.2. </span>Arrays of Random Numbers<a class="headerlink" href="#arrays-of-random-numbers" title="Permalink to this headline">¶</a></h2>
+<h2>Arrays of Random Numbers<a class="headerlink" href="#arrays-of-random-numbers" title="Permalink to this headline">¶</a></h2>
 <p>NumPy has functions to create arrays of many different types of random numbers in the <code class="docutils literal notranslate"><span class="pre">np.random</span></code> module. A few of the common random number types are detailed below.</p>
 <div class="section" id="array-of-random-integers">
-<h3><span class="section-number">6.1.4.2.1. </span>Array of Random Integers<a class="headerlink" href="#array-of-random-integers" title="Permalink to this headline">¶</a></h3>
+<h3>Array of Random Integers<a class="headerlink" href="#array-of-random-integers" title="Permalink to this headline">¶</a></h3>
 <p>Arrays of random integers can be created with NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> function. The general syntax is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">lower</span> <span class="n">limit</span><span class="p">,</span> <span class="n">upper</span> <span class="n">limit</span><span class="p">,</span> <span class="n">number</span> <span class="n">of</span> <span class="n">values</span><span class="p">)</span>
 </pre></div>
@@ -547,7 +518,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([5, 1, 2, 7, 5])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1, 4, 3, 3, 5])
 </pre></div>
 </div>
 </div>
@@ -560,18 +531,18 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([[7, 7, 7, 2, 9],
-       [8, 4, 6, 8, 5],
-       [3, 1, 4, 0, 6],
-       [9, 3, 5, 1, 7],
-       [5, 2, 1, 5, 0]])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([[5, 4, 5, 7, 0],
+       [6, 1, 9, 9, 8],
+       [4, 4, 8, 9, 2],
+       [9, 3, 4, 4, 1],
+       [2, 5, 1, 9, 9]])
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="array-of-random-floats">
-<h3><span class="section-number">6.1.4.2.2. </span>Array of Random Floats<a class="headerlink" href="#array-of-random-floats" title="Permalink to this headline">¶</a></h3>
+<h3>Array of Random Floats<a class="headerlink" href="#array-of-random-floats" title="Permalink to this headline">¶</a></h3>
 <p>Arrays of random floating point numbers can be created with NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.rand()</span></code> function. The general syntax is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">number</span> <span class="n">of</span> <span class="n">values</span><span class="p">)</span>
 </pre></div>
@@ -584,7 +555,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([0.53853406, 0.32158564, 0.92782114, 0.18581405, 0.21656584])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([0.21313899, 0.51328149, 0.21738489, 0.85462985, 0.93854674])
 </pre></div>
 </div>
 </div>
@@ -598,7 +569,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([9.02506142, 2.64782672, 4.91775129, 3.35560948, 1.19932693])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1.59451105, 2.05317273, 9.16945269, 4.26291841, 3.11430731])
 </pre></div>
 </div>
 </div>
@@ -611,14 +582,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([11.63290851, 12.11707902, 11.7942619 , 11.12555635, 12.81574154])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([11.86484235, 12.97399227, 12.9979602 , 12.18544142, 12.83770673])
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="random-array-choice-from-a-list">
-<h3><span class="section-number">6.1.4.2.3. </span>Random Array Choice from  a List<a class="headerlink" href="#random-array-choice-from-a-list" title="Permalink to this headline">¶</a></h3>
+<h3>Random Array Choice from  a List<a class="headerlink" href="#random-array-choice-from-a-list" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span> <span class="n">of</span> <span class="n">choices</span><span class="p">,</span> <span class="n">number</span> <span class="n">of</span> <span class="n">choices</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -631,14 +602,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1, 9, 1])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1, 9, 5])
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="random-array-with-a-normal-distribution">
-<h3><span class="section-number">6.1.4.2.4. </span>Random Array with a Normal Distribution<a class="headerlink" href="#random-array-with-a-normal-distribution" title="Permalink to this headline">¶</a></h3>
+<h3>Random Array with a Normal Distribution<a class="headerlink" href="#random-array-with-a-normal-distribution" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.random.randn()</span></code> returns an array of  random numbers with a normal distribution, assuming a mean of 0 and variance of 1.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">number</span> <span class="n">of</span> <span class="n">values</span><span class="p">)</span>
 </pre></div>
@@ -650,8 +621,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([ 1.70498977, -0.88882485, -1.04446671, -0.35078922, -1.59957961,
-       -0.65395995, -1.38846051,  0.43961516, -0.08088945, -0.70930104])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([ 0.0326588 , -1.07857839,  1.71706393,  1.41538457, -1.65542796,
+       -0.61428222,  1.1521198 ,  0.3039963 , -0.77481501, -0.55658426])
 </pre></div>
 </div>
 </div>
@@ -667,8 +638,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([69.1150408 , 61.56921148, 67.65600727, 74.31529674, 70.67763054,
-       70.87489263, 71.48124545, 80.21057037, 67.37287741, 72.98229511])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([65.80483153, 74.14487324, 68.42446976, 80.26262745, 59.05676773,
+       68.71604825, 59.9523371 , 63.28845948, 72.43620436, 67.14744541])
 </pre></div>
 </div>
 </div>
@@ -697,9 +668,9 @@
 </div>
 </div>
 <div class="section" id="d-arrays">
-<h2><span class="section-number">6.1.4.3. </span>2-D Arrays<a class="headerlink" href="#d-arrays" title="Permalink to this headline">¶</a></h2>
+<h2>2-D Arrays<a class="headerlink" href="#d-arrays" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="np-meshgrid">
-<h3><span class="section-number">6.1.4.3.1. </span>np.meshgrid()<a class="headerlink" href="#np-meshgrid" title="Permalink to this headline">¶</a></h3>
+<h3>np.meshgrid()<a class="headerlink" href="#np-meshgrid" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.meshgrid()</span></code> function takes in two positional arguments which are 1D NumPy arrays. The two input arrays do not have to contain the same number of elements. The outputs of the <code class="docutils literal notranslate"><span class="pre">np.meshgrid()</span></code> function are two 2D arrays. One of the 2D arrays has the same values in each row; the other 2D array has the same values in each column.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">)</span>
 </pre></div>
@@ -734,7 +705,7 @@
 <p>Note how the first array <code class="docutils literal notranslate"><span class="pre">X</span></code> has the same numbers in each row, and the second array <code class="docutils literal notranslate"><span class="pre">Y</span></code> has the same numbers in each column.</p>
 </div>
 <div class="section" id="np-mgrid">
-<h3><span class="section-number">6.1.4.3.2. </span>np.mgrid[]<a class="headerlink" href="#np-mgrid" title="Permalink to this headline">¶</a></h3>
+<h3>np.mgrid[]<a class="headerlink" href="#np-mgrid" title="Permalink to this headline">¶</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.mgrid[]</span></code> function is similar to <code class="docutils literal notranslate"><span class="pre">np.meshgrid()</span></code>, but has a “MATLAB-like” syntax and behavior.</p>
 <p>Use square brackets <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> after the <code class="docutils literal notranslate"><span class="pre">np.mgrid</span></code> function name. Separate the two “lists” passed as input arguments with a comma and use the <code class="docutils literal notranslate"><span class="pre">start:stop:step</span></code> indexing method. The outputs of the <code class="docutils literal notranslate"><span class="pre">np.mgrid[]</span></code> function are two 2D arrays. The first 2D array has the same values in each row; the second 2D array has the same values in each column.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
@@ -766,7 +737,7 @@
 </div>
 </div>
 <div class="section" id="section-summary">
-<h2><span class="section-number">6.1.4.4. </span>Section Summary<a class="headerlink" href="#section-summary" title="Permalink to this headline">¶</a></h2>
+<h2>Section Summary<a class="headerlink" href="#section-summary" title="Permalink to this headline">¶</a></h2>
 <p>Below is a list of NumPy functions and associated descriptions used in this section.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -816,6 +787,25 @@
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./05-NumPy-and-Arrays"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -825,8 +815,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="05.03-Python-Lists-and-NumPy-Arrays.html" title="previous page"><span class="section-number">6.1.3. </span>Python Lists and NumPy Arrays</a>
-    <a class='right-next' id="next-link" href="05.05-Array-Indexing.html" title="next page"><span class="section-number">6.1.5. </span>Array Indexing</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

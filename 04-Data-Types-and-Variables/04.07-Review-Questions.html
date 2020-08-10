@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>5.1.7. Review Questions &#8212; PSWP</title>
+    <title>Review Questions &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,24 +30,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/04-Data-Types-and-Variables/04.07-Review-Questions.html" />
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://127.0.0.1:8500/04-Data-Types-and-Variables/04.07-Review-Questions.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. NumPy and Arrays" href="../05-NumPy-and-Arrays/05.00-Introduction.html" />
-    <link rel="prev" title="5.1.6. Summary" href="04.06-Summary.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/04-Data-Types-and-Variables/04.07-Review-Questions.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/04-Data-Types-and-Variables/04.07-Review-Questions.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Review Questions" />
-<meta property="og:description" content="Review Questions  Determine the Data Type  Q04.01 Find the data type of a if a=9  Q04.02 Find the data type of a if a=9.  Q04.03 Find the data type of a if a='9" />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:description" content="Review Questions  Determine the Data Type  Q04.01 Find the data type of a if a=9  Q04.02 Find the data type of a if a=9.  Q04.03 Find the data type of a if a=&#39;9" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,111 +81,74 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+  <a class="reference internal" href="../01-Orientation/01_00-Welcome.html">
    2. Orientation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="04.00-Introduction.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_00-Introduction.html">
    5. Data Types and Variables
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="04.01-Numeric-Data-Types.html">
-     5.1.1. Numeric Data Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04.02-Boolean-Data-Type.html">
-     5.1.2. Boolean Data Type
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04.03-Strings.html">
-     5.1.3. Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04.04-Lists.html">
-     5.1.4. Lists
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04.05-Dictionaries-and-Tuples.html">
-     5.1.5. Dictionaries and Tuples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04.06-Summary.html">
-     5.1.6. Summary
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     5.1.7. Review Questions
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="../07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08_00-Introduction.html">
    9. If Else Try Except
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11_00-Introduction.html">
    12. Python and External Hardware
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>
@@ -221,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/04-Data-Types-and-Variables/04.07-Review-Questions.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/04-Data-Types-and-Variables/04.07-Review-Questions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -240,53 +209,70 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/04-Data-Types-and-Variables/04.07-Review-Questions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#determine-the-data-type">
-   5.1.7.1. Determine the Data Type
+   Determine the Data Type
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numeric-data-types">
-   5.1.7.2. Numeric Data Types
+   Numeric Data Types
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#booleans">
-   5.1.7.3. Booleans
+   Booleans
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#strings">
-   5.1.7.4. Strings
+   Strings
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists">
-   5.1.7.5. Lists
+   Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dictionaries">
-   5.1.7.6. Dictionaries
+   Dictionaries
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tuples">
-   5.1.7.7. Tuples
+   Tuples
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#errors-explanations-and-solutions">
-   5.1.7.8. Errors, Explanations, and Solutions
+   Errors, Explanations, and Solutions
   </a>
  </li>
 </ul>
@@ -300,9 +286,9 @@
               <div>
                 
   <div class="section" id="review-questions">
-<h1><span class="section-number">5.1.7. </span>Review Questions<a class="headerlink" href="#review-questions" title="Permalink to this headline">¶</a></h1>
+<h1>Review Questions<a class="headerlink" href="#review-questions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="determine-the-data-type">
-<h2><span class="section-number">5.1.7.1. </span>Determine the Data Type<a class="headerlink" href="#determine-the-data-type" title="Permalink to this headline">¶</a></h2>
+<h2>Determine the Data Type<a class="headerlink" href="#determine-the-data-type" title="Permalink to this headline">¶</a></h2>
 <p>Q04.01 Find the data type of <code class="docutils literal notranslate"><span class="pre">a</span></code> if <code class="docutils literal notranslate"><span class="pre">a=9</span></code></p>
 <p>Q04.02 Find the data type of <code class="docutils literal notranslate"><span class="pre">a</span></code> if <code class="docutils literal notranslate"><span class="pre">a=9.</span></code></p>
 <p>Q04.03 Find the data type of <code class="docutils literal notranslate"><span class="pre">a</span></code> if <code class="docutils literal notranslate"><span class="pre">a='9.'</span></code></p>
@@ -314,7 +300,7 @@
 <p>Q04.09 Find the data type of <code class="docutils literal notranslate"><span class="pre">a</span></code> if <code class="docutils literal notranslate"><span class="pre">a=1</span> <span class="pre">+</span> <span class="pre">9j</span></code></p>
 </div>
 <div class="section" id="numeric-data-types">
-<h2><span class="section-number">5.1.7.2. </span>Numeric Data Types<a class="headerlink" href="#numeric-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>Numeric Data Types<a class="headerlink" href="#numeric-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Q04.10 Set <code class="docutils literal notranslate"><span class="pre">a=1</span></code> and <code class="docutils literal notranslate"><span class="pre">b=2</span></code>. What data type is <code class="docutils literal notranslate"><span class="pre">a/b</span></code>?</p>
 <p>Q04.11 Set <code class="docutils literal notranslate"><span class="pre">a=1</span></code> and <code class="docutils literal notranslate"><span class="pre">b=2</span></code>. What data type is <code class="docutils literal notranslate"><span class="pre">a*b</span></code>?</p>
 <p>Q04.12 What is <code class="docutils literal notranslate"><span class="pre">5.1</span></code> plus <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">+</span> <span class="pre">3j</span></code>?</p>
@@ -337,7 +323,7 @@
 \[ magnitude = \sqrt{(real)^2+(imaginary)^2} \]</div>
 </div>
 <div class="section" id="booleans">
-<h2><span class="section-number">5.1.7.3. </span>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">¶</a></h2>
+<h2>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">¶</a></h2>
 <p>Q04.20 Predict the output if the lines <code class="docutils literal notranslate"><span class="pre">n=5</span></code> and <code class="docutils literal notranslate"><span class="pre">(n&lt;3)</span> <span class="pre">and</span> <span class="pre">(n&lt;7)</span></code> are run. Then run the the two lines of code.</p>
 <p>Q04.21 Predict the output if the lines of code below are run. Then run the code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ans</span><span class="o">=</span><span class="s1">&#39;Yes&#39;</span>
@@ -351,7 +337,7 @@
 <p>Q04.26 Show that <code class="docutils literal notranslate"><span class="pre">(n&lt;5)</span> <span class="pre">or</span> <span class="pre">(n&gt;=10)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">not(5</span> <span class="pre">=&lt;</span> <span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">10)</span></code> using the two different numbers for <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </div>
 <div class="section" id="strings">
-<h2><span class="section-number">5.1.7.4. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
 <p>Q04.30 Define a string that contains the word <span class="math notranslate nohighlight">\(Problem\)</span>.</p>
 <p>Q04.31 Define one string as the word <span class="math notranslate nohighlight">\(Problem\)</span> and define another string as the word <span class="math notranslate nohighlight">\(Solving\)</span>. Combine these two strings to make the statement <span class="math notranslate nohighlight">\(Problem \ Solving\)</span>.</p>
 <p>Q04.32 (a) Define a string that contains the number <span class="math notranslate nohighlight">\(8\)</span> and a string that contains the number <span class="math notranslate nohighlight">\(5\)</span>. Combine these two strings with the plus operator <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p>
@@ -381,7 +367,7 @@
 <p>(d) <code class="docutils literal notranslate"><span class="pre">oat</span></code></p>
 </div>
 <div class="section" id="lists">
-<h2><span class="section-number">5.1.7.5. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <p>Q04.40 Create a list that contains the numbers <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2.9 \times 10^8\)</span>, and the word <span class="math notranslate nohighlight">\(game\)</span>.</p>
 <p>Q04.41 Create a list that contains the words <span class="math notranslate nohighlight">\(problem\)</span>, <span class="math notranslate nohighlight">\(solving\)</span>, <span class="math notranslate nohighlight">\(with\)</span>, <span class="math notranslate nohighlight">\(python\)</span>.</p>
 <p>Q04.42 Create a list with one value, the number <span class="math notranslate nohighlight">\(6\)</span>. Convert the list to a boolean with the <code class="docutils literal notranslate"><span class="pre">bool()</span></code> function.</p>
@@ -396,7 +382,7 @@
 <p>Q04.51 Create a Python list containing the values 1, 2, 5.6, and 9 in that order and store it in a variable called <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </div>
 <div class="section" id="dictionaries">
-<h2><span class="section-number">5.1.7.6. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
 <p>Q04.60 Create a dictionary called <code class="docutils literal notranslate"><span class="pre">capitals</span></code> that contains the states and state capitals. Include <code class="docutils literal notranslate"><span class="pre">Washington</span></code>, capital <code class="docutils literal notranslate"><span class="pre">Olympia</span></code> and <code class="docutils literal notranslate"><span class="pre">Oregon</span></code>, capital <code class="docutils literal notranslate"><span class="pre">Salem</span></code>.</p>
 <p>Q04.61 Create a dictionary called <code class="docutils literal notranslate"><span class="pre">capitals</span></code> that contains the states and state capitals. Include <code class="docutils literal notranslate"><span class="pre">Washington</span></code>, capital <code class="docutils literal notranslate"><span class="pre">Olympia</span></code> and <code class="docutils literal notranslate"><span class="pre">Oregon</span></code>, capital <code class="docutils literal notranslate"><span class="pre">Salem</span></code>. In the line after the dictionary is created add the state <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">York</span></code>, capital <code class="docutils literal notranslate"><span class="pre">Albany</span></code>.</p>
 <p>Q04.62 Create a dictionary <code class="docutils literal notranslate"><span class="pre">numbers</span> <span class="pre">=</span> <span class="pre">{'one':1,</span> <span class="pre">'two':2,</span> <span class="pre">'three':3}</span></code>. Pull out the number <code class="docutils literal notranslate"><span class="pre">'2'</span></code> by calling the key <code class="docutils literal notranslate"><span class="pre">'two'</span></code>.</p>
@@ -408,7 +394,7 @@
 <p>Q04.68 Create a dictionary <code class="docutils literal notranslate"><span class="pre">college</span> <span class="pre">=</span> <span class="pre">{'name':</span> <span class="pre">'University</span> <span class="pre">of</span> <span class="pre">Oregon'}</span></code>. Add the following two keys: <span class="math notranslate nohighlight">\(abbreviation\)</span>, <span class="math notranslate nohighlight">\(mascot\)</span> and the corresponding two values: <span class="math notranslate nohighlight">\(UofO\)</span>, <span class="math notranslate nohighlight">\(ducks\)</span>.</p>
 </div>
 <div class="section" id="tuples">
-<h2><span class="section-number">5.1.7.7. </span>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h2>
+<h2>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h2>
 <p>Q04.70 Create a tuple with the numbers <span class="math notranslate nohighlight">\(8\)</span>, <span class="math notranslate nohighlight">\(9\)</span>, and <span class="math notranslate nohighlight">\(10\)</span>.</p>
 <p>Q04.71 Create a tuple that has a single entry, the number <span class="math notranslate nohighlight">\(10\)</span>.</p>
 <p>Q04.72 Create a list and a tuple that both contains the strings: <span class="math notranslate nohighlight">\(one\)</span>, <span class="math notranslate nohighlight">\(two\)</span> and <span class="math notranslate nohighlight">\(three\)</span>.   Pull the word <span class="math notranslate nohighlight">\(two\)</span> out of both the list and the tuple.</p>
@@ -424,7 +410,7 @@
 <p>Q04.76 Create a tuple that returns <code class="docutils literal notranslate"><span class="pre">False</span></code> when converted to a boolean. Use the <code class="docutils literal notranslate"><span class="pre">bool()</span></code> function to demonstrate your tuple converts to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </div>
 <div class="section" id="errors-explanations-and-solutions">
-<h2><span class="section-number">5.1.7.8. </span>Errors, Explanations, and Solutions<a class="headerlink" href="#errors-explanations-and-solutions" title="Permalink to this headline">¶</a></h2>
+<h2>Errors, Explanations, and Solutions<a class="headerlink" href="#errors-explanations-and-solutions" title="Permalink to this headline">¶</a></h2>
 <p>Q04.80 Run the following lines of code and explain the error in your own words. Then rewrite the lines of code to run error free:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">503</span>
 <span class="n">n</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -474,6 +460,25 @@
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./04-Data-Types-and-Variables"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -483,8 +488,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="04.06-Summary.html" title="previous page"><span class="section-number">5.1.6. </span>Summary</a>
-    <a class='right-next' id="next-link" href="../05-NumPy-and-Arrays/05.00-Introduction.html" title="next page"><span class="section-number">6. </span>NumPy and Arrays</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

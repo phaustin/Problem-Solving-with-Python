@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>12.1.3. Controlling an LED with Python &#8212; PSWP</title>
+    <title>Controlling an LED with Python &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,24 +30,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/11-Python-and-External-Hardware/11.03-Controlling-an-LED.html" />
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://127.0.0.1:8500/11-Python-and-External-Hardware/11.03-Controlling-an-LED.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12.1.4. Reading a Sensor with Python" href="11.04-Reading-a-Sensor-with-Python.html" />
-    <link rel="prev" title="12.1.2. Bytes and Unicode Strings" href="11.02-Bytes-and-Unicode-Strings.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/11-Python-and-External-Hardware/11.03-Controlling-an-LED.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/11-Python-and-External-Hardware/11.03-Controlling-an-LED.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Controlling an LED with Python" />
 <meta property="og:description" content="Controlling an LED with Python  In this section, you will learn how to control an LED connected to an external piece of hardware (an Arduino) using Python. To a" />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,106 +81,74 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+  <a class="reference internal" href="../01-Orientation/01_00-Welcome.html">
    2. Orientation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04_00-Introduction.html">
    5. Data Types and Variables
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="../07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08_00-Introduction.html">
    9. If Else Try Except
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="11.00-Introduction.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_00-Introduction.html">
    12. Python and External Hardware
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="11.01-PySerial.html">
-     12.1.1. PySerial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11.02-Bytes-and-Unicode-Strings.html">
-     12.1.2. Bytes and Unicode Strings
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     12.1.3. Controlling an LED with Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11.04-Reading-a-Sensor-with-Python.html">
-     12.1.4. Reading a Sensor with Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11.05-Summary.html">
-     12.1.5. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11.06-Project-Ideas.html">
-     12.1.6. Project Ideas
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>
@@ -216,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/11-Python-and-External-Hardware/11.03-Controlling-an-LED.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/11-Python-and-External-Hardware/11.03-Controlling-an-LED.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -235,48 +209,65 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/11-Python-and-External-Hardware/11.03-Controlling-an-LED.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wire-the-led-to-the-arduino">
-   12.1.3.1. Wire the LED to the Arduino
+   Wire the LED to the Arduino
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#upload-code-to-the-arduino">
-   12.1.3.2. Upload code to the Arduino
+   Upload code to the Arduino
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#connect-the-arduino-to-the-computer">
-   12.1.3.3. Connect the Arduino to the Computer
+   Connect the Arduino to the Computer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#turn-the-led-on-and-off-with-the-arduino-serial-monitor">
-   12.1.3.4. Turn the LED on and off with the Arduino Serial Monitor
+   Turn the LED on and off with the Arduino Serial Monitor
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#use-the-python-repl-to-turn-the-arduino-led-on-and-off">
-   12.1.3.5. Use the Python REPL to turn the Arduino LED on and off
+   Use the Python REPL to turn the Arduino LED on and off
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#write-a-python-script-to-turn-the-led-on-and-off">
-   12.1.3.6. Write a Python Script to turn the LED on and off
+   Write a Python Script to turn the LED on and off
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off">
-   12.1.3.7. Write a Python script to allow a user to turn the LED on and off
+   Write a Python script to allow a user to turn the LED on and off
   </a>
  </li>
 </ul>
@@ -290,7 +281,7 @@
               <div>
                 
   <div class="section" id="controlling-an-led-with-python">
-<h1><span class="section-number">12.1.3. </span>Controlling an LED with Python<a class="headerlink" href="#controlling-an-led-with-python" title="Permalink to this headline">¶</a></h1>
+<h1>Controlling an LED with Python<a class="headerlink" href="#controlling-an-led-with-python" title="Permalink to this headline">¶</a></h1>
 <p>In this section, you will learn how to control an LED connected to an external piece of hardware (an Arduino) using Python. To accomplish this task, the following hardware is required:</p>
 <ul class="simple">
 <li><p>A computer running Python</p></li>
@@ -306,12 +297,12 @@
 <p>If you are working on a computer that you don’t have administrator privileges to install software on, be sure to select: [Windows ZIP for non-admin install].</p>
 <p><img alt="Arduino IDE Download Page" src="../_images/arduino_download_page.png" /></p>
 <div class="section" id="wire-the-led-to-the-arduino">
-<h2><span class="section-number">12.1.3.1. </span>Wire the LED to the Arduino<a class="headerlink" href="#wire-the-led-to-the-arduino" title="Permalink to this headline">¶</a></h2>
+<h2>Wire the LED to the Arduino<a class="headerlink" href="#wire-the-led-to-the-arduino" title="Permalink to this headline">¶</a></h2>
 <p>Connect the LED to the Arduino using a resistor, wires and a breadboard. Note the short leg of the LED is connected to ground, and the long leg of the resistor is connected through a resistor to PIN 13. A resistor is needed to prevent too much current from flowing through the LED. This type of resistor is called a <em>pull up resistor</em>.</p>
 <p><img alt="Arduino with LED" src="../_images/redboard_LED_bb.png" /></p>
 </div>
 <div class="section" id="upload-code-to-the-arduino">
-<h2><span class="section-number">12.1.3.2. </span>Upload code to the Arduino<a class="headerlink" href="#upload-code-to-the-arduino" title="Permalink to this headline">¶</a></h2>
+<h2>Upload code to the Arduino<a class="headerlink" href="#upload-code-to-the-arduino" title="Permalink to this headline">¶</a></h2>
 <p>Upload the following code to the Arduino using the Arduino IDE. The code is same as in the example sketch called <code class="docutils literal notranslate"><span class="pre">Physical</span> <span class="pre">Pixel</span></code>. The <code class="docutils literal notranslate"><span class="pre">Physical</span> <span class="pre">Pixel</span></code> sketch is found in the Arduino IDE under File –&gt; Examples –&gt; 04.Communication –&gt; PhysicalPixel</p>
 <p><img alt="Physical Pixel Example Sketch in the Arduino IDE" src="../_images/file-examples-communication-physicalpixel.png" /></p>
 <p>The code for the Physical Pixel Sketch is shown below.</p>
@@ -347,7 +338,7 @@ void loop() {
 </div>
 </div>
 <div class="section" id="connect-the-arduino-to-the-computer">
-<h2><span class="section-number">12.1.3.3. </span>Connect the Arduino to the Computer<a class="headerlink" href="#connect-the-arduino-to-the-computer" title="Permalink to this headline">¶</a></h2>
+<h2>Connect the Arduino to the Computer<a class="headerlink" href="#connect-the-arduino-to-the-computer" title="Permalink to this headline">¶</a></h2>
 <p>Connect the Arduino to the computer using a USB cable. Ensure two settings in the Arduino IDE are set correctly.</p>
 <ul class="simple">
 <li><p>Make sure the <code class="docutils literal notranslate"><span class="pre">Port</span></code> is selected properly in the Arduino IDE under Tools –&gt; Port.</p></li>
@@ -358,12 +349,12 @@ void loop() {
 <p><img alt="Arduino IDE Arrow to Upload" src="../_images/Arrow_to_Upload.png" /></p>
 </div>
 <div class="section" id="turn-the-led-on-and-off-with-the-arduino-serial-monitor">
-<h2><span class="section-number">12.1.3.4. </span>Turn the LED on and off with the Arduino Serial Monitor<a class="headerlink" href="#turn-the-led-on-and-off-with-the-arduino-serial-monitor" title="Permalink to this headline">¶</a></h2>
+<h2>Turn the LED on and off with the Arduino Serial Monitor<a class="headerlink" href="#turn-the-led-on-and-off-with-the-arduino-serial-monitor" title="Permalink to this headline">¶</a></h2>
 <p>Open the Arduino Serial Monitor using Tools –&gt; Serial Monitor. In the Serial Monitor type <code class="docutils literal notranslate"><span class="pre">L</span></code> or <code class="docutils literal notranslate"><span class="pre">H</span></code> and click [Send]. Observe the LED turn on and off. Send <code class="docutils literal notranslate"><span class="pre">H</span></code> to turn the LED on. Send <code class="docutils literal notranslate"><span class="pre">L</span></code> to turn the LED off.</p>
 <p><img alt="Arduino Serial Monitor" src="../_images/serial_monitor_L.png" /></p>
 </div>
 <div class="section" id="use-the-python-repl-to-turn-the-arduino-led-on-and-off">
-<h2><span class="section-number">12.1.3.5. </span>Use the Python REPL to turn the Arduino LED on and off<a class="headerlink" href="#use-the-python-repl-to-turn-the-arduino-led-on-and-off" title="Permalink to this headline">¶</a></h2>
+<h2>Use the Python REPL to turn the Arduino LED on and off<a class="headerlink" href="#use-the-python-repl-to-turn-the-arduino-led-on-and-off" title="Permalink to this headline">¶</a></h2>
 <p>Next,  use the Python REPL to turn the Arduino on and off. (You can open the Python REPL by typing <code class="docutils literal notranslate"> <span class="pre">&gt;</span> <span class="pre">python</span></code> at the <strong>Anaconda Prompt</strong>) At the Python REPL, type the following commands. If a REPL prompt <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> precedes the command, type the command into the REPL. If the line does not start with a REPL prompt, the line represents expected output.</p>
 <p>When you type the command: <code class="docutils literal notranslate"><span class="pre">ser</span> <span class="pre">=</span> <span class="pre">serial.Serial('COM4',</span> <span class="pre">9800,</span> <span class="pre">timeout=1)</span></code>, ensure the <code class="docutils literal notranslate"><span class="pre">'COM#'</span></code> corresponds to the port that worked with the Arduino IDE in Tools –&gt; Port.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">serial</span>
@@ -393,7 +384,7 @@ void loop() {
 <p>Ensure the command <code class="docutils literal notranslate"><span class="pre">ser.close()</span></code> is issued before exiting the Python REPL.</p>
 </div>
 <div class="section" id="write-a-python-script-to-turn-the-led-on-and-off">
-<h2><span class="section-number">12.1.3.6. </span>Write a Python Script to turn the LED on and off<a class="headerlink" href="#write-a-python-script-to-turn-the-led-on-and-off" title="Permalink to this headline">¶</a></h2>
+<h2>Write a Python Script to turn the LED on and off<a class="headerlink" href="#write-a-python-script-to-turn-the-led-on-and-off" title="Permalink to this headline">¶</a></h2>
 <p>After the LED turns on and off based on sending <code class="docutils literal notranslate"><span class="pre">H</span></code> and <code class="docutils literal notranslate"><span class="pre">L</span></code> with the Arduino Serial Monitor and you can turn the LED on and off with the Python REPL, it’s time to write a Python script to turn the LED on and off. Again, the serial communication between the Python script and the Arduino is facilitated by the PySerial package. Ensure PySerial is installed before running the Python script.</p>
 <p>At the top of the Python script, import the PySerial package. Note that even though the package is called PySerial, the line <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">serial</span></code> is used. Python’s built-in <code class="docutils literal notranslate"><span class="pre">time</span></code> module is also imported as the <code class="docutils literal notranslate"><span class="pre">time.sleep()</span></code> function will be used in the script.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># blink.py</span>
@@ -418,7 +409,7 @@ void loop() {
 <p>Run the entire Python script and watch the Arduino LED blink ten times. A common problem is the serial port was not closed before the script starts. Make sure the Arduino Serial Monitor is closed and try running <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">ser.close()</span></code> at the Python REPL.</p>
 </div>
 <div class="section" id="write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off">
-<h2><span class="section-number">12.1.3.7. </span>Write a Python script to allow a user to turn the LED on and off<a class="headerlink" href="#write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off" title="Permalink to this headline">¶</a></h2>
+<h2>Write a Python script to allow a user to turn the LED on and off<a class="headerlink" href="#write-a-python-script-to-allow-a-user-to-turn-the-led-on-and-off" title="Permalink to this headline">¶</a></h2>
 <p>Once the LED blinks on and off successfully using a for loop in a Python script, you can write a new Python script that allows a user to turn the LED on and off. At the top of the new Python script import the <strong>PySerial</strong> package and built-in <code class="docutils literal notranslate"><span class="pre">time</span></code> module.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">serial</span>
 <span class="kn">import</span> <span class="nn">time</span>
@@ -450,6 +441,25 @@ void loop() {
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./11-Python-and-External-Hardware"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -459,8 +469,6 @@ void loop() {
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="11.02-Bytes-and-Unicode-Strings.html" title="previous page"><span class="section-number">12.1.2. </span>Bytes and Unicode Strings</a>
-    <a class='right-next' id="next-link" href="11.04-Reading-a-Sensor-with-Python.html" title="next page"><span class="section-number">12.1.4. </span>Reading a Sensor with Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

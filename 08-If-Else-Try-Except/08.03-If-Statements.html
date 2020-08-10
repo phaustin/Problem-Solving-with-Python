@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>9.1.3. If statements &#8212; PSWP</title>
+    <title>If statements &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,24 +30,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/08-If-Else-Try-Except/08.03-If-Statements.html" />
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://127.0.0.1:8500/08-If-Else-Try-Except/08.03-If-Statements.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9.1.4. If Else Statements" href="08.04-If-Else-Statements.html" />
-    <link rel="prev" title="9.1.2. Selection Statements" href="08.02-Selection-Statements.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/08-If-Else-Try-Except/08.03-If-Statements.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/08-If-Else-Try-Except/08.03-If-Statements.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="If statements" />
 <meta property="og:description" content="If statements  The if-statement is one of the basic selection structures in Python. The syntax for a section of code that contains an if-statement is below:  if" />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,116 +81,74 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+  <a class="reference internal" href="../01-Orientation/01_00-Welcome.html">
    2. Orientation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04_00-Introduction.html">
    5. Data Types and Variables
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="../07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="08.00-Introduction.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_00-Introduction.html">
    9. If Else Try Except
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.01-User-Input.html">
-     9.1.1. User Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.02-Selection-Statements.html">
-     9.1.2. Selection Statements
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     9.1.3. If statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.04-If-Else-Statements.html">
-     9.1.4. If Else Statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.05-Try-Except-Statements.html">
-     9.1.5. Try-Except Statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.06-Flowcharts.html">
-     9.1.6. Flowcharts
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.07-Summary.html">
-     9.1.7. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08.08-Review-Questions.html">
-     9.1.8. Review Questions
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11_00-Introduction.html">
    12. Python and External Hardware
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>
@@ -226,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/08-If-Else-Try-Except/08.03-If-Statements.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/08-If-Else-Try-Except/08.03-If-Statements.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -245,18 +209,35 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/08-If-Else-Try-Except/08.03-If-Statements.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#multiple-if-statements">
-   9.1.3.1. Multiple if statements
+   Multiple if statements
   </a>
  </li>
 </ul>
@@ -270,7 +251,7 @@
               <div>
                 
   <div class="section" id="if-statements">
-<h1><span class="section-number">9.1.3. </span>If statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h1>
+<h1>If statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h1>
 <p>The <em>if-statement</em> is one of the basic selection structures in Python. The syntax for a section of code that contains an if-statement is below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="n">logical_condition</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">code</span> <span class="n">to</span> <span class="n">run</span><span class="o">&gt;</span>
@@ -295,7 +276,7 @@
 <p>In the first line of code in the example above, the variable <code class="docutils literal notranslate"><span class="pre">a</span></code> is assigned the value <code class="docutils literal notranslate"><span class="pre">2</span></code>. The second line of code is the if-statement. The if-statement starts with the keyword <code class="docutils literal notranslate"><span class="pre">if</span></code> and is followed by the logical condition <code class="docutils literal notranslate"><span class="pre">a&lt;5</span></code> and a colon <code class="docutils literal notranslate"><span class="pre">:</span></code>. The logical condition <code class="docutils literal notranslate"><span class="pre">a&lt;5</span></code> will return either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> depending on the value of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Since <code class="docutils literal notranslate"><span class="pre">a=2</span></code>, the logical condition <code class="docutils literal notranslate"><span class="pre">a&lt;5</span></code> evaluates as <code class="docutils literal notranslate"><span class="pre">True</span></code>. The line <code class="docutils literal notranslate"><span class="pre">print('less</span> <span class="pre">than</span> <span class="pre">five')</span></code> is indented after the if-statement. The line of code including the <code class="docutils literal notranslate"><span class="pre">print()</span></code> statement will run if the if-statement is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Since the if-statement <em>is</em> <code class="docutils literal notranslate"><span class="pre">True</span></code>, the indented line <code class="docutils literal notranslate"><span class="pre">print('less</span> <span class="pre">than</span> <span class="pre">five')</span></code> runs.</p>
 <p>As a result of running these three lines of code, the user sees the text <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">than</span> <span class="pre">five</span></code>.</p>
 <div class="section" id="multiple-if-statements">
-<h2><span class="section-number">9.1.3.1. </span>Multiple if statements<a class="headerlink" href="#multiple-if-statements" title="Permalink to this headline">¶</a></h2>
+<h2>Multiple if statements<a class="headerlink" href="#multiple-if-statements" title="Permalink to this headline">¶</a></h2>
 <p>If-statements can be chained together one after another to create a programmatic flow. For example, the following code block utilizes three different if-statements, each if-statement is followed by an indented code block.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -343,6 +324,25 @@ a is positive
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./08-If-Else-Try-Except"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -352,8 +352,6 @@ a is positive
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="08.02-Selection-Statements.html" title="previous page"><span class="section-number">9.1.2. </span>Selection Statements</a>
-    <a class='right-next' id="next-link" href="08.04-If-Else-Statements.html" title="next page"><span class="section-number">9.1.4. </span>If Else Statements</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

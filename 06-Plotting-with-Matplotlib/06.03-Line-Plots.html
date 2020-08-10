@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>7.1.3. Line Plots &#8212; PSWP</title>
+    <title>Line Plots &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,24 +30,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/06-Plotting-with-Matplotlib/06.03-Line-Plots.html" />
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://127.0.0.1:8500/06-Plotting-with-Matplotlib/06.03-Line-Plots.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.1.4. Saving plots" href="06.04-Saving-Plots.html" />
-    <link rel="prev" title="7.1.2. Installing Matplotlib" href="06.02-Installing Matplotlib.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/06-Plotting-with-Matplotlib/06.03-Line-Plots.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/06-Plotting-with-Matplotlib/06.03-Line-Plots.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Line Plots" />
 <meta property="og:description" content="Line Plots  Line plots can be created in Python with Matplotlib’s pyplot library.  To build a line plot, first import Matplotlib.  It is a standard convention t" />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,166 +81,74 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../01-Orientation/01.00-Welcome.html">
+  <a class="reference internal" href="../01-Orientation/01_00-Welcome.html">
    2. Orientation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04_00-Introduction.html">
    5. Data Types and Variables
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="06.00-Introduction.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.01-What-is-Matplotlib.html">
-     7.1.1. What is Matplotlib?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.02-Installing Matplotlib.html">
-     7.1.2. Installing Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     7.1.3. Line Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.04-Saving-Plots.html">
-     7.1.4. Saving plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.05-Multi-Line-Plots.html">
-     7.1.5. Multi Line Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.06-Bar-Charts-and-Pie-Charts.html">
-     7.1.6. Bar Charts and Pie Charts
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.07-Error-Bars.html">
-     7.1.7. Error Bars
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.08-Histograms.html">
-     7.1.8. Histograms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.09-Box-Plots-and-Violin-Plots.html">
-     7.1.9. Box Plots and Violin Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.10-Scatter-Plots.html">
-     7.1.10. Scatter Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.11-Plot-Annotations.html">
-     7.1.11. Plot annotations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.12-Subplots.html">
-     7.1.12. Subplots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.13-Plot-Styles.html">
-     7.1.13. Plot Styles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.14-Contour-Plots.html">
-     7.1.14. Contour Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.15-Quiver-and-Stream-Plots.html">
-     7.1.15. Quiver and Stream Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.16-3D-Surface-Plots.html">
-     7.1.16. 3D Surface Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.17-Summary.html">
-     7.1.17. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06.18-Review-Questions.html">
-     7.1.18. Review Questions
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="../07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08_00-Introduction.html">
    9. If Else Try Except
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11_00-Introduction.html">
    12. Python and External Hardware
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>
@@ -276,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/06-Plotting-with-Matplotlib/06.03-Line-Plots.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/06-Plotting-with-Matplotlib/06.03-Line-Plots.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -295,85 +209,102 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/06-Plotting-with-Matplotlib/06.03-Line-Plots.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#features-of-a-matplotlib-plot">
-   7.1.3.1. Features of a Matplotlib plot
+   Features of a Matplotlib plot
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#line-color-line-width-line-style-line-opacity-and-marker-options">
-     7.1.3.1.1. Line Color, Line Width, Line Style, Line Opacity and Marker Options
+     Line Color, Line Width, Line Style, Line Opacity and Marker Options
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#title">
-     7.1.3.1.2. Title
+     Title
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#x-axis-label">
-     7.1.3.1.3. x-axis label
+     x-axis label
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#y-axis-label">
-     7.1.3.1.4. y-axis label
+     y-axis label
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#legend">
-     7.1.3.1.5. Legend
+     Legend
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#grid">
-     7.1.3.1.6. Grid
+     Grid
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tick-labels">
-     7.1.3.1.7. Tick Labels
+     Tick Labels
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#build-a-plot-in-five-steps">
-   7.1.3.2. Build a plot in five steps
+   Build a plot in five steps
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
-     7.1.3.2.1. 1. Imports
+     1. Imports
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#define-data">
-     7.1.3.2.2. 2. Define data
+     2. Define data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plot-data-including-options">
-     7.1.3.2.3. 3. Plot data including options
+     3. Plot data including options
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-plot-details">
-     7.1.3.2.4. 4. Add plot details
+     4. Add plot details
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-the-plot">
-     7.1.3.2.5. 5. Show the plot
+     5. Show the plot
     </a>
    </li>
   </ul>
@@ -389,7 +320,7 @@
               <div>
                 
   <div class="section" id="line-plots">
-<h1><span class="section-number">7.1.3. </span>Line Plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">¶</a></h1>
+<h1>Line Plots<a class="headerlink" href="#line-plots" title="Permalink to this headline">¶</a></h1>
 <p>Line plots can be created in Python with Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library.</p>
 <p>To build a line plot, first import Matplotlib.  It is a standard convention to import Matplotlib’s <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library as <code class="docutils literal notranslate"><span class="pre">plt</span></code>. The <code class="docutils literal notranslate"><span class="pre">plt</span></code> alias will be familiar to other Python programmers.</p>
 <p>If using a Jupyter notebook, include the line <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> after the imports. <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> is a Jupyter notebook magic command which causes Matplotlib plots to display directly inside Jupyter notebook output cells.</p>
@@ -427,10 +358,10 @@
 </div>
 <p>The result is a line plot that shows sin(x) from 0 to 4$\pi$.</p>
 <div class="section" id="features-of-a-matplotlib-plot">
-<h2><span class="section-number">7.1.3.1. </span>Features of a Matplotlib plot<a class="headerlink" href="#features-of-a-matplotlib-plot" title="Permalink to this headline">¶</a></h2>
+<h2>Features of a Matplotlib plot<a class="headerlink" href="#features-of-a-matplotlib-plot" title="Permalink to this headline">¶</a></h2>
 <p>A variety of features on a Matplotlib plot can be specified. The following is a list of commonly defined features:</p>
 <div class="section" id="line-color-line-width-line-style-line-opacity-and-marker-options">
-<h3><span class="section-number">7.1.3.1.1. </span>Line Color, Line Width, Line Style, Line Opacity and Marker Options<a class="headerlink" href="#line-color-line-width-line-style-line-opacity-and-marker-options" title="Permalink to this headline">¶</a></h3>
+<h3>Line Color, Line Width, Line Style, Line Opacity and Marker Options<a class="headerlink" href="#line-color-line-width-line-style-line-opacity-and-marker-options" title="Permalink to this headline">¶</a></h3>
 <p>The color, width, and style of line in a Matplotlib plot can be specified. Line color, line width, and line style are included as extra keyword arguments in the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> function call.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">&lt;</span><span class="n">x</span><span class="o">-</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">y</span><span class="o">-</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span>
             <span class="n">linewideth</span><span class="o">=&lt;</span><span class="nb">float</span> <span class="ow">or</span> <span class="nb">int</span><span class="o">&gt;</span><span class="p">,</span>
@@ -638,28 +569,28 @@
 </div>
 </div>
 <div class="section" id="title">
-<h3><span class="section-number">7.1.3.1.2. </span>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<h3>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
 <p>The plot title will be shown above the plot. The <code class="docutils literal notranslate"><span class="pre">plt.title()</span></code> command accepts a string as an argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;My Plot Title&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="x-axis-label">
-<h3><span class="section-number">7.1.3.1.3. </span>x-axis label<a class="headerlink" href="#x-axis-label" title="Permalink to this headline">¶</a></h3>
+<h3>x-axis label<a class="headerlink" href="#x-axis-label" title="Permalink to this headline">¶</a></h3>
 <p>The x-axis label is shown below the x-axis. The <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> command accepts a string as an argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;My x-axis label&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="y-axis-label">
-<h3><span class="section-number">7.1.3.1.4. </span>y-axis label<a class="headerlink" href="#y-axis-label" title="Permalink to this headline">¶</a></h3>
+<h3>y-axis label<a class="headerlink" href="#y-axis-label" title="Permalink to this headline">¶</a></h3>
 <p>The y-axis label is shown to the left of the y-axis. The <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code> command also accepts a string as an argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;My y-axis label&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="legend">
-<h3><span class="section-number">7.1.3.1.5. </span>Legend<a class="headerlink" href="#legend" title="Permalink to this headline">¶</a></h3>
+<h3>Legend<a class="headerlink" href="#legend" title="Permalink to this headline">¶</a></h3>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> command to insert a legend on a plot. The legend appears within the plot area, in the upper right corner by default. The <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> command accepts a list of strings and optionally accepts a <code class="docutils literal notranslate"><span class="pre">loc=</span> </code> argument to specify the legend location.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;entry1&#39;</span><span class="p">,</span><span class="s1">&#39;entry2&#39;</span><span class="p">],</span> <span class="n">loc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
@@ -709,7 +640,7 @@
 </table>
 </div>
 <div class="section" id="grid">
-<h3><span class="section-number">7.1.3.1.6. </span>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h3>
+<h3>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">¶</a></h3>
 <p>A grid can be added to a Matplotlib plot using the <code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code> command. By defaut, the grid is turned off. To turn on the grid use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -717,7 +648,7 @@
 <p>The only valid options are <code class="docutils literal notranslate"><span class="pre">plt.grid(True)</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.grid(False)</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> are capitalized and are not enclosed in quotes.</p>
 </div>
 <div class="section" id="tick-labels">
-<h3><span class="section-number">7.1.3.1.7. </span>Tick Labels<a class="headerlink" href="#tick-labels" title="Permalink to this headline">¶</a></h3>
+<h3>Tick Labels<a class="headerlink" href="#tick-labels" title="Permalink to this headline">¶</a></h3>
 <p>Tick labels can be specified on a Matplotlib plot using <code class="docutils literal notranslate"><span class="pre">plt.xticks()</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.yticks()</span></code>. To add tick labels use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="n">locations</span> <span class="nb">list</span><span class="p">],[</span><span class="n">labels</span> <span class="nb">list</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="n">locations</span> <span class="nb">list</span><span class="p">],[</span><span class="n">labels</span> <span class="nb">list</span><span class="p">])</span>
@@ -727,7 +658,7 @@
 </div>
 </div>
 <div class="section" id="build-a-plot-in-five-steps">
-<h2><span class="section-number">7.1.3.2. </span>Build a plot in five steps<a class="headerlink" href="#build-a-plot-in-five-steps" title="Permalink to this headline">¶</a></h2>
+<h2>Build a plot in five steps<a class="headerlink" href="#build-a-plot-in-five-steps" title="Permalink to this headline">¶</a></h2>
 <p>The steps below show a logical progression to build a plot with Matplotlib:</p>
 <ol class="simple">
 <li><p>Imports</p></li>
@@ -738,15 +669,15 @@
 </ol>
 <p>Details of each step is explained below.</p>
 <div class="section" id="imports">
-<h3><span class="section-number">7.1.3.2.1. </span>1. Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<h3>1. Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <p>Import <code class="docutils literal notranslate"><span class="pre">matplot.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>, as well as any other modules needed to work with the data such as NumPy or Pandas. If using a Jupyter notebook, include the line <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> in the import section.</p>
 </div>
 <div class="section" id="define-data">
-<h3><span class="section-number">7.1.3.2.2. </span>2. Define data<a class="headerlink" href="#define-data" title="Permalink to this headline">¶</a></h3>
+<h3>2. Define data<a class="headerlink" href="#define-data" title="Permalink to this headline">¶</a></h3>
 <p>The plot needs to contain data. Data is defined after the imports. Typically, data for plots is contained in Python lists, NumPy arrays or Pandas dataframes.</p>
 </div>
 <div class="section" id="plot-data-including-options">
-<h3><span class="section-number">7.1.3.2.3. </span>3. Plot data including options<a class="headerlink" href="#plot-data-including-options" title="Permalink to this headline">¶</a></h3>
+<h3>3. Plot data including options<a class="headerlink" href="#plot-data-including-options" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> to plot the data you defined. Note the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> line needs to be called before any other plot details are specified. Otherwise, the details have no plot to apply to.</p>
 <p>Besides data, the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> function can include keyword arguments such as:</p>
 <ul class="simple">
@@ -761,7 +692,7 @@
 </ul>
 </div>
 <div class="section" id="add-plot-details">
-<h3><span class="section-number">7.1.3.2.4. </span>4. Add plot details<a class="headerlink" href="#add-plot-details" title="Permalink to this headline">¶</a></h3>
+<h3>4. Add plot details<a class="headerlink" href="#add-plot-details" title="Permalink to this headline">¶</a></h3>
 <p>After the <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> line, add details such as a title, axis labels, legend, grid, and tick labels. Plot details to add include:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">plt.title('&lt;title</span> <span class="pre">string&gt;')</span></code></p></li>
@@ -774,7 +705,7 @@
 </ul>
 </div>
 <div class="section" id="show-the-plot">
-<h3><span class="section-number">7.1.3.2.5. </span>5. Show the plot<a class="headerlink" href="#show-the-plot" title="Permalink to this headline">¶</a></h3>
+<h3>5. Show the plot<a class="headerlink" href="#show-the-plot" title="Permalink to this headline">¶</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> command to show the plot. <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> causes the plot to display in a Jupyter notebook or pop out in a new window if the plot is constructed in a separate <strong><em>.py</em></strong> file. Note that <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> needs to be called after <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> and any plot details such as <code class="docutils literal notranslate"><span class="pre">plt.title()</span></code>.</p>
 <p>The next code section utilizes the 5 steps to build a plot. The resulting plot is shown after the code.</p>
 <div class="cell docutils container">
@@ -821,6 +752,25 @@
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./06-Plotting-with-Matplotlib"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -830,8 +780,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="06.02-Installing Matplotlib.html" title="previous page"><span class="section-number">7.1.2. </span>Installing Matplotlib</a>
-    <a class='right-next' id="next-link" href="06.04-Saving-Plots.html" title="next page"><span class="section-number">7.1.4. </span>Saving plots</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

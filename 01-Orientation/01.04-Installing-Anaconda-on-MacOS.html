@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>2.1.4. Installing Anaconda on MacOS &#8212; PSWP</title>
+    <title>Installing Anaconda on MacOS &#8212; PSWP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
@@ -29,24 +30,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="canonical" href="http://l127.0.0.1:8500/01-Orientation/01.04-Installing-Anaconda-on-MacOS.html" />
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="http://127.0.0.1:8500/01-Orientation/01.04-Installing-Anaconda-on-MacOS.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.1.5. Installing Anaconda on Linux" href="01.05-Installing-Anaconda-on-Linux.html" />
-    <link rel="prev" title="2.1.3. Installing Anaconda on Windows" href="01.03-Installing-Anaconda-on-Windows.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="http://l127.0.0.1:8500/01-Orientation/01.04-Installing-Anaconda-on-MacOS.html" />
+<meta property="og:url"         content="http://127.0.0.1:8500/01-Orientation/01.04-Installing-Anaconda-on-MacOS.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Installing Anaconda on MacOS" />
 <meta property="og:description" content="Installing Anaconda on MacOS  This section details the installation of the Anaconda Distribution of Python on MacOS. Most versions of MacOS come pre-installed w" />
-<meta property="og:image"       content="http://l127.0.0.1:8500/_static/logo.png" />
+<meta property="og:image"       content="http://127.0.0.1:8500/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -75,116 +81,74 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../00-Preface/00.00-Motivation.html">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="01.00-Welcome.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_00-Welcome.html">
    2. Orientation
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.01-Why-Python.html">
-     2.1.1. Why Python?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.02-The-Anaconda-Distribution-of-Python.html">
-     2.1.2. The Anaconda Distribution of Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.03-Installing-Anaconda-on-Windows.html">
-     2.1.3. Installing Anaconda on Windows
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     2.1.4. Installing Anaconda on MacOS
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.05-Installing-Anaconda-on-Linux.html">
-     2.1.5. Installing Anaconda on Linux
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.06-Installing-Python-from-Python-dot-org.html">
-     2.1.6. Installing Python from Python.org
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.07-Summary.html">
-     2.1.7. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01.08-Review-Questions.html">
-     2.1.8. Review Questions
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../02-Jupyter-Notebooks/02.00-Introduction.html">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
    3. Jupyter Notebooks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../03-The-Python-REPL/03.00-Introduction.html">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
    4. The Python REPL
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../04-Data-Types-and-Variables/04.00-Introduction.html">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04_00-Introduction.html">
    5. Data Types and Variables
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../05-NumPy-and-Arrays/05.00-Introduction.html">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05_00-Introduction.html">
    6. NumPy and Arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06.00-Introduction.html">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_00-Introduction.html">
    7. Plotting with Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07-Functions-and-Modules/07.00-Introduction.html">
+  <a class="reference internal" href="../07-Functions-and-Modules/07_00-Introduction.html">
    8. Functions and Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../08-If-Else-Try-Except/08.00-Introduction.html">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08_00-Introduction.html">
    9. If Else Try Except
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../09-Loops/09.00-Introduction.html">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
    10. Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../10-Symbolic-Math/10.00-Introduction.html">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
    11. Symbolic Math
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../11-Python-and-External-Hardware/11.00-Introduction.html">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11_00-Introduction.html">
    12. Python and External Hardware
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../12-MicroPython/12.00-Introduction.html">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
    13. MicroPython
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../99-Appendix/99.00-Appendix.html">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
    14. Appendix
   </a>
  </li>
@@ -226,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/01-Orientation/01.04-Installing-Anaconda-on-MacOS.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/01-Orientation/01.04-Installing-Anaconda-on-MacOS.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -245,48 +209,65 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/01-Orientation/01.04-Installing-Anaconda-on-MacOS.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#steps">
-   2.1.4.1. Steps:
+   Steps:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visit-the-anaconda-downloads-page">
-   2.1.4.2. 1. Visit the Anaconda downloads page
+   1. Visit the Anaconda downloads page
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#select-macos-and-download-the-pkg-installer">
-   2.1.4.3. 2. Select MacOS and download the .pkg installer
+   2. Select MacOS and download the .pkg installer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#open-the-pkg-installer">
-   2.1.4.4. 3. Open the .pkg installer
+   3. Open the .pkg installer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#follow-the-installation-instructions">
-   2.1.4.5. 4. Follow the installation instructions
+   4. Follow the installation instructions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#source-your-bash-rc-file">
-   2.1.4.6. 5. Source your .bash-rc file
+   5. Source your .bash-rc file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#open-a-terminal-and-type-python-and-run-some-code">
-   2.1.4.7. 6. Open a terminal and type
+   6. Open a terminal and type
    <code class="docutils literal notranslate">
     <span class="pre">
      python
@@ -306,7 +287,7 @@
               <div>
                 
   <div class="section" id="installing-anaconda-on-macos">
-<h1><span class="section-number">2.1.4. </span>Installing Anaconda on MacOS<a class="headerlink" href="#installing-anaconda-on-macos" title="Permalink to this headline">¶</a></h1>
+<h1>Installing Anaconda on MacOS<a class="headerlink" href="#installing-anaconda-on-macos" title="Permalink to this headline">¶</a></h1>
 <p>This section details the installation of the Anaconda Distribution of Python on MacOS. Most versions of MacOS come pre-installed with legacy Python (Version 2.7). You can confirm the legacy version of Python is installed on MacOS by opening and running a command at the MacOS <strong>terminal</strong>. To open the MacOS terminal use <code class="docutils literal notranslate"><span class="pre">[command]+[Space</span> <span class="pre">Bar]</span></code> and type <code class="docutils literal notranslate"><span class="pre">terminal</span></code> in the Spotlight Search bar.</p>
 <p>In the MacOS Terminal type (note: the dollar sign <code class="docutils literal notranslate"><span class="pre">$</span></code> is used to indicate the terminal prompt. The dollar sign <code class="docutils literal notranslate"><span class="pre">$</span></code> does not need to be typed):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
@@ -315,7 +296,7 @@
 <p>You will most likely see Python version 2.7 is installed. An issue for MacOS users is that the installed system version of Python has a set of permissions that may always allow Python to run and may not allow users to install external packages.  Therefore, I recommend the Anaconda distribution of Python is installed alongside the system version of Python that comes pre-installed with MacOS. You will be able to run Python code using the Anaconda distribution of Python, and you will be able to install external packages using the Anaconda distribution of Python.</p>
 <p>Follow the steps below to install the Anaconda distribution of Python on MacOS.</p>
 <div class="section" id="steps">
-<h2><span class="section-number">2.1.4.1. </span>Steps:<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
+<h2>Steps:<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Visit <a class="reference external" href="https://www.anaconda.com/download/">Anaconda.com/downloads</a></p></li>
 <li><p>Select MacOS and Download the <strong><em>.pkg</em></strong> installer</p></li>
@@ -326,26 +307,26 @@
 </ol>
 </div>
 <div class="section" id="visit-the-anaconda-downloads-page">
-<h2><span class="section-number">2.1.4.2. </span>1. Visit the Anaconda downloads page<a class="headerlink" href="#visit-the-anaconda-downloads-page" title="Permalink to this headline">¶</a></h2>
+<h2>1. Visit the Anaconda downloads page<a class="headerlink" href="#visit-the-anaconda-downloads-page" title="Permalink to this headline">¶</a></h2>
 <p>Go to the following link: <a class="reference external" href="https://www.anaconda.com/download/">Anaconda.com/downloads</a></p>
 </div>
 <div class="section" id="select-macos-and-download-the-pkg-installer">
-<h2><span class="section-number">2.1.4.3. </span>2. Select MacOS and download the .pkg installer<a class="headerlink" href="#select-macos-and-download-the-pkg-installer" title="Permalink to this headline">¶</a></h2>
+<h2>2. Select MacOS and download the .pkg installer<a class="headerlink" href="#select-macos-and-download-the-pkg-installer" title="Permalink to this headline">¶</a></h2>
 <p>In the operating systems box, select <code class="docutils literal notranslate"><span class="pre">[MacOS]</span></code>. Then download the most recent Python 3 distribution (at the time of this writing the most recent version is Python 3.6) graphical installer by clicking the Download link. Python 2.7 is legacy Python. For problem solvers, select the most recent Python 3 version.</p>
 <p><img alt="Anaconda distribution of Python downloads page. Notice the macOS operating system is selection. Download Python 3.6 verion or higher" src="../_images/anaconda_download_mac.png" /></p>
 <p>You may be prompted to enter your email. You can still download Anaconda if you click <code class="docutils literal notranslate"><span class="pre">[No</span> <span class="pre">Thanks]</span></code> or <code class="docutils literal notranslate"><span class="pre">[x]</span></code> and don’t enter your Work Email address.</p>
 <p><img alt="Anaconda downloads page. You do not have to enter your Work Email" src="../_images/anaconda_download_mac_ask_for_email.png" /></p>
 </div>
 <div class="section" id="open-the-pkg-installer">
-<h2><span class="section-number">2.1.4.4. </span>3. Open the .pkg installer<a class="headerlink" href="#open-the-pkg-installer" title="Permalink to this headline">¶</a></h2>
+<h2>3. Open the .pkg installer<a class="headerlink" href="#open-the-pkg-installer" title="Permalink to this headline">¶</a></h2>
 <p>Navigate to the Downloads folder and double-click the <strong><em>.pkg</em></strong> installer file you just downloaded. It may be helpful to order the contents of the Downloads folder by date to find the <strong><em>.pkg</em></strong> file.</p>
 </div>
 <div class="section" id="follow-the-installation-instructions">
-<h2><span class="section-number">2.1.4.5. </span>4. Follow the installation instructions<a class="headerlink" href="#follow-the-installation-instructions" title="Permalink to this headline">¶</a></h2>
+<h2>4. Follow the installation instructions<a class="headerlink" href="#follow-the-installation-instructions" title="Permalink to this headline">¶</a></h2>
 <p>Follow the installation instructions. It is advised that you install <strong>Anaconda</strong> for the current user and that <strong>Anaconda</strong> <strong>is added to your PATH</strong>.</p>
 </div>
 <div class="section" id="source-your-bash-rc-file">
-<h2><span class="section-number">2.1.4.6. </span>5. Source your .bash-rc file<a class="headerlink" href="#source-your-bash-rc-file" title="Permalink to this headline">¶</a></h2>
+<h2>5. Source your .bash-rc file<a class="headerlink" href="#source-your-bash-rc-file" title="Permalink to this headline">¶</a></h2>
 <p>Once Anaconda is installed, you need to load the changes to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable in the current terminal session.</p>
 <p>Open the MacOS Terminal and type:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ cd ~
@@ -354,7 +335,7 @@ $ source .bashrc
 </div>
 </div>
 <div class="section" id="open-a-terminal-and-type-python-and-run-some-code">
-<h2><span class="section-number">2.1.4.7. </span>6. Open a terminal and type <code class="docutils literal notranslate"><span class="pre">python</span></code> and run some code.<a class="headerlink" href="#open-a-terminal-and-type-python-and-run-some-code" title="Permalink to this headline">¶</a></h2>
+<h2>6. Open a terminal and type <code class="docutils literal notranslate"><span class="pre">python</span></code> and run some code.<a class="headerlink" href="#open-a-terminal-and-type-python-and-run-some-code" title="Permalink to this headline">¶</a></h2>
 <p>Open the MacOS Terminal and type:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ python
 </pre></div>
@@ -374,6 +355,25 @@ $ source .bashrc
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01-Orientation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -383,8 +383,6 @@ $ source .bashrc
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="01.03-Installing-Anaconda-on-Windows.html" title="previous page"><span class="section-number">2.1.3. </span>Installing Anaconda on Windows</a>
-    <a class='right-next' id="next-link" href="01.05-Installing-Anaconda-on-Linux.html" title="next page"><span class="section-number">2.1.5. </span>Installing Anaconda on Linux</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
