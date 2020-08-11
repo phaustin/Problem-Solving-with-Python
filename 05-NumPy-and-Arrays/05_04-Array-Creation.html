@@ -83,7 +83,14 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Problem Solving with Python
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
    1. Preface
@@ -271,12 +278,12 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="http://127.0.0.1:9500/tree/notebooks/05-NumPy-and-Arrays/05_04-Array-Creation.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
         
+        <a class="jupyterhub-button" href="http://127.0.0.1:9500/tree/notebooks/05-NumPy-and-Arrays/05_04-Array-Creation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Jupyter" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Launch Jupyter">Jupyter</button></a>
         
         
         
@@ -575,7 +582,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([6, 6, 3, 2, 4])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([9, 7, 6, 9, 0])
 </pre></div>
 </div>
 </div>
@@ -588,11 +595,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([[3, 6, 0, 2, 6],
-       [4, 8, 7, 5, 7],
-       [1, 1, 7, 0, 7],
-       [5, 7, 2, 2, 6],
-       [1, 9, 3, 8, 0]])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([[9, 2, 6, 1, 9],
+       [1, 5, 4, 8, 0],
+       [0, 2, 4, 5, 0],
+       [6, 6, 5, 3, 9],
+       [3, 8, 5, 4, 0]])
 </pre></div>
 </div>
 </div>
@@ -612,7 +619,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([0.79065812, 0.55946017, 0.59259645, 0.37432658, 0.83951466])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1.20579495e-01, 6.49748225e-04, 5.90677367e-01, 2.42935988e-01,
+       9.53272301e-01])
 </pre></div>
 </div>
 </div>
@@ -626,7 +634,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([3.80942651, 1.39687448, 4.80044734, 8.47042696, 4.76925362])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([3.2236358 , 9.96186927, 8.2340113 , 3.34640823, 9.9902885 ])
 </pre></div>
 </div>
 </div>
@@ -639,7 +647,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([11.47247205, 12.53807255, 12.52823782, 12.64998121, 11.98255854])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([12.19996872, 11.813508  , 11.57292323, 12.23169329, 12.48045797])
 </pre></div>
 </div>
 </div>
@@ -659,7 +667,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([ 1,  1, 11])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([1, 1, 5])
 </pre></div>
 </div>
 </div>
@@ -678,8 +686,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([-0.49801434, -0.16149813,  0.68296118,  0.317668  ,  0.02318519,
-        0.60471121,  0.86586275, -0.85508632,  0.40628818,  0.60277391])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([ 0.91823294, -0.21565322, -0.84941747, -0.6168827 , -0.09855634,
+       -2.13231717, -1.49715033,  0.47684807,  0.9745387 ,  1.62359623])
 </pre></div>
 </div>
 </div>
@@ -695,8 +703,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([74.24532874, 57.63830817, 82.71413473, 75.99400541, 72.88497612,
-       65.10232313, 71.63554118, 69.27250194, 66.73488936, 68.75934392])
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([59.75826334, 58.46070091, 82.99023401, 79.76801526, 70.40345407,
+       67.61151239, 75.04091261, 58.60566718, 70.67189226, 75.00643473])
 </pre></div>
 </div>
 </div>
