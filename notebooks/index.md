@@ -1,4 +1,8 @@
-# Problem Solving with Python
+
+# Problem Solving with Python 
+
+This is a fork of [Problem Solving with Python](https://github.com/professorkazarinoff/Problem-Solving-with-Python-37-Edition) by that uses the [jupyter-book](https://jupyterbook.org/intro.html) platform.
+
 If you like this book, please consider purchasing a hard copy version on amazon.com.
 
 ## Overview
@@ -16,3 +20,7 @@ If you like this book, please consider purchasing a hard copy version on amazon.
 ## License
 
 This work is licensed under a GNU General Public License v3.0
+
+```{code-cell} ipython3
+
+```

@@ -1,10 +1,12 @@
 ---
 jupytext:
+  cell_metadata_filter: all
+  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
     format_version: '0.9'
-    jupytext_version: 1.5.0
+    jupytext_version: 1.5.1
 kernelspec:
   display_name: Python 3
   language: python
