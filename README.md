@@ -1,10 +1,6 @@
 # Problem-Solving-with-Python-37-Edition
 
-This is a fork of the [git repo](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition.git) for the book: Problem Solving with Python 3.7 Edition by Peter D. Kazarinoff, PhDo
-
-A print copy of the book is available on Amazon: [https://www.amazon.com/dp/1693405415](https://www.amazon.com/dp/1693405415)
-
-This is a fork of the [git repo](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition.git) for the book: Problem Solving with Python 3.7 Edition by Peter D. Kazarinoff, PhDo
+This is a fork of the [git repo](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition.git) for the book: Problem Solving with Python 3.7 Edition by Peter D. Kazarinoff, PhD
 
 If you like this book, please consider purchasing a hard copy version on Amazon: [https://www.amazon.com/dp/1693405415](https://www.amazon.com/dp/1693405415)
 
