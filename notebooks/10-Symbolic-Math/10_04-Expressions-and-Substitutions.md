@@ -1,10 +1,12 @@
 ---
 jupytext:
+  cell_metadata_filter: all
+  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
-    format_version: '0.9'
-    jupytext_version: 1.5.0
+    format_version: '0.10'
+    jupytext_version: 1.5.2
 kernelspec:
   display_name: Python 3
   language: python
@@ -89,7 +91,6 @@ $$ y = 2x $$
 results in
 
 $$ 2x + 2x^2 + z^{-3} $$
-    
 
 ```{code-cell} ipython3
 x, y, z = symbols('x y z')
