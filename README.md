@@ -1,62 +1,40 @@
 # Problem-Solving-with-Python-37-Edition
 
-Fork of the [git repo](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition.git) for the book: Problem Solving with Python 3.7 Edition by Peter D. Kazarinoff, PhD
+This is a fork of the [git repo](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition.git) for the book: Problem Solving with Python 3.7 Edition by Peter D. Kazarinoff, PhDo
 
 A print copy of the book is available on Amazon: [https://www.amazon.com/dp/1693405415](https://www.amazon.com/dp/1693405415)
 
+This is a fork of the [git repo](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition.git) for the book: Problem Solving with Python 3.7 Edition by Peter D. Kazarinoff, PhDo
 
-This fork is an experimental repo to see how easy it is to serve a jupyter book as a docker image.  To run:
+If you like this book, please consider purchasing a hard copy version on Amazon: [https://www.amazon.com/dp/1693405415](https://www.amazon.com/dp/1693405415)
 
-1) install docker and docker-compose (with the wsl2 backend if you are on windows)
-2) open a unix shell
-3) clone this repository  (do this from unix, not windows)
+The formatted version: https://phaustin.github.io/Problem-Solving-with-Python-37-Edition/
 
-        git clone https://github.com/phaustin/Problem-Solving-with-Python-37-Edition.git
+To actually run the notebooks 
 
-4) change to the book folder and switch to branch `jb`
+1) Install [docker](https://docs.docker.com/get-docker/)
 
-        cd Problem-Solving-with-Python-37-Edition
-        git checkout -b jb origin/jb
+2) checkout the repo on the `with_html` branch to get the rendered book
 
+```
+git clone https://github.com/phaustin/Problem-Solving-with-Python-37-Edition.git
+cd Problem-Solving-with-Python-37-Edition
+git checkout with_html
+docker pull phaustin/webserver:aug10
+docker pull phaustin/user_notebook:aug11
+docker-compose up
+```
 
-5) at the prompt, type:
+2) open firefox or chrome and in one tab open:
 
-        docker-compose up
+       localhost:8500
 
-6) if this succeeds, you should see two containers running when you do:
-
-        docker ps
-
-7) The container `phaustin/base_pangeo` is running a jupyter notebook server on port 9500
-   and the container `phaustin/webserver_intropy` is running an apache webserver on port 8500
-
-
-8) Log into the container to build the book:
-
-        docker exec -it base_pangeo bash
-
-   you should see a prompt that looks like:
-
-        jovyan@4466eaec6c1f:~$
-
-   which means that you're now user jovyan in the container.  To build the book:
-
-        jb build notebooks
-
-   and you should see new files appear in the `notebooks/_build/html` folder
-
-   type `Ctrl-d` to quit the container
+3) Now take a look at your local version of [section 6.1.5](https://phaustin.github.io/Problem-Solving-with-Python-37-Edition/05-NumPy-and-Arrays/05_05-Array-Indexing.html). If you right-click on the rocketship and launch Jupyterhub in a new tab, you will be prompted for a password. Type "friend" (without the quotes) to start a live notebook for that page.
 
 
-9) To see the text of the jupyter-book, point your web browser at `localhost:8500`
+4) To stop and remove all processes, containers and images:
 
-10) To access the notebooks, point your web browser at `localhost:9500` and enter the password: `friend` in the password box on that page.
-
-11) to remove all volumes and containers do:
-
-       bash bringdown.sh
-
-12) to remove all images do:
-
-       docker rmi $(docker images -q)
-
+```
+bash bringdown.sh
+docker rmi $(docker images -q)
+``
