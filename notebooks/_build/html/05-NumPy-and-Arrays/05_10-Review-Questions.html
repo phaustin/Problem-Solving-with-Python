@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -219,6 +217,10 @@
 
  <!-- To handle the deprecated key -->
 
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -278,12 +280,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/Problem-Solving-with-Python-37-Edition.git/jb?urlpath=tree/notebooks/05-NumPy-and-Arrays/05_10-Review-Questions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
         
-        <a class="jupyterhub-button" href="http://127.0.0.1:9500/tree/notebooks/05-NumPy-and-Arrays/05_10-Review-Questions.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Jupyter" data-toggle="tooltip"
+        
+        <a class="jupyterhub-button" href="http://127.0.0.1:9500/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python-37-Edition.git&urlpath=tree/Problem-Solving-with-Python-37-Edition.git/notebooks/05-NumPy-and-Arrays/05_10-Review-Questions.md&branch=jb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
-                    alt="Launch Jupyter">Jupyter</button></a>
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
         
@@ -346,7 +354,7 @@
 <p>Q05.01 Create an array of the numbers <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">19</span></code>, <code class="docutils literal notranslate"><span class="pre">30</span></code></p>
 <p>Q05.02 Create an array of the numbers <code class="docutils literal notranslate"><span class="pre">-3</span></code>, <code class="docutils literal notranslate"><span class="pre">15</span></code>,<code class="docutils literal notranslate"><span class="pre">0.001</span></code>, <code class="docutils literal notranslate"><span class="pre">6.02e23</span></code></p>
 <p>Q05.03 Create an array of integers between -10 and 10</p>
-<p>Q05.04 Create an array of 10 equally spaced angles between 0 and 2$\pi$</p>
+<p>Q05.04 Create an array of 10 equally spaced angles between 0 and 2<span class="math notranslate nohighlight">\(\pi\)</span></p>
 <p>Q05.05 Create an array of logarithmically spaced numbers between 1 and 1 million. Hint: remember to pass exponents to the <code class="docutils literal notranslate"><span class="pre">np.logspace()</span></code> function.</p>
 <p>Q05.06 Create an array of 20 random integers between 1 and 10</p>
 <p>Q05.07 Create an array of 30 random numbers with a normal distribution</p>
@@ -356,7 +364,7 @@
 <p>Q05.11 Create an array of 18 random floating point numbers between 0 and 10</p>
 <p>Q05.12 Create a variable <span class="math notranslate nohighlight">\(x\)</span> that is an NumPy array which contains values 0, 0.1, 0.2, …, 4.9, 5.0.  Hard coding the values one will be time consuming, use a NumPy function to create the array instead.</p>
 <p>Q05.13 Create a Python list containing the values 1, 2, 5.6, and 9 and store the Python list in a variable called <code class="docutils literal notranslate"><span class="pre">x</span></code>.  Then create a NumPy array of the same values and store it in a variable called <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<p>Q05.14 Create an array called <code class="docutils literal notranslate"><span class="pre">r</span></code> of 200 evenly spaced numbers between and including 0 to 2$\pi$, then create an array <code class="docutils literal notranslate"><span class="pre">y</span></code> such that <span class="math notranslate nohighlight">\(y=10sin(3r)\)</span>.</p>
+<p>Q05.14 Create an array called <code class="docutils literal notranslate"><span class="pre">r</span></code> of 200 evenly spaced numbers between and including 0 to 2<span class="math notranslate nohighlight">\(\pi\)</span>, then create an array <code class="docutils literal notranslate"><span class="pre">y</span></code> such that <span class="math notranslate nohighlight">\(y=10sin(3r)\)</span>.</p>
 <p>Q05.15 Create an array of 25 regularly spaced values beginning at 10 and ending with 18.</p>
 <p>Q05.16 Create an array of regularly spaced numbers beginning at 10, ending with 18.4 using an increment of 0.6.</p>
 </div>
@@ -423,7 +431,7 @@ y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 <p>(b) <span class="math notranslate nohighlight">\(1.5a -2b\)</span></p>
 <p>(c) <span class="math notranslate nohighlight">\(0.5ab\)</span></p>
 <p>(d) <span class="math notranslate nohighlight">\(\frac{b^2}{a}\)</span></p>
-<p>Q05.51 Create an array of angles between (and including) 0 and 2$\pi$ radians in increments of <span class="math notranslate nohighlight">\(\pi/2\)</span> radians.</p>
+<p>Q05.51 Create an array of angles between (and including) 0 and 2<span class="math notranslate nohighlight">\(\pi\)</span> radians in increments of <span class="math notranslate nohighlight">\(\pi/2\)</span> radians.</p>
 <p>(a) Calculate the sine of each angle in the array</p>
 <p>(b) Calculate the cosine of each angle in the array</p>
 <p>(c) Convert each angle in the array to degrees</p>

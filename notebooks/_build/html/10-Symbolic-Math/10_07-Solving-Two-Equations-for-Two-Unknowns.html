@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -214,6 +212,10 @@
 
  <!-- To handle the deprecated key -->
 
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -273,12 +275,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/Problem-Solving-with-Python-37-Edition.git/jb?urlpath=tree/notebooks/10-Symbolic-Math/10_07-Solving-Two-Equations-for-Two-Unknowns.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
         
-        <a class="jupyterhub-button" href="http://127.0.0.1:9500/tree/notebooks/10-Symbolic-Math/10_07-Solving-Two-Equations-for-Two-Unknowns.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Jupyter" data-toggle="tooltip"
+        
+        <a class="jupyterhub-button" href="http://127.0.0.1:9500/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python-37-Edition.git&urlpath=tree/Problem-Solving-with-Python-37-Edition.git/notebooks/10-Symbolic-Math/10_07-Solving-Two-Equations-for-Two-Unknowns.md&branch=jb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
-                    alt="Launch Jupyter">Jupyter</button></a>
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
         
@@ -336,7 +344,7 @@
 <p>To solve this system of two equations for the two unknowns, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, first import the SymPy package. From the SymPy package, the functions <code class="docutils literal notranslate"><span class="pre">symbols</span></code>, <code class="docutils literal notranslate"><span class="pre">Eq</span></code> and <code class="docutils literal notranslate"><span class="pre">solve</span></code> are needed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
 </pre></div>
 </div>
 </div>
@@ -344,7 +352,7 @@
 <p>Next, create two SymPy symbols objects, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. As shown in a previous section, the string passed as an input argument to the <code class="docutils literal notranslate"><span class="pre">symbols()</span></code> function, <code class="docutils literal notranslate"><span class="pre">'x</span> <span class="pre">y'</span></code>, does not have any commas. The outputs of the <code class="docutils literal notranslate"><span class="pre">symbols()</span></code> function are the two symbol objects <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. These outputs must be separated by a comma and are not surrounded by quotes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -352,33 +360,32 @@
 <p>Now define the two equations as SymPy equation objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eq1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq1</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">eq2</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="stderr docutils container">
-<pre class="stderr literal-block">/opt/conda/lib/python3.8/site-packages/sympy/core/relational.py:486: SymPyDeprecationWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.8/site-packages/sympy/core/relational.py:486: SymPyDeprecationWarning: 
 
 Eq(expr) with rhs default to 0 has been deprecated since SymPy 1.5.
 Use Eq(expr, 0) instead. See
 https://github.com/sympy/sympy/issues/16587 for more info.
 
   SymPyDeprecationWarning(
-</pre>
+</pre></div>
 </div>
 </div>
 </div>
 <p>We can use SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function to compute the value of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. The first argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of the two equations <code class="docutils literal notranslate"><span class="pre">(eq1,</span> <span class="pre">eq2)</span></code>. The second argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of the variables we want to solve for <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>{x: 1, y: 4}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{x: 1, y: 4}
 </pre></div>
 </div>
 </div>
@@ -387,14 +394,14 @@ https://github.com/sympy/sympy/issues/16587 for more info.
 <p>We can access the solution out of the solution dictionary using regular dictionary indexing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sol_dict</span> <span class="o">=</span> <span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol_dict</span> <span class="o">=</span> <span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;x = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;y = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>x = 1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 1
 y = 4
 </pre></div>
 </div>
@@ -420,7 +427,7 @@ y = 4
 <p>To accomplish this with Python, first import NumPy and SymPy.  The SymPy functions <code class="docutils literal notranslate"><span class="pre">symbols</span></code>, <code class="docutils literal notranslate"><span class="pre">Eq</span></code> and <code class="docutils literal notranslate"><span class="pre">solve</span></code> are needed. We will also use NumPy’s trig functions to solve this problem.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span><span class="p">,</span> <span class="n">solve</span>
 </pre></div>
 </div>
@@ -429,7 +436,7 @@ y = 4
 <p>Next, define the symbolic math variables. Multiple symbolic math variables can be defined at the same time. Remember the argument names (on the right-hand side of the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>) need to be enclosed in quotes<code class="docutils literal notranslate"><span class="pre">'</span>&#160; <span class="pre">'</span></code> and separated by spaces, no commas. The object names (on the left-hand side of the assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code>) are separated with commas, no quotes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;Tce Tbd&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;Tce Tbd&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -466,24 +473,23 @@ y = 4
 <p>A detail in the code section below is that NumPy’s <code class="docutils literal notranslate"><span class="pre">np.cos()</span></code> function accepts an angle in radians, so we need to convert our angles from degrees to radians using NumPy’s <code class="docutils literal notranslate"><span class="pre">np.radians()</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eq1</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">-</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq1</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">-</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">eq1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Eq(-0.707106781186548*Tbd + 0.866025403784439*Tce, 0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eq(-0.707106781186548*Tbd + 0.866025403784439*Tce, 0)
 </pre></div>
 </div>
-<div class="stderr docutils container">
-<pre class="stderr literal-block">/opt/conda/lib/python3.8/site-packages/sympy/core/relational.py:486: SymPyDeprecationWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.8/site-packages/sympy/core/relational.py:486: SymPyDeprecationWarning: 
 
 Eq(expr) with rhs default to 0 has been deprecated since SymPy 1.5.
 Use Eq(expr, 0) instead. See
 https://github.com/sympy/sympy/issues/16587 for more info.
 
   SymPyDeprecationWarning(
-</pre>
+</pre></div>
 </div>
 </div>
 </div>
@@ -493,13 +499,13 @@ https://github.com/sympy/sympy/issues/16587 for more info.
 <p>Define this equation as a SymPy equation object as well:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">eq2</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">+</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span><span class="o">-</span><span class="mi">22</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq2</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">+</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span><span class="o">-</span><span class="mi">22</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">eq2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Eq(0.707106781186547*Tbd + 0.5*Tce - 22, 0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eq(0.707106781186547*Tbd + 0.5*Tce - 22, 0)
 </pre></div>
 </div>
 </div>
@@ -507,12 +513,12 @@ https://github.com/sympy/sympy/issues/16587 for more info.
 <p>Now solve the two equations for <span class="math notranslate nohighlight">\(T_{ce}\)</span> and <span class="math notranslate nohighlight">\(T_{bd}\)</span> with SymPy’s <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function. The first argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of equations to solve, the second argument passed to the <code class="docutils literal notranslate"><span class="pre">solve()</span></code> function is a tuple of the variables to solve for.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>{Tce: 16.1051177665153, Tbd: 19.7246603876972}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{Tce: 16.1051177665153, Tbd: 19.7246603876972}
 </pre></div>
 </div>
 </div>
@@ -521,14 +527,14 @@ https://github.com/sympy/sympy/issues/16587 for more info.
 <p>The numerical solutions can be pulled out of the dictionary using regular Python dictionary access. Note <code class="docutils literal notranslate"><span class="pre">Tce</span></code> and <code class="docutils literal notranslate"><span class="pre">Tbd</span></code> are SymPy symbols objects, not strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sol_dict</span> <span class="o">=</span> <span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol_dict</span> <span class="o">=</span> <span class="n">solve</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span><span class="n">eq2</span><span class="p">),(</span><span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tce = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">Tce</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tce = </span><span class="si">{</span><span class="n">sol_dict</span><span class="p">[</span><span class="n">Tbd</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Tce = 16.1051177665153
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tce = 16.1051177665153
 Tce = 19.7246603876972
 </pre></div>
 </div>
@@ -537,7 +543,7 @@ Tce = 19.7246603876972
 <p>The same problem can be solved again, but with <span class="math notranslate nohighlight">\(w\)</span> kept as a variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="p">,</span> <span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;w, Tab, Tac&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="p">,</span> <span class="n">Tce</span><span class="p">,</span> <span class="n">Tbd</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;w, Tab, Tac&#39;</span><span class="p">)</span>
 
 <span class="n">eq1</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">-</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">)))</span>
 <span class="n">eq2</span><span class="o">=</span><span class="n">Eq</span><span class="p">(</span><span class="n">Tce</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span> <span class="o">+</span> <span class="n">Tbd</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span><span class="o">-</span><span class="n">w</span><span class="p">)</span>
@@ -547,7 +553,7 @@ Tce = 19.7246603876972
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>{Tab: 0.732050807568878*w, Tac: 0.896575472168054*w}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{Tab: 0.732050807568878*w, Tac: 0.896575472168054*w}
 </pre></div>
 </div>
 </div>

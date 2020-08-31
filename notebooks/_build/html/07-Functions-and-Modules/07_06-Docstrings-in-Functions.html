@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -214,6 +212,10 @@
 
  <!-- To handle the deprecated key -->
 
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -273,12 +275,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/Problem-Solving-with-Python-37-Edition.git/jb?urlpath=tree/notebooks/07-Functions-and-Modules/07_06-Docstrings-in-Functions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
         
-        <a class="jupyterhub-button" href="http://127.0.0.1:9500/tree/notebooks/07-Functions-and-Modules/07_06-Docstrings-in-Functions.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Jupyter" data-toggle="tooltip"
+        
+        <a class="jupyterhub-button" href="http://127.0.0.1:9500/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python-37-Edition.git&urlpath=tree/Problem-Solving-with-Python-37-Edition.git/notebooks/07-Functions-and-Modules/07_06-Docstrings-in-Functions.md&branch=jb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
-                    alt="Launch Jupyter">Jupyter</button></a>
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
         
@@ -323,12 +331,12 @@
 <p>Doc strings are what you see when the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function is called. As an example, running the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function on the built-in function <code class="docutils literal notranslate"><span class="pre">sum</span></code> brings up:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on built-in function sum in module builtins:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function sum in module builtins:
 
 sum(iterable, /, start=0)
     Return the sum of a &#39;start&#39; value (default: 0) plus an iterable of numbers
@@ -336,7 +344,6 @@ sum(iterable, /, start=0)
     When the iterable is empty, return the start value.
     This function is intended specifically for use with numeric values and may
     reject non-numeric types.
-
 </pre></div>
 </div>
 </div>
@@ -345,7 +352,7 @@ sum(iterable, /, start=0)
 <p>Let’s create a new function that converts grams (g) to kilograms (kg). 1000 grams is equal to 1 kilogram. Let’s call our function <code class="docutils literal notranslate"><span class="pre">g2kg</span></code>. Remember the <strong>parenthesis</strong>, <strong>colon</strong>, and <strong>return</strong> statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g2kg</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g2kg</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="n">kg</span> <span class="o">=</span> <span class="n">g</span><span class="o">/</span><span class="mi">1000</span>
     
     <span class="k">return</span> <span class="n">kg</span>
@@ -356,12 +363,12 @@ sum(iterable, /, start=0)
 <p>Now let’s try and use our function. How many kilograms is 1300 grams? We expect the output to be <code class="docutils literal notranslate"><span class="pre">1.3</span></code> kilograms.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g2kg</span><span class="p">(</span><span class="mi">1300</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g2kg</span><span class="p">(</span><span class="mi">1300</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1.3
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3
 </pre></div>
 </div>
 </div>
@@ -369,15 +376,14 @@ sum(iterable, /, start=0)
 <p>If we call <code class="docutils literal notranslate"><span class="pre">help()</span></code> on our <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function, nothing is returned. <code class="docutils literal notranslate"><span class="pre">help(g2kg)</span></code> does not return any output because our new <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function does not contain a docstring yet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">g2kg</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">g2kg</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on function g2kg in module __main__:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function g2kg in module __main__:
 
 g2kg(g)
-
 </pre></div>
 </div>
 </div>
@@ -406,7 +412,7 @@ g2kg(g)
 <p>Let’s include a docstring with our <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function definition.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g2kg</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g2kg</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    </span>
 <span class="sd">    Function g2kg converts between g and kg</span>
@@ -431,12 +437,12 @@ g2kg(g)
 <p>Now let’s ask for <code class="docutils literal notranslate"><span class="pre">help()</span></code> on our <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function and see the docstring we wrote in the <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function definition printed back to us.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">g2kg</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">g2kg</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Help on function g2kg in module __main__:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function g2kg in module __main__:
 
 g2kg(g)
     Function g2kg converts between g and kg
@@ -449,7 +455,6 @@ g2kg(g)
         &gt;&gt;&gt; g2kg(1300)
             
             1.3
-
 </pre></div>
 </div>
 </div>

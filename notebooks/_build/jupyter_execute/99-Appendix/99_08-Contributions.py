@@ -1,4 +1,4 @@
-## Contributions
+# Contributions
 
 Any corrections, typos or suggestions to improve the text can be emailed to:
 
@@ -6,7 +6,7 @@ Any corrections, typos or suggestions to improve the text can be emailed to:
  
 Please include the chapter number and section number in your email. Include in your email if you would like to remain anonymous or have your name recognized in the contributor list. Thank-you in advance for improving the text for others.
 
-### Contributor List
+## Contributor List
 
  * Levi, Blessing, and Ngan helped improve some review questions
  

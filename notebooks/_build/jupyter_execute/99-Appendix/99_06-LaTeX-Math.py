@@ -1,4 +1,4 @@
-## LaTeX Math
+# LaTeX Math
 
 LaTeX math can be included in Jupyter notebook markdown cells. LaTeX math can also be included in parts of Matplotlib plots like axis labels and text fields.
 

@@ -11,11 +11,11 @@ kernelspec:
   name: python3
 ---
 
-## Problem Solving with Python Book Construction
+# Problem Solving with Python Book Construction
 
 +++
 
-### Jupyter Notebooks
+## Jupyter Notebooks
 
 +++
 
@@ -83,7 +83,7 @@ There is a Jupyter notebook for each section of the book within each chapter dir
 
 +++
 
-### Website
+## Website
 
 +++
 
@@ -91,7 +91,7 @@ The website for this book was constructed using **Mkdocs** (https://www.mkdocs.o
 
 +++
 
-### Hardcopy
+## Hardcopy
 
 +++
 

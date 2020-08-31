@@ -1,6 +1,6 @@
-## Problem Solving with Python Book Construction
+# Problem Solving with Python Book Construction
 
-### Jupyter Notebooks
+## Jupyter Notebooks
 
 This book was constructed using Jupyter notebooks. The GitHub.com repo for the book can be found at:
     
@@ -56,11 +56,11 @@ There is a Jupyter notebook for each section of the book within each chapter dir
 `-- images/
 ```
 
-### Website
+## Website
 
 The website for this book was constructed using **Mkdocs** (https://www.mkdocs.org) and the **Material for MkDocs** (https://squidfunk.github.io/mkdocs-material/) theme. Jupyter noteboks were exported to **_.html_** files with markdown cells unformatted using a custom script and **nbconvert**.
 
-### Hardcopy
+## Hardcopy
 
 The hard copy of the book was constructed using LaTeX, **nbconvert** and a set of custom scripts and templates. One conversion script combined all of the notebooks into one BIG notebook.  The BIG notebook was then converted into LaTeX using **nbconvert** and a custom template. Outside of the Python ecosystem, a separate installation of TeXworks compiled the LaTeX **_.tex_** file to a **_.pdf_** document.
 

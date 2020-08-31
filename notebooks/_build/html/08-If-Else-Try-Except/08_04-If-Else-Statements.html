@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -209,6 +207,10 @@
 
  <!-- To handle the deprecated key -->
 
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
 </div>
 
 
@@ -268,12 +270,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/Problem-Solving-with-Python-37-Edition.git/jb?urlpath=tree/notebooks/08-If-Else-Try-Except/08_04-If-Else-Statements.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
         
-        <a class="jupyterhub-button" href="http://127.0.0.1:9500/tree/notebooks/08-If-Else-Try-Except/08_04-If-Else-Statements.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Jupyter" data-toggle="tooltip"
+        
+        <a class="jupyterhub-button" href="http://127.0.0.1:9500/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python-37-Edition.git&urlpath=tree/Problem-Solving-with-Python-37-Edition.git/notebooks/08-If-Else-Try-Except/08_04-If-Else-Statements.md&branch=jb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
-                    alt="Launch Jupyter">Jupyter</button></a>
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
         
@@ -318,7 +326,7 @@
 <p>A sample if/else code section is below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is greater than 10&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -327,7 +335,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>a is less than 10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a is less than 10
 </pre></div>
 </div>
 </div>
@@ -336,7 +344,7 @@
 <p>If the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> is modified so that <code class="docutils literal notranslate"><span class="pre">a</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">a&gt;10</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, and the code under the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement <em>will</em> run, and the code under the <code class="docutils literal notranslate"><span class="pre">else</span></code> keyword <em>will not</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a is greater than 10&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -345,7 +353,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>a is greater than 10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a is greater than 10
 </pre></div>
 </div>
 </div>
@@ -365,7 +373,7 @@
 <p>An example section of code using <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> is below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
 <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="s1">&#39;red&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The color is red&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">color</span> <span class="o">==</span> <span class="s1">&#39;green&#39;</span><span class="p">:</span>
@@ -376,7 +384,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>The color is green
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The color is green
 </pre></div>
 </div>
 </div>
@@ -384,7 +392,7 @@
 <p>If we modify the code and set <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">=</span> <span class="pre">'orange'</span></code>, the code under the <code class="docutils literal notranslate"><span class="pre">if</span></code> does not run, and the code under the <code class="docutils literal notranslate"><span class="pre">elif</span></code> does not run either. Only the code under the <code class="docutils literal notranslate"><span class="pre">else</span></code> is executed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span>
 <span class="k">if</span> <span class="n">color</span> <span class="o">==</span> <span class="s1">&#39;red&#39;</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The color is red&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">color</span> <span class="o">==</span> <span class="s1">&#39;green&#39;</span><span class="p">:</span>
@@ -395,7 +403,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>The color is not red or green
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The color is not red or green
 </pre></div>
 </div>
 </div>

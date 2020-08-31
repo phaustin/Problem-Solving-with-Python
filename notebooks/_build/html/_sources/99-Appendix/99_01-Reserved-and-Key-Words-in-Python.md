@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Reserved and Keywords in Python
+# Reserved and Keywords in Python
 
 +++
 
@@ -39,7 +39,7 @@ as
 
 +++
 
-### Logical Keywords
+## Logical Keywords
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -56,7 +56,7 @@ in
 
 +++
 
-### Control Flow Key Words
+## Control Flow Key Words
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -79,7 +79,7 @@ yield
 
 +++
 
-### Definition Key Words
+## Definition Key Words
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -96,7 +96,7 @@ del
 
 +++
 
-### Module Keywords
+## Module Keywords
 
 +++ {"latex": {"environment": "key_terms"}}
 

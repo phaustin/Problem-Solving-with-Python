@@ -1,4 +1,4 @@
-## Reserved and Keywords in Python
+# Reserved and Keywords in Python
 
 The following are reserved and keywords in Python. These words should not be used as the names for user-defined variables, functions, classes, methods or modules. Python's keywords can be accessed with the following code:
 
@@ -20,7 +20,7 @@ as
 
 ```
 
-### Logical Keywords
+## Logical Keywords
 
 ```text
 True
@@ -33,7 +33,7 @@ None
 in
 ```
 
-### Control Flow Key Words
+## Control Flow Key Words
 
 ```text
 if
@@ -52,7 +52,7 @@ return
 yield
 ```
 
-### Definition Key Words
+## Definition Key Words
 
 ```text
 def
@@ -65,7 +65,7 @@ assert
 del
 ```
 
-### Module Keywords
+## Module Keywords
 
 ```text
 import

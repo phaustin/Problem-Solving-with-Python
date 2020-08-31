@@ -1,4 +1,4 @@
-## Git and GitHub
+# Git and GitHub
 
 **Git** is one of the standard _version control_ systems used by developers to save code and work on code collaboratively as a team. **Git** is a program run on the command line or **Anaconda Prompt**. If you use Windows, the **gitbash** program can be downloaded at [git-scm.com/downloads](https://git-scm.com/downloads). **Git** was created by Linus Torvalds, who also designed the Linux operating system.
 
@@ -29,7 +29,7 @@ Useful **git** commands are summarized below:
  
  * ```git pull origin master``` pull down the version in the remote repo into the local repo
 
-### Cloning a repo
+## Cloning a repo
 
 One common operation to complete with **git** is to clone a repo from GitHub.com and save it locally. This means you copy all the files stored in the remote repo on GitHub.com onto your local computer. Cloning a repo from Github.com is accomplished with:
 
@@ -43,15 +43,15 @@ This command copies the repo named ```repo``` from the user named ```user``` to 
 $ git clone https://github.com/micropython/micropython.git
 ```
 
-### Creating and synching a remote repo on GitHub.com with a local repo
+## Creating and synching a remote repo on GitHub.com with a local repo
 
 Another common task to complete with **git** is to synch a remote repo on GitHub.com with a local repo on your local computer. This is useful when you want to keep the files in a particular project synched across multiple computers. Synched remote and local repos are also useful for a group of problem solvers working on the same project. Each team member has access to the same remote repo on GitHub.com and each team member has the same local repo on their computer.
 
-#### Create a remote repo on GitHub.com
+### Create a remote repo on GitHub.com
 
 First, go to [GitHub.com/join](https://github.com/join) and create a new account. Log in and create a new repo. It is a good idea to include a license and a **_.gitignore_** file. For a Python project, the **_.gitignore_** file for Python is a good start. Two common licenses for open source projects (projects you are willing to share with others) are the _GNU General Public License v3.0_ and the _MIT License_.
 
-#### Make a new local repo and link the local repo to the remote repo on GitHub.com
+### Make a new local repo and link the local repo to the remote repo on GitHub.com
 
 Second, create a local directory and ```cd``` into it. Initialize a git repo locally in that directory. Then synch the local folder with the remote repo on GitHub.com.
 
@@ -63,7 +63,7 @@ $ git remote add origin https://github.com/user/repo.git
 $ git pull origin master
 ```
 
-#### Add, commit and push changes up to Github.com
+### Add, commit and push changes up to Github.com
 
 Third, work on the project locally. For example, you could edit one of the files in the directory ```newproject``` or create a new file in the directory ```newproject```.
 
@@ -75,7 +75,7 @@ $ git commit -m "commit message"
 $ git push origin master
 ```
 
-#### Pull the most recent version from GitHub.com before each work session
+### Pull the most recent version from GitHub.com before each work session
 
 If using **git** and GitHub.com, remember to pull the most recent version of the repo down from GitHub.com before you make any changes locally. If changes are made locally before the version of the repo on GitHub.com is synched, the local repo and remote repo will be out of synch.
 

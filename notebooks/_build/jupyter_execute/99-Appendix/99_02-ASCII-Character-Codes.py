@@ -1,4 +1,4 @@
-## ASCII Character Codes
+# ASCII Character Codes
 
 A listing of ASCII character codes is below. ASCII character codes  character codes can be accessed using the following code:
 

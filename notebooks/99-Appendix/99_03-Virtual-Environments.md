@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Virtual Environments
+# Virtual Environments
 
 +++
 
@@ -21,7 +21,7 @@ Two projects on the same computer can use different versions of Python and diffe
 
 +++
 
-### Create a virtual environment with the Anaconda Prompt
+## Create a virtual environment with the Anaconda Prompt
 
 To create the new virtual environment, open the **Anaconda Prompt** and issue the command:
 
@@ -53,7 +53,7 @@ Type ```y``` to confirm and create the new virtual environment.
 
 +++
 
-### Activate a virtual environment
+## Activate a virtual environment
 
 To use the new virtual environment ```env_name```, the virtual environment needs to be _activated_. To activate the environment ```env_name```, issue the command:
 
@@ -69,7 +69,7 @@ The virtual environment is active when you see ```(env_name) >``` in parenthesis
 
 +++
 
-### Install packages in a virtual environment
+## Install packages in a virtual environment
 
 When a new virtual environment is created, no packages are installed by default. If you use the Anaconda distribution of Python, the ```base``` environment contains about 600 packages that come with Anaconda. But a fresh new virtual environment will just have Python installed, no other packages.
 
@@ -87,7 +87,7 @@ Multiple packages can be installed with the same command. To install both NumPy 
 
 +++
 
-### Deactivate a virtual environment
+## Deactivate a virtual environment
 
 To deactivate an active environment, run the command:
 
@@ -100,7 +100,7 @@ When the virtual environment is deactivated, the prompt looks normal (just ```>`
 
 +++
 
-### List your virtual environments
+## List your virtual environments
 
 View a list of your virtual environments using the command ```conda info --envs``` or ```conda env list```.
 
@@ -138,7 +138,7 @@ matplotlib               /home/tribilium/anaconda3/envs/matplotlib
 
 +++
 
-### Remove a virtual environment
+## Remove a virtual environment
 
 Remove a virtual environment with the command ```conda remove --name env_name --all```. You need to exit out of the environment before you remove it.
 

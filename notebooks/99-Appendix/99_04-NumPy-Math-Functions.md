@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## NumPy Math Functions
+# NumPy Math Functions
 
 +++
 
@@ -25,7 +25,7 @@ for func in dir(np):
 
 +++
 
-### NumPy Array Creation and Manipulation Functions and Methods
+## NumPy Array Creation and Manipulation Functions and Methods
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -49,7 +49,7 @@ np.asarray
 
 +++
 
-### NumPy Exponential and Logarithmic Functions and Methods
+## NumPy Exponential and Logarithmic Functions and Methods
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -69,7 +69,7 @@ np.e
 
 +++
 
-### NumPy Trigonometric Functions and Methods
+## NumPy Trigonometric Functions and Methods
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -97,7 +97,7 @@ np.angle
 
 +++
 
-### NumPy Statistics Functions and Methods
+## NumPy Statistics Functions and Methods
 
 +++ {"latex": {"environment": "key_terms"}}
 

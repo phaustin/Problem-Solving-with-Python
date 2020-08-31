@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## About the Author
+# About the Author
 
 +++
 

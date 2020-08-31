@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## LaTeX Math
+# LaTeX Math
 
 +++
 

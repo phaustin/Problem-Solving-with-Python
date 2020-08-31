@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Contributions
+# Contributions
 
 +++
 
@@ -23,7 +23,7 @@ Please include the chapter number and section number in your email. Include in y
 
 +++
 
-### Contributor List
+## Contributor List
 
  * Levi, Blessing, and Ngan helped improve some review questions
  

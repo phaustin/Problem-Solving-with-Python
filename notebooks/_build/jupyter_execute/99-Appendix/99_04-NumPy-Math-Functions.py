@@ -1,4 +1,4 @@
-## NumPy Math Functions
+# NumPy Math Functions
 
 The code below prints out all NumPy functions and methods:
 
@@ -8,7 +8,7 @@ for func in dir(np):
     print(func)
 ```
 
-### NumPy Array Creation and Manipulation Functions and Methods
+## NumPy Array Creation and Manipulation Functions and Methods
 
 ```
 np.array
@@ -28,7 +28,7 @@ np.asmatrix
 np.asarray
 ```
 
-### NumPy Exponential and Logarithmic Functions and Methods
+## NumPy Exponential and Logarithmic Functions and Methods
 
 ```
 np.log
@@ -44,7 +44,7 @@ np.power
 np.e
 ```
 
-### NumPy Trigonometric Functions and Methods
+## NumPy Trigonometric Functions and Methods
 
 ```
 np.pi
@@ -68,7 +68,7 @@ np.tanh
 np.angle
 ```
 
-### NumPy Statistics Functions and Methods
+## NumPy Statistics Functions and Methods
 
 ```
 np.mean

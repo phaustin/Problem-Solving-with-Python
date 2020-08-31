@@ -1,10 +1,10 @@
-## Virtual Environments
+# Virtual Environments
 
 Using _virtual environments_ is standard practice in Python. A virtual environment is an isolated installation of Python with associated packages. When you use virtual environments, one project can have a separate version of Python and packages. Another project can use a different virtual environment and therefore have a different version of Python and a different set of packages. 
 
 Two projects on the same computer can use different versions of Python and different versions of packages if virtual environments are used.
 
-### Create a virtual environment with the Anaconda Prompt
+## Create a virtual environment with the Anaconda Prompt
 
 To create the new virtual environment, open the **Anaconda Prompt** and issue the command:
 
@@ -34,7 +34,7 @@ The following NEW packages will be INSTALLED:
 
 Type ```y``` to confirm and create the new virtual environment.
 
-### Activate a virtual environment
+## Activate a virtual environment
 
 To use the new virtual environment ```env_name```, the virtual environment needs to be _activated_. To activate the environment ```env_name```, issue the command:
 
@@ -48,7 +48,7 @@ The virtual environment is active when you see ```(env_name) >``` in parenthesis
 (env_name) > 
 ```
 
-### Install packages in a virtual environment
+## Install packages in a virtual environment
 
 When a new virtual environment is created, no packages are installed by default. If you use the Anaconda distribution of Python, the ```base``` environment contains about 600 packages that come with Anaconda. But a fresh new virtual environment will just have Python installed, no other packages.
 
@@ -64,7 +64,7 @@ Multiple packages can be installed with the same command. To install both NumPy 
 (env_name) > conda install numpy jupyter
 ```
 
-### Deactivate a virtual environment
+## Deactivate a virtual environment
 
 To deactivate an active environment, run the command:
 
@@ -75,7 +75,7 @@ To deactivate an active environment, run the command:
 
 When the virtual environment is deactivated, the prompt looks normal (just ```>```), with no environment name in parenthesis before it.
 
-### List your virtual environments
+## List your virtual environments
 
 View a list of your virtual environments using the command ```conda info --envs``` or ```conda env list```.
 
@@ -111,7 +111,7 @@ matplotlib               /home/tribilium/anaconda3/envs/matplotlib
 
 ```
 
-### Remove a virtual environment
+## Remove a virtual environment
 
 Remove a virtual environment with the command ```conda remove --name env_name --all```. You need to exit out of the environment before you remove it.
 
