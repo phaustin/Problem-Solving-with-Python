@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Line Plots
+# Line Plots
 
 +++
 
@@ -50,7 +50,7 @@ The result is a line plot that shows sin(x) from 0 to 4$\pi$.
 
 +++
 
-### Features of a Matplotlib plot
+## Features of a Matplotlib plot
 
 +++
 
@@ -58,7 +58,7 @@ A variety of features on a Matplotlib plot can be specified. The following is a 
 
 +++
 
-#### Line Color, Line Width, Line Style, Line Opacity and Marker Options
+### Line Color, Line Width, Line Style, Line Opacity and Marker Options
 
 The color, width, and style of line in a Matplotlib plot can be specified. Line color, line width, and line style are included as extra keyword arguments in the ```plt.plot()``` function call.
 
@@ -165,7 +165,7 @@ plt.plot( ....
 
 +++
 
-#### Title
+### Title
 
 The plot title will be shown above the plot. The ```plt.title()``` command accepts a string as an argument.
 
@@ -175,7 +175,7 @@ plt.title('My Plot Title')
 
 +++
 
-#### x-axis label
+### x-axis label
 
 The x-axis label is shown below the x-axis. The ```plt.xlabel()``` command accepts a string as an argument.
 
@@ -185,7 +185,7 @@ plt.xlabel('My x-axis label')
 
 +++
 
-#### y-axis label
+### y-axis label
 
 The y-axis label is shown to the left of the y-axis. The ```plt.ylabel()``` command also accepts a string as an argument.
 
@@ -195,7 +195,7 @@ plt.ylabel('My y-axis label')
 
 +++
 
-#### Legend
+### Legend
 
 You can use the ```plt.legend()``` command to insert a legend on a plot. The legend appears within the plot area, in the upper right corner by default. The ```plt.legend()``` command accepts a list of strings and optionally accepts a ```loc= ``` argument to specify the legend location.
 
@@ -221,7 +221,7 @@ The following are the legend location codes. These numbers need to be placed aft
 
 +++
 
-#### Grid
+### Grid
 
 A grid can be added to a Matplotlib plot using the ```plt.grid()``` command. By defaut, the grid is turned off. To turn on the grid use:
 
@@ -233,7 +233,7 @@ The only valid options are ```plt.grid(True)``` and ```plt.grid(False)```. Note 
 
 +++
 
-#### Tick Labels
+### Tick Labels
 
 Tick labels can be specified on a Matplotlib plot using ```plt.xticks()``` and ```plt.yticks()```. To add tick labels use:
 
@@ -246,7 +246,7 @@ The ```[locations list]``` can be a Python list or NumPy array of tick locations
 
 +++
 
-### Build a plot in five steps
+## Build a plot in five steps
 
 +++
 
@@ -260,15 +260,15 @@ The steps below show a logical progression to build a plot with Matplotlib:
 
 Details of each step is explained below.
 
-#### 1. Imports
+### 1. Imports
 
 Import ```matplot.pyplot as plt```, as well as any other modules needed to work with the data such as NumPy or Pandas. If using a Jupyter notebook, include the line ```%matplotlib inline``` in the import section.
 
-#### 2. Define data
+### 2. Define data
 
 The plot needs to contain data. Data is defined after the imports. Typically, data for plots is contained in Python lists, NumPy arrays or Pandas dataframes.
 
-#### 3. Plot data including options
+### 3. Plot data including options
 
 Use ```plt.plot()``` to plot the data you defined. Note the ```plt.plot()``` line needs to be called before any other plot details are specified. Otherwise, the details have no plot to apply to.
 
@@ -283,7 +283,7 @@ Besides data, the ```plt.plot()``` function can include keyword arguments such a
  * ```markerfacecolor='<color abbreviation>'```
  * ```markersize=<float or int>```
 
-#### 4. Add plot details
+### 4. Add plot details
 
 After the ```plt.plot()``` line, add details such as a title, axis labels, legend, grid, and tick labels. Plot details to add include:
 
@@ -295,7 +295,7 @@ After the ```plt.plot()``` line, add details such as a title, axis labels, legen
 * ```plt.xticks([locations list or array], [labels list])```
 * ```plt.yticks([locations list or array], [labels list])```
 
-#### 5. Show the plot
+### 5. Show the plot
 
 Use the ```plt.show()``` command to show the plot. ```plt.show()``` causes the plot to display in a Jupyter notebook or pop out in a new window if the plot is constructed in a separate **_.py_** file. Note that ```plt.show()``` needs to be called after ```plt.plot()``` and any plot details such as ```plt.title()```.
 

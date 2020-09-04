@@ -11,11 +11,11 @@ kernelspec:
   name: python3
 ---
 
-## Review Questions
+# Review Questions
 
 +++
 
-#### Line plots
+## Line plots
 
 +++ {"latex": {"environment": "problems"}}
 
@@ -59,7 +59,7 @@ Set values of $r=-1/2$ to $1/2$
 
 +++
 
-#### Bar Charts and Pie Charts
+### Bar Charts and Pie Charts
 
 +++ {"latex": {"environment": "problems"}}
 
@@ -169,7 +169,7 @@ Build a bar plot of tensile strength vs. heat treatment using the steel heat tre
 
 +++
 
-#### Histograms, Box Plots, and Violin Plots
+### Histograms, Box Plots, and Violin Plots
 
 Q06.50 Plot the histogram of a normal distribution of ```100``` random numbers. Use NumPy's ```np.random.normal()``` function to create the array of numbers. Set a mean $\mu$ = ```20``` and a standard deviation $\sigma$ = ```7```.
 
@@ -183,7 +183,7 @@ Q06.54 Use Matplotlib's ```plt.subplots()``` command to create a figure with thr
 
 +++
 
-#### Scatter Plots
+### Scatter Plots
 
 Q06.60 Create a scatter plot with the following lists of x points and y points.
 
@@ -214,7 +214,7 @@ Plot the arrays ```x``` and ```y``` on a scatter plot. Set the color of the mark
 
 +++
 
-#### Subplots
+### Subplots
 
 Q06.70 Create a figure that has four subplots all in one row. In each of the subplots plot the function:
 

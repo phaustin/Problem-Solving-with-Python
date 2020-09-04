@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## What is Matplotlib?
+# What is Matplotlib?
 
 +++
 
@@ -19,7 +19,7 @@ Matplotlib is a popular Python package used to build plots. Matplotlib started a
 
 +++
 
-### Why use Matplotlib?
+## Why use Matplotlib?
 
 +++
 

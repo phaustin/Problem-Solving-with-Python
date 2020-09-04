@@ -13,7 +13,7 @@ kernelspec:
 
 +++ {"latex": {"before_cell": "newpage"}}
 
-## Summary
+# Summary
 
 +++
 
@@ -47,7 +47,7 @@ The types of plots detailed in this chapter are shown in the table below.
 
 +++
 
-### Key Terms and Concepts
+## Key Terms and Concepts
 
 +++ {"latex": {"environment": "key_terms"}}
 
@@ -101,7 +101,7 @@ projection
 
 +++
 
-### Additional Resources
+## Additional Resources
 
 +++
 

@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Installing Matplotlib
+# Installing Matplotlib
 
 +++
 
@@ -19,7 +19,7 @@ Before Matplotlib's plotting functions can be used, Matplotlib needs to be insta
 
 +++
 
-### Use the Anaconda distribution of Python
+## Use the Anaconda distribution of Python
 
 The simplest way to install Matplotlib is to download and install the Anaconda distribution of Python. The Anaconda distribution of Python comes with Matplotlib pre-installed and no further installation steps are necessary.
 
@@ -27,7 +27,7 @@ Below are additional methods to install Matplotlib if you are not using the Anac
 
 +++
 
-### Install Matplotlib with the Anaconda Prompt
+## Install Matplotlib with the Anaconda Prompt
 
 Matplotlib can be installed using with the **Anaconda Prompt**. If the **Anaconda Prompt** is available on your machine, it can usually be seen in the Windows Start Menu. To install Matplotlib, open the **Anaconda Prompt** and type:
 
@@ -39,7 +39,7 @@ Type ```y``` for yes when prompted.
 
 +++
 
-### Install Matplotlib with **pip**
+## Install Matplotlib with **pip**
 
 Matplotlib can also be installed using the Python package manager, **pip**. To install Matplotlib with **pip**, open a terminal window and type:
 
@@ -51,7 +51,7 @@ This command installs Matplotlib in the current working Python environment.
 
 +++
 
-### Verify the installation
+## Verify the installation
 
 +++
 

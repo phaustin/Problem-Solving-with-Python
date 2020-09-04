@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## 3D Surface Plots
+# 3D Surface Plots
 
 +++
 
@@ -21,7 +21,7 @@ The ```axes3d``` submodule included in Matplotlib's ```mpl_toolkits.mplot3d``` t
 
 +++
 
-### Surface Plots
+## Surface Plots
 
 Surface plots are created with Matplotlib's ```ax.plot_surface()``` method. By default, surface plots are a single color. The general format of Matplotlib's ```ax.plot_surface()``` method is below.
 
@@ -54,7 +54,7 @@ ax.plot_surface(X, Y, Z)
 plt.show()
 ```
 
-### Wire Frame Plots
+## Wire Frame Plots
 
 +++
 
@@ -94,7 +94,7 @@ ax2.set_title('row step size 20, column step size 20')
 plt.show()
 ```
 
-### Gradient Surface Plots
+## Gradient Surface Plots
 
 +++
 
@@ -134,7 +134,7 @@ fig.colorbar(surf1, ax=ax1, shrink=0.5, aspect=5)
 plt.show()
 ```
 
-### 3D Surface Plots with 2D Contour Plot Projections
+## 3D Surface Plots with 2D Contour Plot Projections
 
 +++
 

@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Bar Charts and Pie Charts
+# Bar Charts and Pie Charts
 
 +++
 
@@ -19,7 +19,7 @@ Bar charts and pie charts can be created with Matplotlib's ```pyplot``` library.
 
 +++
 
-### Bar Charts
+## Bar Charts
 
 +++
 
@@ -93,7 +93,7 @@ plt.savefig('bar_plot.png')
 plt.show()
 ```
 
-### Pie Charts
+## Pie Charts
 
 +++
 

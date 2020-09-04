@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Quiver and Stream Plots
+# Quiver and Stream Plots
 
 +++
 
@@ -19,7 +19,7 @@ In this section, you will learn how to build quiver and stream plots using Matpl
 
 +++
 
-### Quiver Plots
+## Quiver Plots
 
 +++
 
@@ -27,7 +27,7 @@ A quiver plot is a type of 2D plot that shows vector lines as arrows. Quiver plo
 
 +++
 
-#### Quiver plot with one arrow
+### Quiver plot with one arrow
 
 First, we'll build a simple quiver plot that contains one arrow to demonstrate how Matplotlib's ```ax.quiver()``` method works. The ```ax.quiver()``` method takes four positional arguments: 
 
@@ -64,7 +64,7 @@ The quiver plot contains one arrow. The arrow starts at point 0, 0 and ends at p
 
 +++
 
-#### Quiver plot with two arrows
+### Quiver plot with two arrows
 
 Now let's add a second arrow to the quiver plot by passing in two starting points and two arrow directions. 
 
@@ -97,7 +97,7 @@ We see a plot with two arrows. Both arrows start at the origin. One arrow points
 
 +++
 
-#### Quiver plot using a meshgrid
+### Quiver plot using a meshgrid
 
 A quiver plot with two arrows is a good start, but it is tedious and repetitive to add quiver plot arrows one by one. To create a complete 2D surface of arrows, we'll utilize NumPy's ```meshgrid()``` function. 
 
@@ -177,7 +177,7 @@ ax.set_aspect('equal')
 plt.show()
 ```
 
-#### Quiver plot containing a gradient
+### Quiver plot containing a gradient
 
 Next let's build a quiver plot that shows a gradient function. The gradient function has the form:
 
@@ -209,7 +209,7 @@ ax.set_aspect('equal')
 plt.show()
 ```
 
-#### Quiver plot with four vortices
+### Quiver plot with four vortices
 
 Now let's build a quiver plot that contains four vortices. The function $\vec{F}$ which describes the 2D field that has four vortices is shown below.
 
@@ -243,7 +243,7 @@ ax.set_aspect('equal')
 plt.show()
 ```
 
-#### Quiver plots with color
+### Quiver plots with color
 
 Finally, let's add some color to our quiver plots. The ```ax.quiver()``` method has an optional fifth positional argument that specifies the quiver arrow color. The quiver arrow color argument needs to have the same dimensions as the position and direction arrays.
 
@@ -319,7 +319,7 @@ fig.savefig('3_quiver_plots.png', dpi=300, bbox_inches='tight')
 plt.show()
 ```
 
-### Stream Plots
+## Stream Plots
 
 +++
 
@@ -335,7 +335,7 @@ Where ```x_grid``` and ```y_grid``` are arrays of x, y points. The arrays ```x_v
 
 +++
 
-#### A simple stream plot
+### A simple stream plot
 
 Let's start with a stream plot that contains stream lines on a 10 x 10 grid.  All the stream lines on the plot are parallel and point to the right.
 
@@ -365,7 +365,7 @@ The plot contains parallel streamlines all pointing to the right.
 
 +++
 
-#### Stream plot of a field
+### Stream plot of a field
 
 We can build a stream plot which shows field lines based on a defined 2D vector field.
 
@@ -393,7 +393,7 @@ ax.set_title('Stream Plot of Field Lines')
 plt.show()
 ```
 
-#### Stream plot of two point charges
+### Stream plot of two point charges
 
 Finally, we will build a stream plot to demonstrate the electric field due to two point charges.  The electric field at any point on a 2D surface depends on the position and distance relative to the two point charges.
 

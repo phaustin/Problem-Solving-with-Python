@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Plot annotations
+# Plot annotations
 
 +++
 

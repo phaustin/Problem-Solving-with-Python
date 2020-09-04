@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Box Plots and Violin Plots
+# Box Plots and Violin Plots
 
 +++
 
@@ -19,7 +19,7 @@ In addition to histograms, a couple other useful statistical plots are box plots
 
 +++
 
-### Box Plots
+## Box Plots
 
 +++
 
@@ -65,7 +65,7 @@ ax.yaxis.grid(True)
 plt.show()
 ```
 
-### Violin Plots
+## Violin Plots
 
 +++
 

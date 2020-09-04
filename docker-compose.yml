@@ -1,46 +1,59 @@
 version: '3.8'
 
 services:
+
+  content:
+    container_name: book_content
+    build:
+      context: .
+      dockerfile: content.dockerfile
+    image: phaustin/problem_solving_content:aug31
+    volumes:
+      - problem-solving-notebooks:/srv/notebooks
+      - problem-solving-website:/srv/website
+
   webserver:
     build:
       context: .
       dockerfile: apache_webserver/Dockerfile
-    image: phaustin/webserver:aug10
+    image: phaustin/webserver:aug31
     container_name: webserver
     ports:
       - "${TEXT_PORT}:80"
     volumes:
-      - type: bind
-        source: ./notebooks/_build/html
+      - type: volume
+        source: problem-solving-website
         target: /usr/local/apache2/htdocs
       - "/var/run/docker.sock:/var/run/docker.sock"
-      - jupyterhub_data:/srv/jupyterhub
     networks:
-      - dask_net
+      - jupyterhub
 
   user_notebook:
       build:
         context: .
         dockerfile: ./user_notebook/Dockerfile
-      image: phaustin/user_notebook:aug11
+      image: phaustin/user_notebook:aug31
       container_name: user_notebook
       volumes:
-        - ${LOCAL_NOTEBOOK_DIR}:/home/jovyan/notebooks
-        - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
-        - ${LOCAL_MODULES}:/home/jovyan/work/modules
+        - problem-solving-notebooks:/home/jovyan/notebooks
         - "/var/run/docker.sock:/var/run/docker.sock"
       ports:
         - ${NB_PORT}:8888
       networks:
-        - dask_net
+        - jupyterhub
       command: "start-notebook.sh \
          --NotebookApp.password=${ACCESS_TOKEN}"
 
 # the actual name will be <directory_name>_<network_name>
 networks:
-    dask_net:
+    jupyterhub:
       driver: bridge
+      name: jupyterhub
 
 volumes:
-  jupyterhub_data:
+  problem-solving-notebooks:
+    name: problem-solving-notebooks
+    
+  problem-solving-website:
+    name: problem-solving-website
 

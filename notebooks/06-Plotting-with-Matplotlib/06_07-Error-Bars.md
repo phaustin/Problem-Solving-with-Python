@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Error Bars
+# Error Bars
 
 +++
 
@@ -19,7 +19,7 @@ Matplotlib line plots and bar charts can include error bars. Error bars are usef
 
 +++
 
-### Error bars in bar plots
+## Error bars in bar plots
 
 +++
 
@@ -85,7 +85,7 @@ The resulting plot contains three error bars. We can see the standard deviation 
 
 +++
 
-### Error bars in line plots
+## Error bars in line plots
 
 +++
 

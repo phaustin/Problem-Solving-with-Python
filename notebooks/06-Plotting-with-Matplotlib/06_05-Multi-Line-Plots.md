@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Multi Line Plots
+# Multi Line Plots
 
 +++
 
@@ -19,7 +19,7 @@ Multi-line plots are created using Matplotlib's ```pyplot``` library. This secti
 
 +++
 
-### The Matplotlib's object-oriented interface
+## The Matplotlib's object-oriented interface
 
 An object-oriented plotting interface is an interface where components of the plot (like the axis, title, lines, markers, tick labels, etc.) are treated as programmatic _objects_ that have _attributes_ and _methods_ associated with them.
 

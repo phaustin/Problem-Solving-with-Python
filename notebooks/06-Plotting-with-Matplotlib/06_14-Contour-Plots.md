@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-## Contour Plots
+# Contour Plots
 
 +++
 
@@ -19,7 +19,7 @@ Contour plots can be created with Matplotlib. In Civil Engineering a contour plo
 
 +++
 
-### Matplotlib's ```plt.contourf()``` method
+## Matplotlib's ```plt.contourf()``` method
 
 +++
 
@@ -52,7 +52,7 @@ ax.contour(X,Y,Z)
 plt.show()
 ```
 
-### Matplotlib's ```plt.contourf()``` method
+## Matplotlib's ```plt.contourf()``` method
 
 +++
 
@@ -86,7 +86,7 @@ ax.contourf(X,Y,Z)
 plt.show()
 ```
 
-### Color bars on contour plots
+## Color bars on contour plots
 
 +++
 
@@ -128,7 +128,7 @@ fig.colorbar(cf, ax=ax)
 plt.show()
 ```
 
-### Color maps on contour plots
+## Color maps on contour plots
 
 +++
 
