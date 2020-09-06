@@ -1,50 +1,87 @@
+#
+# 
+#
 version: '3.8'
 
 services:
 
+#
+# copy notebooks and html files in ./notebooks on host
+# to /srv/problem_solving_content and create
+# a named volume holding that target
+#
   content:
     container_name: book_content
     build:
       context: .
       dockerfile: content.dockerfile
-    image: phaustin/problem_solving_content:aug31
+    image: phaustin/problem_solving_content:sep06
     volumes:
-      - problem-solving-notebooks:/srv/notebooks
-      - problem-solving-website:/srv/website
+      - type: volume
+        source: problem-solving-notebooks
+        target: /srv/problem_solving_content
+#
+# run conda build to produce base-notebook-2020.09.05-0.tar.bz2
+# for upload to anaconda:
+#  docker-compose run -d --name conda conda_build tail -f
+#  docker cp conda:/srv/conda_channel built_channel
+#
+  conda_build:
+    container_name: conda_build
+    build:
+      context: conda_build
+      dockerfile: Dockerfile
+    image: phaustin/conda_build:sep05
 
+#
+# start a web server at port .env:TEXT_PORT
+# with the html files from book_content
+#
   webserver:
     build:
       context: .
       dockerfile: apache_webserver/Dockerfile
     image: phaustin/webserver:aug31
+    depends_on: [content]
     container_name: webserver
     ports:
       - "${TEXT_PORT}:80"
     volumes:
-      - type: volume
-        source: problem-solving-website
-        target: /usr/local/apache2/htdocs
+      - problem-solving-notebooks:/srv/notebooks
       - "/var/run/docker.sock:/var/run/docker.sock"
+    command: bash -c
+            "cp -a /srv/notebooks/_build/html/* /usr/local/apache2/htdocs/.
+             && httpd-foreground
+            "
     networks:
       - jupyterhub
-
+#
+# start a jupyter notebook with the notebooks from book_content on
+# .env:NB_PORT
+#
+# before building be sure to make the conda lock file with
+# conda-lock -f environment.yml -p linux-64
+#
   user_notebook:
       build:
-        context: .
-        dockerfile: ./user_notebook/Dockerfile
-      image: phaustin/user_notebook:aug31
+        context: user_notebook
+        dockerfile: Dockerfile
+      depends_on: [content, conda_build]
+      image: phaustin/user_notebook:sep05
       container_name: user_notebook
       volumes:
-        - problem-solving-notebooks:/home/jovyan/notebooks
+        - problem-solving-notebooks:/srv/notebooks
         - "/var/run/docker.sock:/var/run/docker.sock"
       ports:
         - ${NB_PORT}:8888
       networks:
         - jupyterhub
-      command: "start-notebook.sh \
-         --NotebookApp.password=${ACCESS_TOKEN}"
+      command: bash -c
+                 "cp -a /srv/notebooks ~/notebooks
+                  && jupyter notebook --NotebookApp.password=${ACCESS_TOKEN}
+                 "
 
-# the actual name will be <directory_name>_<network_name>
+# explicitly name the network rather than letting docker_compose assign
 networks:
     jupyterhub:
       driver: bridge
@@ -53,7 +90,4 @@ networks:
 volumes:
   problem-solving-notebooks:
     name: problem-solving-notebooks
-    
-  problem-solving-website:
-    name: problem-solving-website
 

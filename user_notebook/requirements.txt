@@ -1,0 +1,12 @@
+git+https://github.com/executablebooks/jupyter-cache.git
+git+https://github.com/executablebooks/MyST-NB.git
+git+https://github.com/jupyter/jupyter-sphinx.git
+click_log
+click_completion
+sphinx_togglebutton
+sphinx-copybutton
+sphinxcontrib-bibtex
+git+https://github.com/mwouts/jupytext.git
+git+https://github.com/phaustin/jupyter-book.git@jbalpha
+git+https://github.com/phaustin/sphinx-book-theme.git@localhost
+

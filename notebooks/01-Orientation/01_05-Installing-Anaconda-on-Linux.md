@@ -6,9 +6,9 @@ jupytext:
     format_version: '0.9'
     jupytext_version: 1.5.0
 kernelspec:
-  display_name: Python 2
+  display_name: Python 3
   language: python
-  name: python2
+  name: python3
 ---
 
 ## Installing Anaconda on Linux
@@ -139,6 +139,3 @@ If you see Python 3.6 from Anaconda listed, your installation is complete. To ex
 >>> exit()
 ```
 
-```{code-cell} ipython2
-
-```
