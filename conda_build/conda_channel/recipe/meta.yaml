@@ -1,0 +1,33 @@
+{% set version = "2020.09.05" %}
+
+package:
+  name: base-notebook
+  version: {{ version }}
+
+build:
+  number: 0
+  noarch: generic
+
+requirements:
+  run:
+    - ipywidgets =7.5.1
+    - jupyter-server-proxy =1.5.0
+    - jupyterhub-singleuser =1.1.0
+    - jupyterlab >=2
+    - nbgitpuller =0.9.0
+    - nodejs >=12
+
+test:
+  commands:
+    - jupyter -h
+
+about:
+  home: http://pangeo.io
+  license: MIT
+  license_file: LICENSE
+  summary: "e350 notebook dependencies"
+
+extra:
+  recipe-maintainers:
+    - phaustin
+
