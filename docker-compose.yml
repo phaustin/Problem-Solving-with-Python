@@ -41,7 +41,7 @@ services:
     build:
       context: .
       dockerfile: apache_webserver/Dockerfile
-    image: phaustin/webserver:aug31
+    image: phaustin/webserver:sep06
     depends_on: [content]
     container_name: webserver
     ports:
