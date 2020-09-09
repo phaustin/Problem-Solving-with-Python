@@ -20,9 +20,9 @@ repository:
 
 launch_buttons:
   notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
-  jupyterhub_url: http://127.0.0.1:9500
+  jupyterhub_url: http://node07.eos.ubc.ca:8000
   
 html:
   home_page_in_navbar: true
-  baseurl: http://127.0.0.1:8500
+  baseurl: http://node07.eos.ubc.ca:8080
 

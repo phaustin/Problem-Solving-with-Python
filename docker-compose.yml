@@ -15,23 +15,23 @@ services:
     build:
       context: .
       dockerfile: content.dockerfile
-    image: phaustin/problem_solving_content:sep06
+    image: phaustin/problem_solving_content:sep09b
     volumes:
       - type: volume
         source: problem-solving-notebooks
-        target: /srv/problem_solving_content
+        target: /srv/problem_solving_notebooks
 #
 # run conda build to produce base-notebook-2020.09.05-0.tar.bz2
 # for upload to anaconda:
 #  docker-compose run -d --name conda conda_build tail -f
 #  docker cp conda:/srv/conda_channel built_channel
 #
-  conda_build:
-    container_name: conda_build
-    build:
-      context: conda_build
-      dockerfile: Dockerfile
-    image: phaustin/conda_build:sep05
+  # conda_build:
+  #   container_name: conda_build
+  #   build:
+  #     context: conda_build
+  #     dockerfile: Dockerfile
+  #   image: phaustin/conda_build:sep05
 
 #
 # start a web server at port .env:TEXT_PORT
@@ -39,9 +39,9 @@ services:
 #
   webserver:
     build:
-      context: .
-      dockerfile: apache_webserver/Dockerfile
-    image: phaustin/webserver:sep06
+      context: apache_webserver
+      dockerfile: Dockerfile
+    image: phaustin/webserver:sep08
     depends_on: [content]
     container_name: webserver
     ports:
@@ -53,8 +53,6 @@ services:
             "cp -a /srv/notebooks/_build/html/* /usr/local/apache2/htdocs/.
              && httpd-foreground
             "
-    networks:
-      - jupyterhub
 #
 # start a jupyter notebook with the notebooks from book_content on
 # .env:NB_PORT
@@ -66,21 +64,32 @@ services:
       build:
         context: user_notebook
         dockerfile: Dockerfile
-      depends_on: [content, conda_build]
-      image: phaustin/user_notebook:sep05
+      depends_on: [content]
+      image: phaustin/user_notebook:sep07
       container_name: user_notebook
       volumes:
         - problem-solving-notebooks:/srv/notebooks
         - "/var/run/docker.sock:/var/run/docker.sock"
-      ports:
-        - ${NB_PORT}:8888
       networks:
         - jupyterhub
-      command: bash -c
-                 "cp -a /srv/notebooks ~/notebooks
-                  && jupyter notebook --NotebookApp.password=${ACCESS_TOKEN}
-                 "
+      command: jupyterhub-singleuser
 
+
+  jupyterhub:
+    build: hub_image
+    image: phaustin/jupyterhub:1.3
+    container_name: jupyterhub
+    depends_on: [user_notebook]
+    ports:
+      - ${NB_PORT}:8000
+    volumes:
+      - problem-solving-notebooks:/srv/notebooks
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - jupyterhub
+
+
+                 
 # explicitly name the network rather than letting docker_compose assign
 networks:
     jupyterhub:
