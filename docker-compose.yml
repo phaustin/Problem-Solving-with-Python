@@ -38,16 +38,12 @@ services:
 # with the html files from book_content
 #
   webserver:
-    build:
-      context: apache_webserver
-      dockerfile: Dockerfile
-    image: phaustin/webserver:sep08
-    depends_on: [content]
-    container_name: webserver
+    image: httpd:2.4
+    container_name: ${WEB_CONTAINER_NAME}
     ports:
       - "${TEXT_PORT}:80"
     volumes:
-      - problem-solving-notebooks:/srv/notebooks
+      - ./notebooks_source:/srv/notebooks
       - "/var/run/docker.sock:/var/run/docker.sock"
     command: bash -c
             "cp -a /srv/notebooks/_build/html/* /usr/local/apache2/htdocs/.
