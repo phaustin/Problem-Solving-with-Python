@@ -10,16 +10,16 @@ services:
 # to /srv/problem_solving_content and create
 # a named volume holding that target
 #
-  content:
-    container_name: book_content
-    build:
-      context: .
-      dockerfile: content.dockerfile
-    image: phaustin/problem_solving_content:sep09b
-    volumes:
-      - type: volume
-        source: problem-solving-notebooks
-        target: /srv/problem_solving_notebooks
+# content:
+#   container_name: book_content
+#   build:
+#     context: .
+#     dockerfile: content.dockerfile
+#   image: phaustin/problem_solving_content:sep09b
+#   volumes:
+#     - type: volume
+#       source: problem-solving-notebooks
+#       target: /srv/problem_solving_notebooks
 #
 # run conda build to produce base-notebook-2020.09.05-0.tar.bz2
 # for upload to anaconda:
@@ -56,43 +56,31 @@ services:
 # before building be sure to make the conda lock file with
 # conda-lock -f environment.yml -p linux-64
 #
-  user_notebook:
-      build:
-        context: user_notebook
-        dockerfile: Dockerfile
-      depends_on: [content]
-      image: phaustin/user_notebook:sep07
-      container_name: user_notebook
-      volumes:
-        - problem-solving-notebooks:/srv/notebooks
-        - "/var/run/docker.sock:/var/run/docker.sock"
-      networks:
-        - jupyterhub
-      command: jupyterhub-singleuser
-
+  notebook:
+    build:
+      context: notebook_image
+    image: phaustin/notebook:textbook
+    container_name: ${NOTEBOOK_CONTAINER_NAME}
 
   jupyterhub:
-    build: hub_image
-    image: phaustin/jupyterhub:1.3
-    container_name: jupyterhub
-    depends_on: [user_notebook]
+    build:
+      context: hub_image
+    image: phaustin/jupyterhub:textbook
+    container_name: ${HUB_CONTAINER_NAME}
+    depends_on:
+      - notebook
     ports:
-      - ${NB_PORT}:8000
+      - "${NB_PORT}:8000"
     volumes:
-      - problem-solving-notebooks:/srv/notebooks
       - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
-      - jupyterhub
+      - ${NETWORK_NAME}
 
-
-                 
 # explicitly name the network rather than letting docker_compose assign
+# set the network name
+# this needs to be matched in jupyterhub_config.py by:
+# c.DockerSpawner.network_name = 'textbook_network'
 networks:
-    jupyterhub:
+    textbook_network:
       driver: bridge
-      name: jupyterhub
-
-volumes:
-  problem-solving-notebooks:
-    name: problem-solving-notebooks
-
+      name: ${NETWORK_NAME}
