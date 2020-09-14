@@ -65,7 +65,7 @@ services:
   jupyterhub:
     build:
       context: hub_image
-    image: phaustin/jupyterhub:textbook
+    image: phaustin/jupyterhub:textbook2
     container_name: ${HUB_CONTAINER_NAME}
     depends_on:
       - notebook
@@ -74,7 +74,7 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
-      - ${NETWORK_NAME}
+      - textbook_network
 
 # explicitly name the network rather than letting docker_compose assign
 # set the network name
