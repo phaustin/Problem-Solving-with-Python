@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+echo "starting jupyter extension installs"
+jupyter labextension install --clean \
+                            @jupyter-widgets/jupyterlab-manager
+jupyter labextension install  @bokeh/jupyter_bokeh
+jupyter lab build
+
+
+pip install git+https://github.com/phaustin/sphinx-book-theme.git@localhost --upgrade --no-deps
+pip install git+https://github.com/phaustin/jupyter-book.git@jbalpha  --upgrade --no-deps

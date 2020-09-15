@@ -1,9 +1,10 @@
 #!/bin/bash -l
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
-mkdir -p ~/notebooks
-cp -a /srv/notebooks ~/.
-echo "copy completed"
+
+mkdir -p ${HOME}/work
+cd ${HOME}/work
+
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 exec "$@"

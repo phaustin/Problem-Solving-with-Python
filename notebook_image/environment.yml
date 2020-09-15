@@ -1,10 +1,12 @@
+#conda-lock -f environment.yml -p linux-64
 name: notebook
 channels:
   - eoas_ubc
   - conda-forge
-  - defaults
 dependencies:
+  - python=3.7
   - base-notebook=2020.09.05
+  - scipy
   # NOTE: pip required for running tests in this repo
   - pip=20
   - click
@@ -17,7 +19,6 @@ dependencies:
   - pyyaml
   - docutils>=0.15
   - setuptools
-  - scipy
   - sympy
   - matplotlib
   - bokeh
@@ -25,5 +26,3 @@ dependencies:
   - nbconvert
   - nbclient
   - pillow
-
-

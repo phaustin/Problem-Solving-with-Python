@@ -1,0 +1,10 @@
+click_log
+click_completion
+sphinx_togglebutton
+sphinx-copybutton
+sphinxcontrib-bibtex
+git+https://github.com/mwouts/jupytext.git
+git+https://github.com/phaustin/jupyter-book.git@jbalpha
+git+https://github.com/phaustin/sphinx-book-theme.git@localhost
+git+https://github.com/phaustin/markdown-it-py.git
+git+https://github.com/pandas-dev/pydata-sphinx-theme.git
