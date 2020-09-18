@@ -1,4 +1,4 @@
-name: notebook
+name: newtext
 channels:
   - eoas_ubc
   - conda-forge
@@ -25,5 +25,5 @@ dependencies:
   - nbconvert
   - nbclient
   - pillow
-
+  - conda-lock
 

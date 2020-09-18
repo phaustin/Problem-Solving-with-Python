@@ -1,14 +1,15 @@
-git+https://github.com/executablebooks/jupyter-cache.git
-git+https://github.com/executablebooks/MyST-NB.git
-git+https://github.com/jupyter/jupyter-sphinx.git
+jupyter-cache
+MyST-NB
+jupyter-sphinx
 click_log
 click_completion
 sphinx_togglebutton
 sphinx-copybutton
 sphinxcontrib-bibtex
-git+https://github.com/mwouts/jupytext.git
-git+https://github.com/executablebooks/jupyter-book.git
-git+https://github.com/phaustin/sphinx-book-theme.git
-git+https://github.com/phaustin/markdown-it-py.git
-git+https://github.com/pandas-dev/pydata-sphinx-theme.git
+jupytext
+jupyter-book
+sphinx-book-theme
+markdown-it-py
+pydata-sphinx-theme
+
 
