@@ -116,6 +116,24 @@
   - file: Symbolic-Math/Solving-Two-Equations-for-Two-Unknowns.md
   - file: Symbolic-Math/Summary.md
   - file: Symbolic-Math/Review-Questions.md
+- file: Python-and-External-Hardware/Introduction.md
+  sections:
+  - file: Python-and-External-Hardware/PySerial.md
+  - file: Python-and-External-Hardware/Bytes-and-Unicode-Strings.md
+  - file: Python-and-External-Hardware/Controlling-an-LED.md
+  - file: Python-and-External-Hardware/Reading-a-Sensor-with-Python.md
+  - file: Python-and-External-Hardware/Summary.md
+  - file: Python-and-External-Hardware/Project-Ideas.md
+- file: MicroPython/Introduction.md
+  sections:
+  - file: MicroPython/What-is-MicroPython.md
+  - file: MicroPython/Installing-MicroPython.md
+  - file: MicroPython/MicroPython-REPL.md
+  - file: MicroPython/Blinking-a-LED.md
+  - file: MicroPython/Reading-a-Sensor.md
+  - file: MicroPython/Uploading-Code.md
+  - file: MicroPython/Summary.md
+  - file: MicroPython/Project-Ideas.md
 - file: Appendix/Appendix.md
   sections:
   - file: Appendix/Reserved-and-Key-Words-in-Python.md
