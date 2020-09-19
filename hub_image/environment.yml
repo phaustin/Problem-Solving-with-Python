@@ -1,0 +1,10 @@
+name: notebook
+channels:
+  - eoas_ubc
+  - conda-forge
+  - defaults
+dependencies:
+  - base-notebook=2020.09.05
+  # NOTE: pip required for running tests in this repo
+  - pip=20
+# conda-lock -f environment.yml -p linux-64
