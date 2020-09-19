@@ -37,7 +37,7 @@ If the jupyter-book `_toc.yml` file is in folder `jupyter-book/docs`
 
 2) start watching the docs folder with:
 
-   `ebp-watch docs`
+   `ebp-watch jb docs`
 
 3) start watching the html folder with:
 
