@@ -13,7 +13,11 @@ https://github.com/eoas-ubc/jb_tools and https://www.npmjs.com/package/live-serv
 
 produces
 
-conda-linux-64.lock	conda-osx-64.lock	conda-win-64.lock
+```
+conda-linux-64.lock	
+conda-osx-64.lock	
+conda-win-64.lock
+```
 
 2) use these to create a new environment with the approriate
    lock file for your os and install the pypi packages with pip
