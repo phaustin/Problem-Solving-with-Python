@@ -3,8 +3,8 @@
 #######################################################################################
 # Book settings
 
-title: EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists
-author: UBC
+title: Problem Solving with Python
+author: Peter Kazarinoff
 copyright: "2021" # Copyright year to be placed in the footer
 logo: "" # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")

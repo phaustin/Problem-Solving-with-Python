@@ -18,7 +18,7 @@ If you like this book, please consider purchasing a hard copy version on Amazon:
 
 * Original sources for this text are stored on GitHub at [https://github.com/professorkazarinoff/Problem-Solving-with-Python-37-Edition](https://github.com/professorkazarinoff/Problem-Solving-with-Python-37-Edition)
 
-* Sources for this fork and instructions on how to start the docker containers run code in the book are on the jb branch here: [https://github.com/phaustin/Problem-Solving-with-Python-37-Edition/blob/jb/README.md](https://github.com/phaustin/Problem-Solving-with-Python-37-Edition/blob/jb/README.md)
+* Sources for this fork and instructions on how to start the docker containers run code in the book are on the jb branch here: [https://github.com/phaustin/Problem-Solving-with-Python/blob/jb/README.md](https://github.com/phaustin/Problem-Solving-with-Python/blob/jb/README.md)
 
 ## License
 

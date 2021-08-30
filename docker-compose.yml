@@ -1,46 +1,20 @@
-version: '3.8'
+version: '3'
 
 services:
-  webserver:
-    build:
-      context: .
-      dockerfile: apache_webserver/Dockerfile
-    image: phaustin/webserver:aug10
-    container_name: webserver
-    ports:
-      - "${TEXT_PORT}:80"
+  kazarinof_web:
+    image: httpd:2.4-alpine
+    container_name: kazarinoff_web
     volumes:
-      - type: bind
-        source: ./notebooks/_build/html
-        target: /usr/local/apache2/htdocs
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - jupyterhub_data:/srv/jupyterhub
+      - ${PWD}/notebooks/_build/html:/usr/local/apache2/htdocs:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - "traefik.enable=false"
+    restart: on-failure
     networks:
-      - dask_net
+      - proxy_aug07
 
-  user_notebook:
-      build:
-        context: .
-        dockerfile: ./user_notebook/Dockerfile
-      image: phaustin/user_notebook:aug11
-      container_name: user_notebook
-      volumes:
-        - ${LOCAL_NOTEBOOK_DIR}:/home/jovyan/notebooks
-        - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
-        - ${LOCAL_MODULES}:/home/jovyan/work/modules
-        - "/var/run/docker.sock:/var/run/docker.sock"
-      ports:
-        - ${NB_PORT}:8888
-      networks:
-        - dask_net
-      command: "start-notebook.sh \
-         --NotebookApp.password=${ACCESS_TOKEN}"
 
-# the actual name will be <directory_name>_<network_name>
 networks:
-    dask_net:
-      driver: bridge
-
-volumes:
-  jupyterhub_data:
+    proxy_aug07:
+      external: true
 
