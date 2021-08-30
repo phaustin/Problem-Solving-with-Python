@@ -218,3 +218,4 @@ pdf/combined_files/
 venv/
 .venv/
 
+*_build

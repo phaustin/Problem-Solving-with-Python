@@ -1,0 +1,21 @@
+name: mainsite
+channels:
+  - eoas_ubc
+  - conda-forge
+  - defaults
+dependencies:
+  - git
+  - python=3.8
+  - pip
+  - ghp-import
+  - jupytext
+  - jupyter-book
+  - conda-lock
+  - jupyterlab
+  - jupyterhub=1.4
+  - mamba
+  - scipy
+  - matplotlib
+  - numpy
+  - pandas
+# conda-lock --file environment.yml -p win-64

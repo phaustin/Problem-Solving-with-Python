@@ -1,150 +1,151 @@
-- file: index.md
+format: jb-article
+root: index.md
+options:
   numbered: true
-  
+sections:
 - file: 00-Preface/00_00-Motivation.md
   sections:
-    - file: 00-Preface/00_02-Acknowledgments.md
-    - file: 00-Preface/00_03-Supporting-Materials.md
-    - file: 00-Preface/00_04-Formatting-Conventions.md
-    - file: 00-Preface/00_05-Errata.md
+  - file: 00-Preface/00_02-Acknowledgments.md
+  - file: 00-Preface/00_03-Supporting-Materials.md
+  - file: 00-Preface/00_04-Formatting-Conventions.md
+  - file: 00-Preface/00_05-Errata.md
 - file: 01-Orientation/01_00-Welcome.md
   sections:
-    - file: 01-Orientation/01_01-Why-Python.md
-    - file: 01-Orientation/01_02-The-Anaconda-Distribution-of-Python.md
-    - file: 01-Orientation/01_03-Installing-Anaconda-on-Windows.md
-    - file: 01-Orientation/01_04-Installing-Anaconda-on-MacOS.md
-    - file: 01-Orientation/01_05-Installing-Anaconda-on-Linux.md
-    - file: 01-Orientation/01_06-Installing-Python-from-Python-dot-org.md
-    - file: 01-Orientation/01_07-Summary.md
-    - file: 01-Orientation/01_08-Review-Questions.md
+  - file: 01-Orientation/01_01-Why-Python.md
+  - file: 01-Orientation/01_02-The-Anaconda-Distribution-of-Python.md
+  - file: 01-Orientation/01_03-Installing-Anaconda-on-Windows.md
+  - file: 01-Orientation/01_04-Installing-Anaconda-on-MacOS.md
+  - file: 01-Orientation/01_05-Installing-Anaconda-on-Linux.md
+  - file: 01-Orientation/01_06-Installing-Python-from-Python-dot-org.md
+  - file: 01-Orientation/01_07-Summary.md
+  - file: 01-Orientation/01_08-Review-Questions.md
 - file: 02-Jupyter-Notebooks/02_00-Introduction.md
   sections:
-     - file: 02-Jupyter-Notebooks/02_01-What-is-a-Jupyter-Notebook.md
-     - file: 02-Jupyter-Notebooks/02_02-Why-Jupyter-Notebooks.md
-     - file: 02-Jupyter-Notebooks/02_03-Installing-Juypter.md
-     - file: 02-Jupyter-Notebooks/02_04-Opening-a-Jupyter-Notebook.md
-     - file: 02-Jupyter-Notebooks/02_05-The-Jupyter-Notebook-Interface.md
-     - file: 02-Jupyter-Notebooks/02_06-Magic-Commands.md
-     - file: 02-Jupyter-Notebooks/02_07-Getting-Help-in-a-Jupyter-Notebook.md
-     - file: 02-Jupyter-Notebooks/02_08-Summary.md
-     - file: 02-Jupyter-Notebooks/02_09-Review-Questions.md
+  - file: 02-Jupyter-Notebooks/02_01-What-is-a-Jupyter-Notebook.md
+  - file: 02-Jupyter-Notebooks/02_02-Why-Jupyter-Notebooks.md
+  - file: 02-Jupyter-Notebooks/02_03-Installing-Juypter.md
+  - file: 02-Jupyter-Notebooks/02_04-Opening-a-Jupyter-Notebook.md
+  - file: 02-Jupyter-Notebooks/02_05-The-Jupyter-Notebook-Interface.md
+  - file: 02-Jupyter-Notebooks/02_06-Magic-Commands.md
+  - file: 02-Jupyter-Notebooks/02_07-Getting-Help-in-a-Jupyter-Notebook.md
+  - file: 02-Jupyter-Notebooks/02_08-Summary.md
+  - file: 02-Jupyter-Notebooks/02_09-Review-Questions.md
 - file: 03-The-Python-REPL/03_00-Introduction.md
   sections:
-     - file: 03-The-Python-REPL/03_01-Python-as-a-Calculator.md
-     - file: 03-The-Python-REPL/03_02-Variables.md
-     - file: 03-The-Python-REPL/03_03-String-Operations.md
-     - file: 03-The-Python-REPL/03_04-Print-Statements.md
-     - file: 03-The-Python-REPL/03_05-Summary.md
-     - file: 03-The-Python-REPL/03_06-Review-Questions.md
+  - file: 03-The-Python-REPL/03_01-Python-as-a-Calculator.md
+  - file: 03-The-Python-REPL/03_02-Variables.md
+  - file: 03-The-Python-REPL/03_03-String-Operations.md
+  - file: 03-The-Python-REPL/03_04-Print-Statements.md
+  - file: 03-The-Python-REPL/03_05-Summary.md
+  - file: 03-The-Python-REPL/03_06-Review-Questions.md
 - file: 04-Data-Types-and-Variables/04_00-Introduction.md
   sections:
-     - file: 04-Data-Types-and-Variables/04_01-Numeric-Data-Types.md
-     - file: 04-Data-Types-and-Variables/04_02-Boolean-Data-Type.md
-     - file: 04-Data-Types-and-Variables/04_03-Strings.md
-     - file: 04-Data-Types-and-Variables/04_04-Lists.md
-     - file: 04-Data-Types-and-Variables/04_05-Dictionaries-and-Tuples.md
-     - file: 04-Data-Types-and-Variables/04_06-Summary.md
-     - file: 04-Data-Types-and-Variables/04_07-Review-Questions.md
+  - file: 04-Data-Types-and-Variables/04_01-Numeric-Data-Types.md
+  - file: 04-Data-Types-and-Variables/04_02-Boolean-Data-Type.md
+  - file: 04-Data-Types-and-Variables/04_03-Strings.md
+  - file: 04-Data-Types-and-Variables/04_04-Lists.md
+  - file: 04-Data-Types-and-Variables/04_05-Dictionaries-and-Tuples.md
+  - file: 04-Data-Types-and-Variables/04_06-Summary.md
+  - file: 04-Data-Types-and-Variables/04_07-Review-Questions.md
 - file: 05-NumPy-and-Arrays/05_00-Introduction.md
   sections:
-     - file: 05-NumPy-and-Arrays/05_01-NumPy.md
-     - file: 05-NumPy-and-Arrays/05_02-Installing-NumPy.md
-     - file: 05-NumPy-and-Arrays/05_03-Python-Lists-and-NumPy-Arrays.md
-     - file: 05-NumPy-and-Arrays/05_04-Array-Creation.md
-     - file: 05-NumPy-and-Arrays/05_05-Array-Indexing.md
-     - file: 05-NumPy-and-Arrays/05_06-Array-Slicing.md
-     - file: 05-NumPy-and-Arrays/05_07-Array-Opperations.md
-     - file: 05-NumPy-and-Arrays/05_08-Systems-of-Linear-Equations.md
-     - file: 05-NumPy-and-Arrays/05_09-Summary.md
-     - file: 05-NumPy-and-Arrays/05_10-Review-Questions.md
+  - file: 05-NumPy-and-Arrays/05_01-NumPy.md
+  - file: 05-NumPy-and-Arrays/05_02-Installing-NumPy.md
+  - file: 05-NumPy-and-Arrays/05_03-Python-Lists-and-NumPy-Arrays.md
+  - file: 05-NumPy-and-Arrays/05_04-Array-Creation.md
+  - file: 05-NumPy-and-Arrays/05_05-Array-Indexing.md
+  - file: 05-NumPy-and-Arrays/05_06-Array-Slicing.md
+  - file: 05-NumPy-and-Arrays/05_07-Array-Opperations.md
+  - file: 05-NumPy-and-Arrays/05_08-Systems-of-Linear-Equations.md
+  - file: 05-NumPy-and-Arrays/05_09-Summary.md
+  - file: 05-NumPy-and-Arrays/05_10-Review-Questions.md
 - file: 06-Plotting-with-Matplotlib/06_00-Introduction.md
   sections:
-     - file: 06-Plotting-with-Matplotlib/06_01-What-is-Matplotlib.md
-     - file: 06-Plotting-with-Matplotlib/06_02-Installing Matplotlib.md
-     - file: 06-Plotting-with-Matplotlib/06_03-Line-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_04-Saving-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_05-Multi-Line-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_06-Bar-Charts-and-Pie-Charts.md
-     - file: 06-Plotting-with-Matplotlib/06_07-Error-Bars.md
-     - file: 06-Plotting-with-Matplotlib/06_08-Histograms.md
-     - file: 06-Plotting-with-Matplotlib/06_09-Box-Plots-and-Violin-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_10-Scatter-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_11-Plot-Annotations.md
-     - file: 06-Plotting-with-Matplotlib/06_12-Subplots.md
-     - file: 06-Plotting-with-Matplotlib/06_13-Plot-Styles.md
-     - file: 06-Plotting-with-Matplotlib/06_14-Contour-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_15-Quiver-and-Stream-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_16-3D-Surface-Plots.md
-     - file: 06-Plotting-with-Matplotlib/06_17-Summary.md
-     - file: 06-Plotting-with-Matplotlib/06_18-Review-Questions.md
+  - file: 06-Plotting-with-Matplotlib/06_01-What-is-Matplotlib.md
+  - file: 06-Plotting-with-Matplotlib/06_02-Installing Matplotlib.md
+  - file: 06-Plotting-with-Matplotlib/06_03-Line-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_04-Saving-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_05-Multi-Line-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_06-Bar-Charts-and-Pie-Charts.md
+  - file: 06-Plotting-with-Matplotlib/06_07-Error-Bars.md
+  - file: 06-Plotting-with-Matplotlib/06_08-Histograms.md
+  - file: 06-Plotting-with-Matplotlib/06_09-Box-Plots-and-Violin-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_10-Scatter-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_11-Plot-Annotations.md
+  - file: 06-Plotting-with-Matplotlib/06_12-Subplots.md
+  - file: 06-Plotting-with-Matplotlib/06_13-Plot-Styles.md
+  - file: 06-Plotting-with-Matplotlib/06_14-Contour-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_15-Quiver-and-Stream-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_16-3D-Surface-Plots.md
+  - file: 06-Plotting-with-Matplotlib/06_17-Summary.md
+  - file: 06-Plotting-with-Matplotlib/06_18-Review-Questions.md
 - file: 07-Functions-and-Modules/07_00-Introduction.md
   sections:
-     - file: 07-Functions-and-Modules/07_01-Why-Functions.md
-     - file: 07-Functions-and-Modules/07_02-First-Function.md
-     - file: 07-Functions-and-Modules/07_03-Functions-with-multiple-arguments.md
-     - file: 07-Functions-and-Modules/07_04-Functions-with-default-arguments.md
-     - file: 07-Functions-and-Modules/07_05-Calling-Functions-from-Other-Files.md
-     - file: 07-Functions-and-Modules/07_06-Docstrings-in-Functions.md
-     - file: 07-Functions-and-Modules/07_07-Positional-and-Keyword-Arguments.md
-     - file: 07-Functions-and-Modules/07_08-Summary.md
-     - file: 07-Functions-and-Modules/07_09-Review-Questions.md
+  - file: 07-Functions-and-Modules/07_01-Why-Functions.md
+  - file: 07-Functions-and-Modules/07_02-First-Function.md
+  - file: 07-Functions-and-Modules/07_03-Functions-with-multiple-arguments.md
+  - file: 07-Functions-and-Modules/07_04-Functions-with-default-arguments.md
+  - file: 07-Functions-and-Modules/07_05-Calling-Functions-from-Other-Files.md
+  - file: 07-Functions-and-Modules/07_06-Docstrings-in-Functions.md
+  - file: 07-Functions-and-Modules/07_07-Positional-and-Keyword-Arguments.md
+  - file: 07-Functions-and-Modules/07_08-Summary.md
+  - file: 07-Functions-and-Modules/07_09-Review-Questions.md
 - file: 08-If-Else-Try-Except/08_00-Introduction.md
   sections:
-     - file: 08-If-Else-Try-Except/08_01-User-Input.md
-     - file: 08-If-Else-Try-Except/08_02-Selection-Statements.md
-     - file: 08-If-Else-Try-Except/08_03-If-Statements.md
-     - file: 08-If-Else-Try-Except/08_04-If-Else-Statements.md
-     - file: 08-If-Else-Try-Except/08_05-Try-Except-Statements.md
-     - file: 08-If-Else-Try-Except/08_06-Flowcharts.md
-     - file: 08-If-Else-Try-Except/08_07-Summary.md
-     - file: 08-If-Else-Try-Except/08_08-Review-Questions.md
+  - file: 08-If-Else-Try-Except/08_01-User-Input.md
+  - file: 08-If-Else-Try-Except/08_02-Selection-Statements.md
+  - file: 08-If-Else-Try-Except/08_03-If-Statements.md
+  - file: 08-If-Else-Try-Except/08_04-If-Else-Statements.md
+  - file: 08-If-Else-Try-Except/08_05-Try-Except-Statements.md
+  - file: 08-If-Else-Try-Except/08_06-Flowcharts.md
+  - file: 08-If-Else-Try-Except/08_07-Summary.md
+  - file: 08-If-Else-Try-Except/08_08-Review-Questions.md
 - file: 09-Loops/09_00-Introduction.md
   sections:
-     - file: 09-Loops/09_01-For-Loops.md
-     - file: 09-Loops/09_02-While-Loops.md
-     - file: 09-Loops/09_03-Break-and-Continue.md
-     - file: 09-Loops/09_04-Flowcharts-Describing-Loops.md
-     - file: 09-Loops/09_05-Summary.md
-     - file: 09-Loops/09_06-Review-Questions.md
+  - file: 09-Loops/09_01-For-Loops.md
+  - file: 09-Loops/09_02-While-Loops.md
+  - file: 09-Loops/09_03-Break-and-Continue.md
+  - file: 09-Loops/09_04-Flowcharts-Describing-Loops.md
+  - file: 09-Loops/09_05-Summary.md
+  - file: 09-Loops/09_06-Review-Questions.md
 - file: 10-Symbolic-Math/10_00-Introduction.md
   sections:
-     - file: 10-Symbolic-Math/10_01-SymPy.md
-     - file: 10-Symbolic-Math/10_02-Installing-SymPy.md
-     - file: 10-Symbolic-Math/10_03-Defining-Variables.md
-     - file: 10-Symbolic-Math/10_04-Expressions-and-Substitutions.md
-     - file: 10-Symbolic-Math/10_05-Equations.md
-     - file: 10-Symbolic-Math/10_06-Solving-Equations.md
-     - file: 10-Symbolic-Math/10_07-Solving-Two-Equations-for-Two-Unknowns.md
-     - file: 10-Symbolic-Math/10_08-Summary.md
-     - file: 10-Symbolic-Math/10_09-Review-Questions.md
+  - file: 10-Symbolic-Math/10_01-SymPy.md
+  - file: 10-Symbolic-Math/10_02-Installing-SymPy.md
+  - file: 10-Symbolic-Math/10_03-Defining-Variables.md
+  - file: 10-Symbolic-Math/10_04-Expressions-and-Substitutions.md
+  - file: 10-Symbolic-Math/10_05-Equations.md
+  - file: 10-Symbolic-Math/10_06-Solving-Equations.md
+  - file: 10-Symbolic-Math/10_07-Solving-Two-Equations-for-Two-Unknowns.md
+  - file: 10-Symbolic-Math/10_08-Summary.md
+  - file: 10-Symbolic-Math/10_09-Review-Questions.md
 - file: 11-Python-and-External-Hardware/11_00-Introduction.md
   sections:
-     - file: 11-Python-and-External-Hardware/11_01-PySerial.md
-     - file: 11-Python-and-External-Hardware/11_02-Bytes-and-Unicode-Strings.md
-     - file: 11-Python-and-External-Hardware/11_03-Controlling-an-LED.md
-     - file: 11-Python-and-External-Hardware/11_04-Reading-a-Sensor-with-Python.md
-     - file: 11-Python-and-External-Hardware/11_05-Summary.md
-     - file: 11-Python-and-External-Hardware/11_06-Project-Ideas.md
+  - file: 11-Python-and-External-Hardware/11_01-PySerial.md
+  - file: 11-Python-and-External-Hardware/11_02-Bytes-and-Unicode-Strings.md
+  - file: 11-Python-and-External-Hardware/11_03-Controlling-an-LED.md
+  - file: 11-Python-and-External-Hardware/11_04-Reading-a-Sensor-with-Python.md
+  - file: 11-Python-and-External-Hardware/11_05-Summary.md
+  - file: 11-Python-and-External-Hardware/11_06-Project-Ideas.md
 - file: 12-MicroPython/12_00-Introduction.md
   sections:
-     - file: 12-MicroPython/12_01-What-is-MicroPython.md
-     - file: 12-MicroPython/12_02-Installing-MicroPython.md
-     - file: 12-MicroPython/12_03-MicroPython-REPL.md
-     - file: 12-MicroPython/12_04-Blinking-a-LED.md
-     - file: 12-MicroPython/12_05-Reading-a-Sensor.md
-     - file: 12-MicroPython/12_06-Uploading-Code.md
-     - file: 12-MicroPython/12_07-Summary.md
-     - file: 12-MicroPython/12_08-Project-Ideas.md
+  - file: 12-MicroPython/12_01-What-is-MicroPython.md
+  - file: 12-MicroPython/12_02-Installing-MicroPython.md
+  - file: 12-MicroPython/12_03-MicroPython-REPL.md
+  - file: 12-MicroPython/12_04-Blinking-a-LED.md
+  - file: 12-MicroPython/12_05-Reading-a-Sensor.md
+  - file: 12-MicroPython/12_06-Uploading-Code.md
+  - file: 12-MicroPython/12_07-Summary.md
+  - file: 12-MicroPython/12_08-Project-Ideas.md
 - file: 99-Appendix/99_00-Appendix.md
   sections:
-     - file: 99-Appendix/99_01-Reserved-and-Key-Words-in-Python.md
-     - file: 99-Appendix/99_02-ASCII-Character-Codes.md
-     - file: 99-Appendix/99_03-Virtual-Environments.md
-     - file: 99-Appendix/99_04-NumPy-Math-Functions.md
-     - file: 99-Appendix/99_05-Git-and-GitHub.md
-     - file: 99-Appendix/99_06-LaTeX-Math.md
-     - file: 99-Appendix/99_07-Problem-Solving-with-Python-Book-Construction.md
-     - file: 99-Appendix/99_08-Contributions.md
-     - file: 99-Appendix/99_09-Cover-Artwork.md
-     - file: 99-Appendix/99_10-About-the-Author.md
-    
+  - file: 99-Appendix/99_01-Reserved-and-Key-Words-in-Python.md
+  - file: 99-Appendix/99_02-ASCII-Character-Codes.md
+  - file: 99-Appendix/99_03-Virtual-Environments.md
+  - file: 99-Appendix/99_04-NumPy-Math-Functions.md
+  - file: 99-Appendix/99_05-Git-and-GitHub.md
+  - file: 99-Appendix/99_06-LaTeX-Math.md
+  - file: 99-Appendix/99_07-Problem-Solving-with-Python-Book-Construction.md
+  - file: 99-Appendix/99_08-Contributions.md
+  - file: 99-Appendix/99_09-Cover-Artwork.md
+  - file: 99-Appendix/99_10-About-the-Author.md
