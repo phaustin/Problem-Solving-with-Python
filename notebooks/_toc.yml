@@ -31,7 +31,7 @@ sections:
       - file: The-Python-REPL/Print-Statements.md
       - file: The-Python-REPL/Summary.md
       - file: The-Python-REPL/Review-Questions.md
-  - file: Data-Types-and-Variables/-Introduction.md
+  - file: Data-Types-and-Variables/Introduction.md
     sections:
       - file: Data-Types-and-Variables/Numeric-Data-Types.md
       - file: Data-Types-and-Variables/Boolean-Data-Type.md
