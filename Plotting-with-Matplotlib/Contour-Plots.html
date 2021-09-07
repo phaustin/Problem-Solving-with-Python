@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.15. Contour Plots &#8212; Problem Solving with Python</title>
+    <title>7.14. Contour Plots &#8212; Problem Solving with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.16. Quiver and Stream Plots" href="Quiver-and-Stream-Plots.html" />
-    <link rel="prev" title="7.14. Plot Styles" href="Plot-Styles.html" />
+    <link rel="next" title="7.15. Quiver and Stream Plots" href="Quiver-and-Stream-Plots.html" />
+    <link rel="prev" title="7.13. Plot Styles" href="Plot-Styles.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -366,88 +366,83 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Installing-Matplotlib.html">
-     7.3. Installing Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Line-Plots.html">
-     7.4. Line Plots
+     7.3. Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Saving-Plots.html">
-     7.5. Saving plots
+     7.4. Saving plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Multi-Line-Plots.html">
-     7.6. Multi Line Plots
+     7.5. Multi Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Bar-Charts-and-Pie-Charts.html">
-     7.7. Bar Charts and Pie Charts
+     7.6. Bar Charts and Pie Charts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Error-Bars.html">
-     7.8. Error Bars
+     7.7. Error Bars
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Histograms.html">
-     7.9. Histograms
+     7.8. Histograms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Box-Plots-and-Violin-Plots.html">
-     7.10. Box Plots and Violin Plots
+     7.9. Box Plots and Violin Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Scatter-Plots.html">
-     7.11. Scatter Plots
+     7.10. Scatter Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Annotations.html">
-     7.12. Plot annotations
+     7.11. Plot annotations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Subplots.html">
-     7.13. Subplots
+     7.12. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Styles.html">
-     7.14. Plot Styles
+     7.13. Plot Styles
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     7.15. Contour Plots
+     7.14. Contour Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Quiver-and-Stream-Plots.html">
-     7.16. Quiver and Stream Plots
+     7.15. Quiver and Stream Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3D-Surface-Plots.html">
-     7.17. 3D Surface Plots
+     7.16. 3D Surface Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Summary.html">
-     7.18. Summary
+     7.17. Summary
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Review-Questions.html">
-     7.19. Review Questions
+     7.18. Review Questions
     </a>
    </li>
   </ul>
@@ -915,7 +910,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matplotlib-s-plt-contourf-method">
-   7.15.1. Matplotlib’s
+   7.14.1. Matplotlib’s
    <code class="docutils literal notranslate">
     <span class="pre">
      plt.contourf()
@@ -926,7 +921,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   7.15.2. Matplotlib’s
+   7.14.2. Matplotlib’s
    <code class="docutils literal notranslate">
     <span class="pre">
      plt.contourf()
@@ -937,12 +932,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#color-bars-on-contour-plots">
-   7.15.3. Color bars on contour plots
+   7.14.3. Color bars on contour plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#color-maps-on-contour-plots">
-   7.15.4. Color maps on contour plots
+   7.14.4. Color maps on contour plots
   </a>
  </li>
 </ul>
@@ -957,10 +952,10 @@
               <div>
                 
   <div class="section" id="contour-plots">
-<h1><span class="section-number">7.15. </span>Contour Plots<a class="headerlink" href="#contour-plots" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7.14. </span>Contour Plots<a class="headerlink" href="#contour-plots" title="Permalink to this headline">¶</a></h1>
 <p>Contour plots can be created with Matplotlib. In Civil Engineering a contour plot could show the topology of a building sight. In Mechanical Engineering a contour plot could show the stress gradient across part surface.</p>
 <div class="section" id="matplotlib-s-plt-contourf-method">
-<h2><span class="section-number">7.15.1. </span>Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plt.contourf()</span></code> method<a class="headerlink" href="#matplotlib-s-plt-contourf-method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.14.1. </span>Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plt.contourf()</span></code> method<a class="headerlink" href="#matplotlib-s-plt-contourf-method" title="Permalink to this headline">¶</a></h2>
 <p>Building contour plots with Matplotlib entails using the <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> method. The basic <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> method call is below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
 </pre></div>
@@ -994,7 +989,7 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">7.15.2. </span>Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plt.contourf()</span></code> method<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.14.2. </span>Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plt.contourf()</span></code> method<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> method is similar to <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> except that <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> produces contour plots that are “filled”. Instead of lines in a <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> plot, shaded areas are produced by a <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> plot. The general method call for <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
 </pre></div>
@@ -1029,7 +1024,7 @@
 </div>
 </div>
 <div class="section" id="color-bars-on-contour-plots">
-<h2><span class="section-number">7.15.3. </span>Color bars on contour plots<a class="headerlink" href="#color-bars-on-contour-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.14.3. </span>Color bars on contour plots<a class="headerlink" href="#color-bars-on-contour-plots" title="Permalink to this headline">¶</a></h2>
 <p>Because colors represent a third dimension (like “hight”) on a 2D plot, it is useful to have a scale to what each color means. A color scale is typically represented besides a plot.</p>
 <p>Color bars are added to Matplotlib contour plots using the <code class="docutils literal notranslate"><span class="pre">fig.colorbar()</span></code> method. Since the color bar is not part of the contour plot, the color bar needs to be applied to the figure object, often called <code class="docutils literal notranslate"><span class="pre">fig</span></code>. A contour plot needs to be passed into the <code class="docutils literal notranslate"><span class="pre">fig.colorbar()</span></code> method. Therefore, when you add a color bar to a figure, a plot object needs to be available. A plot object is the output of the <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> method.</p>
 <p>Previously, the output of the <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> method was not assigned to a variable. But to include a color bar on a contour plot, the plot object needs to be saved to a variable, so that the plot object can be passed to the <code class="docutils literal notranslate"><span class="pre">fig.colorbar()</span></code> method.</p>
@@ -1070,7 +1065,7 @@ fig.colorbar(cf, ax=ax)
 </div>
 </div>
 <div class="section" id="color-maps-on-contour-plots">
-<h2><span class="section-number">7.15.4. </span>Color maps on contour plots<a class="headerlink" href="#color-maps-on-contour-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.14.4. </span>Color maps on contour plots<a class="headerlink" href="#color-maps-on-contour-plots" title="Permalink to this headline">¶</a></h2>
 <p>The default color scheme of Matplotlib contour and filled contour plots can be modified. A general way to modify the color scheme is to call Matplotlib’s <code class="docutils literal notranslate"><span class="pre">plt.get_cmap()</span></code> function that outputs a color map object. There are many different colormaps available to apply to contour plots. A complete list is available in the Matplotlib documentation (<a class="reference external" href="https://matplotlib.org">https://matplotlib.org</a>). The colormap object is then passed to the <code class="docutils literal notranslate"><span class="pre">ax.contourf()</span></code> or <code class="docutils literal notranslate"><span class="pre">ax.contour()</span></code> method as a keyword argument.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mycmap = plt.get_cmap(&#39;gist_earth&#39;)
 ax.contourf(X, Y, Z, cmap=mycmap)
@@ -1143,8 +1138,8 @@ ax.contourf(X, Y, Z, cmap=mycmap)
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Plot-Styles.html" title="previous page"><span class="section-number">7.14. </span>Plot Styles</a>
-    <a class='right-next' id="next-link" href="Quiver-and-Stream-Plots.html" title="next page"><span class="section-number">7.16. </span>Quiver and Stream Plots</a>
+    <a class='left-prev' id="prev-link" href="Plot-Styles.html" title="previous page"><span class="section-number">7.13. </span>Plot Styles</a>
+    <a class='right-next' id="next-link" href="Quiver-and-Stream-Plots.html" title="next page"><span class="section-number">7.15. </span>Quiver and Stream Plots</a>
 
         </div>
         

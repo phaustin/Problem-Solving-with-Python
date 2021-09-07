@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.17. 3D Surface Plots &#8212; Problem Solving with Python</title>
+    <title>7.16. 3D Surface Plots &#8212; Problem Solving with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.18. Summary" href="Summary.html" />
-    <link rel="prev" title="7.16. Quiver and Stream Plots" href="Quiver-and-Stream-Plots.html" />
+    <link rel="next" title="7.17. Summary" href="Summary.html" />
+    <link rel="prev" title="7.15. Quiver and Stream Plots" href="Quiver-and-Stream-Plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -366,88 +366,83 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Installing-Matplotlib.html">
-     7.3. Installing Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Line-Plots.html">
-     7.4. Line Plots
+     7.3. Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Saving-Plots.html">
-     7.5. Saving plots
+     7.4. Saving plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Multi-Line-Plots.html">
-     7.6. Multi Line Plots
+     7.5. Multi Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Bar-Charts-and-Pie-Charts.html">
-     7.7. Bar Charts and Pie Charts
+     7.6. Bar Charts and Pie Charts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Error-Bars.html">
-     7.8. Error Bars
+     7.7. Error Bars
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Histograms.html">
-     7.9. Histograms
+     7.8. Histograms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Box-Plots-and-Violin-Plots.html">
-     7.10. Box Plots and Violin Plots
+     7.9. Box Plots and Violin Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Scatter-Plots.html">
-     7.11. Scatter Plots
+     7.10. Scatter Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Annotations.html">
-     7.12. Plot annotations
+     7.11. Plot annotations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Subplots.html">
-     7.13. Subplots
+     7.12. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Styles.html">
-     7.14. Plot Styles
+     7.13. Plot Styles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Contour-Plots.html">
-     7.15. Contour Plots
+     7.14. Contour Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Quiver-and-Stream-Plots.html">
-     7.16. Quiver and Stream Plots
+     7.15. Quiver and Stream Plots
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     7.17. 3D Surface Plots
+     7.16. 3D Surface Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Summary.html">
-     7.18. Summary
+     7.17. Summary
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Review-Questions.html">
-     7.19. Review Questions
+     7.18. Review Questions
     </a>
    </li>
   </ul>
@@ -915,22 +910,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#surface-plots">
-   7.17.1. Surface Plots
+   7.16.1. Surface Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wire-frame-plots">
-   7.17.2. Wire Frame Plots
+   7.16.2. Wire Frame Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gradient-surface-plots">
-   7.17.3. Gradient Surface Plots
+   7.16.3. Gradient Surface Plots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-surface-plots-with-2d-contour-plot-projections">
-   7.17.4. 3D Surface Plots with 2D Contour Plot Projections
+   7.16.4. 3D Surface Plots with 2D Contour Plot Projections
   </a>
  </li>
 </ul>
@@ -945,11 +940,11 @@
               <div>
                 
   <div class="section" id="d-surface-plots">
-<h1><span class="section-number">7.17. </span>3D Surface Plots<a class="headerlink" href="#d-surface-plots" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7.16. </span>3D Surface Plots<a class="headerlink" href="#d-surface-plots" title="Permalink to this headline">¶</a></h1>
 <p>3D surface plots can be created with Matplotlib.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">axes3d</span></code> submodule included in Matplotlib’s <code class="docutils literal notranslate"><span class="pre">mpl_toolkits.mplot3d</span></code> toolkit provides the methods necessary to create 3D surface plots with Python.</p>
 <div class="section" id="surface-plots">
-<h2><span class="section-number">7.17.1. </span>Surface Plots<a class="headerlink" href="#surface-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.16.1. </span>Surface Plots<a class="headerlink" href="#surface-plots" title="Permalink to this headline">¶</a></h2>
 <p>Surface plots are created with Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.plot_surface()</span></code> method. By default, surface plots are a single color. The general format of Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.plot_surface()</span></code> method is below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
 </pre></div>
@@ -985,7 +980,7 @@
 </div>
 </div>
 <div class="section" id="wire-frame-plots">
-<h2><span class="section-number">7.17.2. </span>Wire Frame Plots<a class="headerlink" href="#wire-frame-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.16.2. </span>Wire Frame Plots<a class="headerlink" href="#wire-frame-plots" title="Permalink to this headline">¶</a></h2>
 <p>Wire frame plots are similar to surface plots, but on a wire frame plot the entire 3d surface is not shown. Instead, the surface is approximated with “wires” laid over the 3D surface. Wire frame 3D surface plots can be constructed using Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.plot_wireframe()</span></code> method. The general method is below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot_wireframe</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -1026,7 +1021,7 @@
 </div>
 </div>
 <div class="section" id="gradient-surface-plots">
-<h2><span class="section-number">7.17.3. </span>Gradient Surface Plots<a class="headerlink" href="#gradient-surface-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.16.3. </span>Gradient Surface Plots<a class="headerlink" href="#gradient-surface-plots" title="Permalink to this headline">¶</a></h2>
 <p>Gradient surface plots combine a 3D surface plot with a 2D contour plot. In a gradient surface plot, the 3D surface is colored like a 2D contour plot. High parts of the surface contain a different color than low parts of the surface. The general method call is below. Note the <code class="docutils literal notranslate"><span class="pre">cmap=</span> </code> keyword argument.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> 
                         <span class="n">cmap</span><span class="o">=&lt;</span><span class="n">color</span> <span class="nb">map</span><span class="o">&gt;</span><span class="p">,</span>
@@ -1067,7 +1062,7 @@
 </div>
 </div>
 <div class="section" id="d-surface-plots-with-2d-contour-plot-projections">
-<h2><span class="section-number">7.17.4. </span>3D Surface Plots with 2D Contour Plot Projections<a class="headerlink" href="#d-surface-plots-with-2d-contour-plot-projections" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.16.4. </span>3D Surface Plots with 2D Contour Plot Projections<a class="headerlink" href="#d-surface-plots-with-2d-contour-plot-projections" title="Permalink to this headline">¶</a></h2>
 <p>3D Surface plots created with Matplotlib can be projected onto 2D surfaces. Below is a code section that creates a 3D surface plot. The projections of the 3D surface are visualized on 2D contour plots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1134,8 +1129,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Quiver-and-Stream-Plots.html" title="previous page"><span class="section-number">7.16. </span>Quiver and Stream Plots</a>
-    <a class='right-next' id="next-link" href="Summary.html" title="next page"><span class="section-number">7.18. </span>Summary</a>
+    <a class='left-prev' id="prev-link" href="Quiver-and-Stream-Plots.html" title="previous page"><span class="section-number">7.15. </span>Quiver and Stream Plots</a>
+    <a class='right-next' id="next-link" href="Summary.html" title="next page"><span class="section-number">7.17. </span>Summary</a>
 
         </div>
         

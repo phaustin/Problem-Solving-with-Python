@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.9. Histograms &#8212; Problem Solving with Python</title>
+    <title>7.8. Histograms &#8212; Problem Solving with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.10. Box Plots and Violin Plots" href="Box-Plots-and-Violin-Plots.html" />
-    <link rel="prev" title="7.8. Error Bars" href="Error-Bars.html" />
+    <link rel="next" title="7.9. Box Plots and Violin Plots" href="Box-Plots-and-Violin-Plots.html" />
+    <link rel="prev" title="7.7. Error Bars" href="Error-Bars.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -366,88 +366,83 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Installing-Matplotlib.html">
-     7.3. Installing Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Line-Plots.html">
-     7.4. Line Plots
+     7.3. Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Saving-Plots.html">
-     7.5. Saving plots
+     7.4. Saving plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Multi-Line-Plots.html">
-     7.6. Multi Line Plots
+     7.5. Multi Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Bar-Charts-and-Pie-Charts.html">
-     7.7. Bar Charts and Pie Charts
+     7.6. Bar Charts and Pie Charts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Error-Bars.html">
-     7.8. Error Bars
+     7.7. Error Bars
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     7.9. Histograms
+     7.8. Histograms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Box-Plots-and-Violin-Plots.html">
-     7.10. Box Plots and Violin Plots
+     7.9. Box Plots and Violin Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Scatter-Plots.html">
-     7.11. Scatter Plots
+     7.10. Scatter Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Annotations.html">
-     7.12. Plot annotations
+     7.11. Plot annotations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Subplots.html">
-     7.13. Subplots
+     7.12. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Styles.html">
-     7.14. Plot Styles
+     7.13. Plot Styles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Contour-Plots.html">
-     7.15. Contour Plots
+     7.14. Contour Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Quiver-and-Stream-Plots.html">
-     7.16. Quiver and Stream Plots
+     7.15. Quiver and Stream Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3D-Surface-Plots.html">
-     7.17. 3D Surface Plots
+     7.16. 3D Surface Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Summary.html">
-     7.18. Summary
+     7.17. Summary
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Review-Questions.html">
-     7.19. Review Questions
+     7.18. Review Questions
     </a>
    </li>
   </ul>
@@ -917,7 +912,7 @@
               <div>
                 
   <div class="section" id="histograms">
-<h1><span class="section-number">7.9. </span>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7.8. </span>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h1>
 <p>Histograms are a useful type of statistics plot for problem solvers. A histogram is a type of bar plot that shows the frequency or number of values compared to a set of value ranges. Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> function creates histogram plots.</p>
 <p>In this example, we’ll use NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.normal()</span></code> function to create an array of random numbers with a normal distribution. The three arguments passed to NumPy’s <code class="docutils literal notranslate"><span class="pre">np.random.normal()</span></code> function are <code class="docutils literal notranslate"><span class="pre">mu</span></code> (mean), <code class="docutils literal notranslate"><span class="pre">sigma</span></code> (standard deviation) and <code class="docutils literal notranslate"><span class="pre">size=</span> </code> (length of the array).</p>
 <p>Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> method is used to build the histogram. The first argument passed to <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> corresponds to the list or array of values to plot. The second argument corresponds to the number of bins, or number of bars on the histogram. The general format of Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.hist()</span></code> method is below.</p>
@@ -983,8 +978,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Error-Bars.html" title="previous page"><span class="section-number">7.8. </span>Error Bars</a>
-    <a class='right-next' id="next-link" href="Box-Plots-and-Violin-Plots.html" title="next page"><span class="section-number">7.10. </span>Box Plots and Violin Plots</a>
+    <a class='left-prev' id="prev-link" href="Error-Bars.html" title="previous page"><span class="section-number">7.7. </span>Error Bars</a>
+    <a class='right-next' id="next-link" href="Box-Plots-and-Violin-Plots.html" title="next page"><span class="section-number">7.9. </span>Box Plots and Violin Plots</a>
 
         </div>
         

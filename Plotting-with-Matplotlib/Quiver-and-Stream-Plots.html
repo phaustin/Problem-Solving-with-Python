@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7.16. Quiver and Stream Plots &#8212; Problem Solving with Python</title>
+    <title>7.15. Quiver and Stream Plots &#8212; Problem Solving with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.17. 3D Surface Plots" href="3D-Surface-Plots.html" />
-    <link rel="prev" title="7.15. Contour Plots" href="Contour-Plots.html" />
+    <link rel="next" title="7.16. 3D Surface Plots" href="3D-Surface-Plots.html" />
+    <link rel="prev" title="7.14. Contour Plots" href="Contour-Plots.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -368,88 +368,83 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Installing-Matplotlib.html">
-     7.3. Installing Matplotlib
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="Line-Plots.html">
-     7.4. Line Plots
+     7.3. Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Saving-Plots.html">
-     7.5. Saving plots
+     7.4. Saving plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Multi-Line-Plots.html">
-     7.6. Multi Line Plots
+     7.5. Multi Line Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Bar-Charts-and-Pie-Charts.html">
-     7.7. Bar Charts and Pie Charts
+     7.6. Bar Charts and Pie Charts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Error-Bars.html">
-     7.8. Error Bars
+     7.7. Error Bars
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Histograms.html">
-     7.9. Histograms
+     7.8. Histograms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Box-Plots-and-Violin-Plots.html">
-     7.10. Box Plots and Violin Plots
+     7.9. Box Plots and Violin Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Scatter-Plots.html">
-     7.11. Scatter Plots
+     7.10. Scatter Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Annotations.html">
-     7.12. Plot annotations
+     7.11. Plot annotations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Subplots.html">
-     7.13. Subplots
+     7.12. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Plot-Styles.html">
-     7.14. Plot Styles
+     7.13. Plot Styles
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Contour-Plots.html">
-     7.15. Contour Plots
+     7.14. Contour Plots
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     7.16. Quiver and Stream Plots
+     7.15. Quiver and Stream Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3D-Surface-Plots.html">
-     7.17. 3D Surface Plots
+     7.16. 3D Surface Plots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Summary.html">
-     7.18. Summary
+     7.17. Summary
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Review-Questions.html">
-     7.19. Review Questions
+     7.18. Review Questions
     </a>
    </li>
   </ul>
@@ -917,59 +912,59 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quiver-plots">
-   7.16.1. Quiver Plots
+   7.15.1. Quiver Plots
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quiver-plot-with-one-arrow">
-     7.16.1.1. Quiver plot with one arrow
+     7.15.1.1. Quiver plot with one arrow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quiver-plot-with-two-arrows">
-     7.16.1.2. Quiver plot with two arrows
+     7.15.1.2. Quiver plot with two arrows
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quiver-plot-using-a-meshgrid">
-     7.16.1.3. Quiver plot using a meshgrid
+     7.15.1.3. Quiver plot using a meshgrid
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quiver-plot-containing-a-gradient">
-     7.16.1.4. Quiver plot containing a gradient
+     7.15.1.4. Quiver plot containing a gradient
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quiver-plot-with-four-vortices">
-     7.16.1.5. Quiver plot with four vortices
+     7.15.1.5. Quiver plot with four vortices
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quiver-plots-with-color">
-     7.16.1.6. Quiver plots with color
+     7.15.1.6. Quiver plots with color
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stream-plots">
-   7.16.2. Stream Plots
+   7.15.2. Stream Plots
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-simple-stream-plot">
-     7.16.2.1. A simple stream plot
+     7.15.2.1. A simple stream plot
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stream-plot-of-a-field">
-     7.16.2.2. Stream plot of a field
+     7.15.2.2. Stream plot of a field
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stream-plot-of-two-point-charges">
-     7.16.2.3. Stream plot of two point charges
+     7.15.2.3. Stream plot of two point charges
     </a>
    </li>
   </ul>
@@ -986,13 +981,13 @@
               <div>
                 
   <div class="section" id="quiver-and-stream-plots">
-<h1><span class="section-number">7.16. </span>Quiver and Stream Plots<a class="headerlink" href="#quiver-and-stream-plots" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7.15. </span>Quiver and Stream Plots<a class="headerlink" href="#quiver-and-stream-plots" title="Permalink to this headline">¶</a></h1>
 <p>In this section, you will learn how to build quiver and stream plots using Matplotlib.</p>
 <div class="section" id="quiver-plots">
-<h2><span class="section-number">7.16.1. </span>Quiver Plots<a class="headerlink" href="#quiver-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.15.1. </span>Quiver Plots<a class="headerlink" href="#quiver-plots" title="Permalink to this headline">¶</a></h2>
 <p>A quiver plot is a type of 2D plot that shows vector lines as arrows. Quiver plots are useful in Electrical Engineering to visualize electrical potential and useful in Mechanical Engineering to show stress gradients.</p>
 <div class="section" id="quiver-plot-with-one-arrow">
-<h3><span class="section-number">7.16.1.1. </span>Quiver plot with one arrow<a class="headerlink" href="#quiver-plot-with-one-arrow" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.1.1. </span>Quiver plot with one arrow<a class="headerlink" href="#quiver-plot-with-one-arrow" title="Permalink to this headline">¶</a></h3>
 <p>First, we’ll build a simple quiver plot that contains one arrow to demonstrate how Matplotlib’s <code class="docutils literal notranslate"><span class="pre">ax.quiver()</span></code> method works. The <code class="docutils literal notranslate"><span class="pre">ax.quiver()</span></code> method takes four positional arguments:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span><span class="p">,</span> <span class="n">x_direct</span><span class="p">,</span> <span class="n">y_direct</span><span class="p">)</span>
 </pre></div>
@@ -1028,7 +1023,7 @@
 <p>The quiver plot contains one arrow. The arrow starts at point 0, 0 and ends at point 1, 1.</p>
 </div>
 <div class="section" id="quiver-plot-with-two-arrows">
-<h3><span class="section-number">7.16.1.2. </span>Quiver plot with two arrows<a class="headerlink" href="#quiver-plot-with-two-arrows" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.1.2. </span>Quiver plot with two arrows<a class="headerlink" href="#quiver-plot-with-two-arrows" title="Permalink to this headline">¶</a></h3>
 <p>Now let’s add a second arrow to the quiver plot by passing in two starting points and two arrow directions.</p>
 <p>We’ll keep our original arrow starting position at the origin <code class="docutils literal notranslate"><span class="pre">0,0</span></code> and pointing up and to the right (in the <code class="docutils literal notranslate"><span class="pre">1,1</span></code> direction). We’ll define a second arrow with a starting position of <code class="docutils literal notranslate"><span class="pre">-0.5,0.5</span></code> which points straight down (in the <code class="docutils literal notranslate"><span class="pre">0,-1</span></code> direction).</p>
 <p>An additional keyword argument to add the the <code class="docutils literal notranslate"><span class="pre">ax.quiver()</span></code> method is <code class="docutils literal notranslate"><span class="pre">scale=5</span></code>. Including <code class="docutils literal notranslate"><span class="pre">scale=5</span></code> scales the arrow lengths so the arrows look longer and show up better on the quiver plot.</p>
@@ -1058,7 +1053,7 @@
 <p>We see a plot with two arrows. Both arrows start at the origin. One arrow points to the upper right, the other arrow points straight down.</p>
 </div>
 <div class="section" id="quiver-plot-using-a-meshgrid">
-<h3><span class="section-number">7.16.1.3. </span>Quiver plot using a meshgrid<a class="headerlink" href="#quiver-plot-using-a-meshgrid" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.1.3. </span>Quiver plot using a meshgrid<a class="headerlink" href="#quiver-plot-using-a-meshgrid" title="Permalink to this headline">¶</a></h3>
 <p>A quiver plot with two arrows is a good start, but it is tedious and repetitive to add quiver plot arrows one by one. To create a complete 2D surface of arrows, we’ll utilize NumPy’s <code class="docutils literal notranslate"><span class="pre">meshgrid()</span></code> function.</p>
 <p>First, we need to build a set of arrays that denote the x and y starting positions of each quiver arrow on the plot. The quiver arrow starting position arrays will be called <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
 <p>We can use the x, y arrow starting <em>positions</em> to define the x and y components of each quiver arrow <em>direction</em>. We will call the quiver arrow direction arrays <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>. For this plot, we will define the quiver arrow direction based upon the quiver arrow starting point using the equations below.</p>
@@ -1144,7 +1139,7 @@
 </div>
 </div>
 <div class="section" id="quiver-plot-containing-a-gradient">
-<h3><span class="section-number">7.16.1.4. </span>Quiver plot containing a gradient<a class="headerlink" href="#quiver-plot-containing-a-gradient" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.1.4. </span>Quiver plot containing a gradient<a class="headerlink" href="#quiver-plot-containing-a-gradient" title="Permalink to this headline">¶</a></h3>
 <p>Next let’s build a quiver plot that shows a gradient function. The gradient function has the form:</p>
 <div class="math notranslate nohighlight">
 \[ z = xe^{-x^2-y^2} \]</div>
@@ -1181,7 +1176,7 @@
 </div>
 </div>
 <div class="section" id="quiver-plot-with-four-vortices">
-<h3><span class="section-number">7.16.1.5. </span>Quiver plot with four vortices<a class="headerlink" href="#quiver-plot-with-four-vortices" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.1.5. </span>Quiver plot with four vortices<a class="headerlink" href="#quiver-plot-with-four-vortices" title="Permalink to this headline">¶</a></h3>
 <p>Now let’s build a quiver plot that contains four vortices. The function <span class="math notranslate nohighlight">\(\vec{F}\)</span> which describes the 2D field that has four vortices is shown below.</p>
 <div class="math notranslate nohighlight">
 \[ \vec{F} = sin(x)cos(y) \ \hat{i} -cos(x)sin(y) \ \hat{j} \]</div>
@@ -1220,7 +1215,7 @@
 </div>
 </div>
 <div class="section" id="quiver-plots-with-color">
-<h3><span class="section-number">7.16.1.6. </span>Quiver plots with color<a class="headerlink" href="#quiver-plots-with-color" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.1.6. </span>Quiver plots with color<a class="headerlink" href="#quiver-plots-with-color" title="Permalink to this headline">¶</a></h3>
 <p>Finally, let’s add some color to our quiver plots. The <code class="docutils literal notranslate"><span class="pre">ax.quiver()</span></code> method has an optional fifth positional argument that specifies the quiver arrow color. The quiver arrow color argument needs to have the same dimensions as the position and direction arrays.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span><span class="p">,</span> <span class="n">x_direct</span><span class="p">,</span> <span class="n">y_direct</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 </pre></div>
@@ -1300,7 +1295,7 @@
 </div>
 </div>
 <div class="section" id="stream-plots">
-<h2><span class="section-number">7.16.2. </span>Stream Plots<a class="headerlink" href="#stream-plots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.15.2. </span>Stream Plots<a class="headerlink" href="#stream-plots" title="Permalink to this headline">¶</a></h2>
 <p>A stream plot is a type of 2D plot used to show fluid flow and 2D field gradiants.</p>
 <p>The basic method to build a stream plot in Matplotlib is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">x_grid</span><span class="p">,</span><span class="n">y_grid</span><span class="p">,</span><span class="n">x_vec</span><span class="p">,</span><span class="n">y_vec</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="n">spacing</span><span class="p">)</span>
@@ -1308,7 +1303,7 @@
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">x_grid</span></code> and <code class="docutils literal notranslate"><span class="pre">y_grid</span></code> are arrays of x, y points. The arrays <code class="docutils literal notranslate"><span class="pre">x_vec</span></code> and <code class="docutils literal notranslate"><span class="pre">y_vec</span></code> denote the stream velocity at each point on the grid. The keyword argument <code class="docutils literal notranslate"><span class="pre">density=spacing</span></code> specifies how close the streamlines are drawn together.</p>
 <div class="section" id="a-simple-stream-plot">
-<h3><span class="section-number">7.16.2.1. </span>A simple stream plot<a class="headerlink" href="#a-simple-stream-plot" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.2.1. </span>A simple stream plot<a class="headerlink" href="#a-simple-stream-plot" title="Permalink to this headline">¶</a></h3>
 <p>Let’s start with a stream plot that contains stream lines on a 10 x 10 grid.  All the stream lines on the plot are parallel and point to the right.</p>
 <p>The following code section builds a stream plot that contains horizontal parallel lines pointing to the right.</p>
 <div class="cell docutils container">
@@ -1340,7 +1335,7 @@
 <p>The plot contains parallel streamlines all pointing to the right.</p>
 </div>
 <div class="section" id="stream-plot-of-a-field">
-<h3><span class="section-number">7.16.2.2. </span>Stream plot of a field<a class="headerlink" href="#stream-plot-of-a-field" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.2.2. </span>Stream plot of a field<a class="headerlink" href="#stream-plot-of-a-field" title="Permalink to this headline">¶</a></h3>
 <p>We can build a stream plot which shows field lines based on a defined 2D vector field.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1374,7 +1369,7 @@
 </div>
 </div>
 <div class="section" id="stream-plot-of-two-point-charges">
-<h3><span class="section-number">7.16.2.3. </span>Stream plot of two point charges<a class="headerlink" href="#stream-plot-of-two-point-charges" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.15.2.3. </span>Stream plot of two point charges<a class="headerlink" href="#stream-plot-of-two-point-charges" title="Permalink to this headline">¶</a></h3>
 <p>Finally, we will build a stream plot to demonstrate the electric field due to two point charges.  The electric field at any point on a 2D surface depends on the position and distance relative to the two point charges.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1436,8 +1431,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Contour-Plots.html" title="previous page"><span class="section-number">7.15. </span>Contour Plots</a>
-    <a class='right-next' id="next-link" href="3D-Surface-Plots.html" title="next page"><span class="section-number">7.17. </span>3D Surface Plots</a>
+    <a class='left-prev' id="prev-link" href="Contour-Plots.html" title="previous page"><span class="section-number">7.14. </span>Contour Plots</a>
+    <a class='right-next' id="next-link" href="3D-Surface-Plots.html" title="next page"><span class="section-number">7.16. </span>3D Surface Plots</a>
 
         </div>
         
