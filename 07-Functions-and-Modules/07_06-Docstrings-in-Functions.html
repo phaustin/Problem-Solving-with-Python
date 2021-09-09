@@ -1,0 +1,1117 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.7. Docstrings in Functions &#8212; Problem Solving with Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.8. Positional and Keyword Arguments" href="07_07-Positional-and-Keyword-Arguments.html" />
+    <link rel="prev" title="8.6. Calling Functions from Other Files" href="07_05-Calling-Functions-from-Other-Files.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Problem Solving with Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Problem Solving with Python
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../00-Preface/00_00-Motivation.html">
+   1. Preface
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00_02-Acknowledgments.html">
+     1.2. Acknowledgments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00_03-Supporting-Materials.html">
+     1.3. Supporting Materials
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00_04-Formatting-Conventions.html">
+     1.4. Formatting Conventions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../00-Preface/00_05-Errata.html">
+     1.5. Errata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-Orientation/01_00-Welcome.html">
+   2. Orientation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-Orientation/01_01-Why-Python.html">
+     2.2. Why Python?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02-Jupyter-Notebooks/02_00-Introduction.html">
+   3. Jupyter Notebooks
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_01-What-is-a-Jupyter-Notebook.html">
+     3.2. What is a Jupyter Notebook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_02-Why-Jupyter-Notebooks.html">
+     3.3. Why Jupyter Notebooks?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_03-Installing-Juypter.html">
+     3.4. Installing Juypter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_04-Opening-a-Jupyter-Notebook.html">
+     3.5. Opening a Jupyter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_05-The-Jupyter-Notebook-Interface.html">
+     3.6. The Jupyter Notebook Interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_06-Magic-Commands.html">
+     3.7. Magic Commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_07-Getting-Help-in-a-Jupyter-Notebook.html">
+     3.8. Getting Help in a Jupyter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_08-Summary.html">
+     3.9. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Jupyter-Notebooks/02_09-Review-Questions.html">
+     3.10. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03-The-Python-REPL/03_00-Introduction.html">
+   4. The Python REPL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03_01-Python-as-a-Calculator.html">
+     4.2. Python as a Calculator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03_02-Variables.html">
+     4.3. Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03_03-String-Operations.html">
+     4.4. String Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03_04-Print-Statements.html">
+     4.5. Print Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03_05-Summary.html">
+     4.6. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-The-Python-REPL/03_06-Review-Questions.html">
+     4.7. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04-Data-Types-and-Variables/04_00-Introduction.html">
+   5. Data Types and Variables
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_01-Numeric-Data-Types.html">
+     5.2. Numeric Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_02-Boolean-Data-Type.html">
+     5.3. Boolean Data Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_03-Strings.html">
+     5.4. Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_04-Lists.html">
+     5.5. Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_05-Dictionaries-and-Tuples.html">
+     5.6. Dictionaries and Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_06-Summary.html">
+     5.7. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04-Data-Types-and-Variables/04_07-Review-Questions.html">
+     5.8. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05-NumPy-and-Arrays/05_00-Introduction.html">
+   6. NumPy and Arrays
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_01-NumPy.html">
+     6.2. NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_02-Installing-NumPy.html">
+     6.3. Installing NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_03-Python-Lists-and-NumPy-Arrays.html">
+     6.4. Python Lists and NumPy Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_04-Array-Creation.html">
+     6.5. Array Creation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_05-Array-Indexing.html">
+     6.6. Array Indexing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_06-Array-Slicing.html">
+     6.7. Array Slicing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_07-Array-Opperations.html">
+     6.8. Array Operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_08-Systems-of-Linear-Equations.html">
+     6.9. Systems of Linear Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_09-Summary.html">
+     6.10. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05-NumPy-and-Arrays/05_10-Review-Questions.html">
+     6.11. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_00-Introduction.html">
+   7. Plotting with Matplotlib
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_01-What-is-Matplotlib.html">
+     7.2. What is Matplotlib?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_02-Installing%20Matplotlib.html">
+     7.3. Installing Matplotlib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_03-Line-Plots.html">
+     7.4. Line Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_04-Saving-Plots.html">
+     7.5. Saving plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_05-Multi-Line-Plots.html">
+     7.6. Multi Line Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_06-Bar-Charts-and-Pie-Charts.html">
+     7.7. Bar Charts and Pie Charts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_07-Error-Bars.html">
+     7.8. Error Bars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_08-Histograms.html">
+     7.9. Histograms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_09-Box-Plots-and-Violin-Plots.html">
+     7.10. Box Plots and Violin Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_10-Scatter-Plots.html">
+     7.11. Scatter Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_11-Plot-Annotations.html">
+     7.12. Plot annotations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_12-Subplots.html">
+     7.13. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_13-Plot-Styles.html">
+     7.14. Plot Styles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_14-Contour-Plots.html">
+     7.15. Contour Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_15-Quiver-and-Stream-Plots.html">
+     7.16. Quiver and Stream Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_16-3D-Surface-Plots.html">
+     7.17. 3D Surface Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_17-Summary.html">
+     7.18. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06-Plotting-with-Matplotlib/06_18-Review-Questions.html">
+     7.19. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="07_00-Introduction.html">
+   8. Functions and Modules
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_01-Why-Functions.html">
+     8.2. Why Functions?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_02-First-Function.html">
+     8.3. First Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_03-Functions-with-multiple-arguments.html">
+     8.4. Functions with Multiple Arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_04-Functions-with-default-arguments.html">
+     8.5. Functions with Default Arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_05-Calling-Functions-from-Other-Files.html">
+     8.6. Calling Functions from Other Files
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     8.7. Docstrings in Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_07-Positional-and-Keyword-Arguments.html">
+     8.8. Positional and Keyword Arguments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_08-Summary.html">
+     8.9. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_09-Review-Questions.html">
+     8.10. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08-If-Else-Try-Except/08_00-Introduction.html">
+   9. If Else Try Except
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_01-User-Input.html">
+     9.2. User Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_02-Selection-Statements.html">
+     9.3. Selection Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_03-If-Statements.html">
+     9.4. If statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_04-If-Else-Statements.html">
+     9.5. If Else Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_05-Try-Except-Statements.html">
+     9.6. Try-Except Statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_06-Flowcharts.html">
+     9.7. Flowcharts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_07-Summary.html">
+     9.8. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08-If-Else-Try-Except/08_08-Review-Questions.html">
+     9.9. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../09-Loops/09_00-Introduction.html">
+   10. Loops
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09-Loops/09_01-For-Loops.html">
+     10.2. For Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09-Loops/09_02-While-Loops.html">
+     10.3. While Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09-Loops/09_03-Break-and-Continue.html">
+     10.4. Break and Continue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09-Loops/09_04-Flowcharts-Describing-Loops.html">
+     10.5. Flowcharts Describing Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09-Loops/09_05-Summary.html">
+     10.6. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09-Loops/09_06-Review-Questions.html">
+     10.7. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../10-Symbolic-Math/10_00-Introduction.html">
+   11. Symbolic Math
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_01-SymPy.html">
+     11.2. SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_02-Installing-SymPy.html">
+     11.3. Installing SymPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_03-Defining-Variables.html">
+     11.4. Defining Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_04-Expressions-and-Substitutions.html">
+     11.5. Expressions and Substitutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_05-Equations.html">
+     11.6. Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_06-Solving-Equations.html">
+     11.7. Solving Equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_07-Solving-Two-Equations-for-Two-Unknowns.html">
+     11.8. Solving Two Equations for Two Unknows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_08-Summary.html">
+     11.9. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../10-Symbolic-Math/10_09-Review-Questions.html">
+     11.10. Review Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../11-Python-and-External-Hardware/11_00-Introduction.html">
+   12. Python and External Hardware
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11-Python-and-External-Hardware/11_01-PySerial.html">
+     12.2. PySerial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11-Python-and-External-Hardware/11_02-Bytes-and-Unicode-Strings.html">
+     12.3. Bytes and Unicode Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11-Python-and-External-Hardware/11_03-Controlling-an-LED.html">
+     12.4. Controlling an LED with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11-Python-and-External-Hardware/11_04-Reading-a-Sensor-with-Python.html">
+     12.5. Reading a Sensor with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11-Python-and-External-Hardware/11_05-Summary.html">
+     12.6. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../11-Python-and-External-Hardware/11_06-Project-Ideas.html">
+     12.7. Project Ideas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../12-MicroPython/12_00-Introduction.html">
+   13. MicroPython
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_01-What-is-MicroPython.html">
+     13.2. What is MicroPython?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_02-Installing-MicroPython.html">
+     13.3. Installing MicroPython
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_03-MicroPython-REPL.html">
+     13.4. The MicroPython REPL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_04-Blinking-a-LED.html">
+     13.5. Blinking a LED
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_05-Reading-a-Sensor.html">
+     13.6. Reading a Sensor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_06-Uploading-Code.html">
+     13.7. Uploading Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_07-Summary.html">
+     13.8. Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../12-MicroPython/12_08-Project-Ideas.html">
+     13.9. Project Ideas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../99-Appendix/99_00-Appendix.html">
+   14. Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_01-Reserved-and-Key-Words-in-Python.html">
+     14.2. Reserved and Keywords in Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_02-ASCII-Character-Codes.html">
+     14.3. ASCII Character Codes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_03-Virtual-Environments.html">
+     14.4. Virtual Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_04-NumPy-Math-Functions.html">
+     14.5. NumPy Math Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_05-Git-and-GitHub.html">
+     14.6. Git and GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_06-LaTeX-Math.html">
+     14.7. LaTeX Math
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_07-Problem-Solving-with-Python-Book-Construction.html">
+     14.8. Problem Solving with Python Book Construction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_08-Contributions.html">
+     14.9. Contributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_09-Cover-Artwork.html">
+     14.10. Cover Artwork
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../99-Appendix/99_10-About-the-Author.html">
+     14.11. About the Author
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/07-Functions-and-Modules/07_06-Docstrings-in-Functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/07-Functions-and-Modules/07_06-Docstrings-in-Functions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/Problem-Solving-with-Python/jb?urlpath=tree/notebooks/07-Functions-and-Modules/07_06-Docstrings-in-Functions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.phaustin.org/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python&urlpath=tree/Problem-Solving-with-Python/notebooks/07-Functions-and-Modules/07_06-Docstrings-in-Functions.md&branch=jb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="docstrings-in-functions">
+<h1><span class="section-number">8.7. </span>Docstrings in Functions<a class="headerlink" href="#docstrings-in-functions" title="Permalink to this headline">¶</a></h1>
+<p>It is good programming practice to document your code. Reusable chunks of code are particularly relevant to document as other programmers may use the code, and you may use the code again at a different time.</p>
+<p>Python has a couple of different ways for programmers to add documentation. One way is to use simple comments. Comments are lines of code that do not get run by the Python interpreter. Comments are meant to be viewed by humans. In Python, comment lines start with the pound symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>. Any line that starts with a <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol will not be run by the Python Interpreter.</p>
+<p>Another way to document code is to use <em>docstrings</em>. Docstrings are comments which are surrounded with triple quotation marks and usually contain multiple lines of explanation. A function containing a docstring takes the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">    Docstring text</span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span>
+    
+    <span class="k">return</span> <span class="n">output</span>
+    
+</pre></div>
+</div>
+<p>Doc strings are what you see when the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function is called. As an example, running the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function on the built-in function <code class="docutils literal notranslate"><span class="pre">sum</span></code> brings up:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function sum in module builtins:
+
+sum(iterable, /, start=0)
+    Return the sum of a &#39;start&#39; value (default: 0) plus an iterable of numbers
+    
+    When the iterable is empty, return the start value.
+    This function is intended specifically for use with numeric values and may
+    reject non-numeric types.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can produce the same type of output when a user types types <code class="docutils literal notranslate"><span class="pre">help()</span></code> by adding docstrings to a function.</p>
+<p>Let’s create a new function that converts grams (g) to kilograms (kg). 1000 grams is equal to 1 kilogram. Let’s call our function <code class="docutils literal notranslate"><span class="pre">g2kg</span></code>. Remember the <strong>parenthesis</strong>, <strong>colon</strong>, and <strong>return</strong> statement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g2kg</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+    <span class="n">kg</span> <span class="o">=</span> <span class="n">g</span><span class="o">/</span><span class="mi">1000</span>
+    
+    <span class="k">return</span> <span class="n">kg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try and use our function. How many kilograms is 1300 grams? We expect the output to be <code class="docutils literal notranslate"><span class="pre">1.3</span></code> kilograms.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g2kg</span><span class="p">(</span><span class="mi">1300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.3
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we call <code class="docutils literal notranslate"><span class="pre">help()</span></code> on our <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function, nothing is returned. <code class="docutils literal notranslate"><span class="pre">help(g2kg)</span></code> does not return any output because our new <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function does not contain a docstring yet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">g2kg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function g2kg in module __main__:
+
+g2kg(g)
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we insert a docstring into the function definition, <code class="docutils literal notranslate"><span class="pre">help(g2kg)</span></code> will return whatever text we included in the docstring.</p>
+<p>The standard components of docstrings included in function definitions are:</p>
+<ul class="simple">
+<li><p>a summary of the function</p></li>
+<li><p>the function inputs</p></li>
+<li><p>the function outputs</p></li>
+<li><p>an example of the function running including the result</p></li>
+</ul>
+<p>The docstring is included right below the <code class="docutils literal notranslate"><span class="pre">def</span></code> line and is enclosed in triple quotes <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span>&#160; <span class="pre">&quot;&quot;&quot;</span></code>. The triple quotes are typically included on their own lines. The syntax to add a docstring in a function definition is below.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> def function_name(arguments):
+     &quot;&quot;&quot;
+     
+     &lt;docstring text&gt;
+     
+     &quot;&quot;&quot;
+     
+     &lt;code&gt;
+     
+     return output
+</pre></div>
+</div>
+<p>Let’s include a docstring with our <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function definition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g2kg</span><span class="p">(</span><span class="n">g</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    </span>
+<span class="sd">    Function g2kg converts between g and kg</span>
+<span class="sd">    </span>
+<span class="sd">    input: number of grams, int or float</span>
+<span class="sd">    output: number of kilograms, float</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">    </span>
+<span class="sd">        &gt;&gt;&gt; g2kg(1300)</span>
+<span class="sd">            </span>
+<span class="sd">            1.3</span>
+<span class="sd">        </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kg</span> <span class="o">=</span> <span class="n">g</span><span class="o">/</span><span class="mi">1000</span>
+    
+    <span class="k">return</span> <span class="n">kg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s ask for <code class="docutils literal notranslate"><span class="pre">help()</span></code> on our <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function and see the docstring we wrote in the <code class="docutils literal notranslate"><span class="pre">g2kg()</span></code> function definition printed back to us.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">g2kg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function g2kg in module __main__:
+
+g2kg(g)
+    Function g2kg converts between g and kg
+    
+    input: number of grams, int or float
+    output: number of kilograms, float
+    
+    Example:
+    
+        &gt;&gt;&gt; g2kg(1300)
+            
+            1.3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./07-Functions-and-Modules"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="07_05-Calling-Functions-from-Other-Files.html" title="previous page"><span class="section-number">8.6. </span>Calling Functions from Other Files</a>
+    <a class='right-next' id="next-link" href="07_07-Positional-and-Keyword-Arguments.html" title="next page"><span class="section-number">8.8. </span>Positional and Keyword Arguments</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Peter Kazarinoff<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

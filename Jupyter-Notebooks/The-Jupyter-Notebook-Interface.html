@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.6. The Jupyter Notebook Interface &#8212; Problem Solving with Python</title>
+    <title>3.4. The Jupyter Notebook Interface &#8212; Problem Solving with Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,19 +42,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.7. Magic Commands" href="Magic-Commands.html" />
-    <link rel="prev" title="3.5. Opening a Jupyter Notebook" href="Opening-a-Jupyter-Notebook.html" />
+    <link rel="next" title="3.5. Getting Help in a Jupyter Notebook" href="Getting-Help-in-a-Jupyter-Notebook.html" />
+    <link rel="prev" title="3.3. Why Jupyter Notebooks?" href="Why-Jupyter-Notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -159,39 +159,24 @@
      3.3. Why Jupyter Notebooks?
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Installing-Juypter.html">
-     3.4. Installing Juypter
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Opening-a-Jupyter-Notebook.html">
-     3.5. Opening a Jupyter Notebook
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3.6. The Jupyter Notebook Interface
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Magic-Commands.html">
-     3.7. Magic Commands
+     3.4. The Jupyter Notebook Interface
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Getting-Help-in-a-Jupyter-Notebook.html">
-     3.8. Getting Help in a Jupyter Notebook
+     3.5. Getting Help in a Jupyter Notebook
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Summary.html">
-     3.9. Summary
+     3.6. Summary
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Review-Questions.html">
-     3.10. Review Questions
+     3.7. Review Questions
     </a>
    </li>
   </ul>
@@ -601,8 +586,8 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Symbolic-Math/Introduction.html">
-   11. Symbolic Math
+  <a class="reference internal" href="../Appendix/Appendix.html">
+   11. Appendix
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
   <label for="toctree-checkbox-11">
@@ -611,204 +596,53 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/SymPy.html">
-     11.2. SymPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Installing-SymPy.html">
-     11.3. Installing SymPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Defining-Variables.html">
-     11.4. Defining Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Expressions-and-Substitutions.html">
-     11.5. Expressions and Substitutions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Equations.html">
-     11.6. Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Solving-Equations.html">
-     11.7. Solving Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Solving-Two-Equations-for-Two-Unknowns.html">
-     11.8. Solving Two Equations for Two Unknows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Summary.html">
-     11.9. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Symbolic-Math/Review-Questions.html">
-     11.10. Review Questions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Python-and-External-Hardware/Introduction.html">
-   12. Python and External Hardware
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Python-and-External-Hardware/PySerial.html">
-     12.2. PySerial
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Python-and-External-Hardware/Bytes-and-Unicode-Strings.html">
-     12.3. Bytes and Unicode Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Python-and-External-Hardware/Controlling-an-LED.html">
-     12.4. Controlling an LED with Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Python-and-External-Hardware/Reading-a-Sensor-with-Python.html">
-     12.5. Reading a Sensor with Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Python-and-External-Hardware/Summary.html">
-     12.6. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Python-and-External-Hardware/Project-Ideas.html">
-     12.7. Project Ideas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../MicroPython/Introduction.html">
-   13. MicroPython
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/What-is-MicroPython.html">
-     13.2. What is MicroPython?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/Installing-MicroPython.html">
-     13.3. Installing MicroPython
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/MicroPython-REPL.html">
-     13.4. The MicroPython REPL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/Blinking-a-LED.html">
-     13.5. Blinking a LED
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/Reading-a-Sensor.html">
-     13.6. Reading a Sensor
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/Uploading-Code.html">
-     13.7. Uploading Code
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/Summary.html">
-     13.8. Summary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../MicroPython/Project-Ideas.html">
-     13.9. Project Ideas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Appendix/Appendix.html">
-   14. Appendix
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/Reserved-and-Key-Words-in-Python.html">
-     14.2. Reserved and Keywords in Python
+     11.2. Reserved and Keywords in Python
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/ASCII-Character-Codes.html">
-     14.3. ASCII Character Codes
+     11.3. ASCII Character Codes
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/Virtual-Environments.html">
-     14.4. Virtual Environments
+     11.4. Virtual Environments
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/NumPy-Math-Functions.html">
-     14.5. NumPy Math Functions
+     11.5. NumPy Math Functions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/Git-and-GitHub.html">
-     14.6. Git and GitHub
+     11.6. Git and GitHub
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/LaTeX-Math.html">
-     14.7. LaTeX Math
+     11.7. LaTeX Math
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/Problem-Solving-with-Python-Book-Construction.html">
-     14.8. Problem Solving with Python Book Construction
+     11.8. Problem Solving with Python Book Construction
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/Contributions.html">
-     14.9. Contributions
+     11.9. Contributions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/Cover-Artwork.html">
-     14.10. Cover Artwork
+     11.10. Cover Artwork
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Appendix/About-the-Author.html">
-     14.11. About the Author
+     11.11. About the Author
     </a>
    </li>
   </ul>
@@ -889,7 +723,7 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://hub.phaustin.org/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python&urlpath=tree/Problem-Solving-with-Python/notebooks/Jupyter-Notebooks/The-Jupyter-Notebook-Interface.md&branch=jb"><button type="button"
+        <a class="jupyterhub-button" href="https://e211hub.eoastest5.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python&urlpath=tree/Problem-Solving-with-Python/notebooks/Jupyter-Notebooks/The-Jupyter-Notebook-Interface.md&branch=jb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -908,113 +742,113 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#menus-and-buttons">
-   3.6.1. Menus and Buttons
+   3.4.1. Menus and Buttons
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-cells">
-   3.6.2. Code Cells
+   3.4.2. Code Cells
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#output-cells">
-   3.6.3. Output Cells
+   3.4.3. Output Cells
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#markdown-cells">
-   3.6.4. Markdown Cells
+   3.4.4. Markdown Cells
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#headings">
-     3.6.4.1. Headings
+     3.4.4.1. Headings
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#code-blocks">
-     3.6.4.2. Code Blocks
+     3.4.4.2. Code Blocks
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bold-and-italics">
-     3.6.4.3. Bold and Italics
+     3.4.4.3. Bold and Italics
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tables">
-     3.6.4.4. Tables
+     3.4.4.4. Tables
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bullet-points-and-lists">
-     3.6.4.5. Bullet Points and Lists
+     3.4.4.5. Bullet Points and Lists
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#horizontal-rule">
-     3.6.4.6. Horizontal Rule
+     3.4.4.6. Horizontal Rule
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#links">
-     3.6.4.7. Links
+     3.4.4.7. Links
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#images">
-     3.6.4.8. Images
+     3.4.4.8. Images
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#latex-math">
-     3.6.4.9. LaTeX Math
+     3.4.4.9. LaTeX Math
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#html">
-     3.6.4.10. html
+     3.4.4.10. html
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#warning-boxes">
-     3.6.4.11. Warning Boxes
+     3.4.4.11. Warning Boxes
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-a-new-cell">
-   3.6.5. Creating a new cell
+   3.4.5. Creating a new cell
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#changing-the-cell-type">
-   3.6.6. Changing the cell type
+   3.4.6. Changing the cell type
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#saving-a-jupyter-notebook">
-   3.6.7. Saving a Jupyter Notebook
+   3.4.7. Saving a Jupyter Notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#renaming-a-jupyter-notebook">
-   3.6.8. Renaming a Jupyter Notebook
+   3.4.8. Renaming a Jupyter Notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#downloading-a-jupyter-notebook">
-   3.6.9. Downloading a Jupyter Notebook
+   3.4.9. Downloading a Jupyter Notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#saving-jupyter-notebooks-in-other-formats">
-   3.6.10. Saving Jupyter Notebooks in Other Formats
+   3.4.10. Saving Jupyter Notebooks in Other Formats
   </a>
  </li>
 </ul>
@@ -1029,14 +863,14 @@
               <div>
                 
   <div class="section" id="the-jupyter-notebook-interface">
-<h1><span class="section-number">3.6. </span>The Jupyter Notebook Interface<a class="headerlink" href="#the-jupyter-notebook-interface" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.4. </span>The Jupyter Notebook Interface<a class="headerlink" href="#the-jupyter-notebook-interface" title="Permalink to this headline">¶</a></h1>
 <p>When a new Jupyter notebook opens, you will see the Jupyter notebook interface. Across the top of the notebook you see the Jupyter icon and the notebook name. You can click on the notebook name field and change the name of the notebook. Note that the file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> is not printed in the file name field, but if you look in the Home tab, you will see that the notebook is saved with the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension.</p>
 <div class="section" id="menus-and-buttons">
-<h2><span class="section-number">3.6.1. </span>Menus and Buttons<a class="headerlink" href="#menus-and-buttons" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.1. </span>Menus and Buttons<a class="headerlink" href="#menus-and-buttons" title="Permalink to this headline">¶</a></h2>
 <p>A Jupyter notebook is comprised of a bunch of <em>cells</em> which are arrayed one after another in boxes below the menu items and buttons. There are three main types of cells: code cells, output cells, and markdown cells.</p>
 </div>
 <div class="section" id="code-cells">
-<h2><span class="section-number">3.6.2. </span>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.2. </span>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h2>
 <p>In code cells, you can write Python code, then execute the Python code and see the resulting output. An example of a code cell is shown below.</p>
 <p><img alt="A Jupyter notebook code cell" src="../_images/code_cell.png" /></p>
 <p>You can tell you are typing in a code cell because <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[</span> <span class="pre">]:</span></code> is shown to the left of the cell and the cell-type drop-down menu shows <strong>Code</strong>.</p>
@@ -1044,21 +878,21 @@
 <p><img alt="The Jupyter notebook run cell button" src="../_images/run_cell.png" /></p>
 </div>
 <div class="section" id="output-cells">
-<h2><span class="section-number">3.6.3. </span>Output Cells<a class="headerlink" href="#output-cells" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.3. </span>Output Cells<a class="headerlink" href="#output-cells" title="Permalink to this headline">¶</a></h2>
 <p>After a code cell is run, an output cell can be produced below the code cell. The output cell contains the output from the code cell above it. Not all code produces output, so not all code cells produce output cells. The results in output cells can’t be edited. If a code cell produces plots, charts or images, these outputs are shown in output cells.</p>
 <p><img alt="A Jupyter notebook output cell" src="../_images/output_cell.png" /></p>
 <p>You can clear all the output cells and re-run code cells by selecting <strong>[Kernal]</strong> –&gt; <strong>[Restart Kernal and Clear Output]</strong>.</p>
 <p><img alt="The Jupyter notebook Kernal menu showing Restart and Clear Output selected" src="../_images/kernel_restart_and_clear_output.png" /></p>
 </div>
 <div class="section" id="markdown-cells">
-<h2><span class="section-number">3.6.4. </span>Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.4. </span>Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">¶</a></h2>
 <p>Markdown cells don’t contain Python code. Markdown cells contain text written in Markdown format.  Text in markdown cells can be formatted to show <strong>bold</strong> or <em>italic</em> text. Tables, images, and lists can also be included in markdown cells.</p>
 <p><img alt="A Jupyter notebook markdown cell. Note Markdown is selected in the cell type menu" src="../_images/markdown_cell.png" /></p>
 <p>Markdown cells are used for documentation and explaining your code. The text in a markdown cell is not executed. Markdown cells can be formatted with a few special characters.</p>
 <p>Markdown cells are run like code cells. The difference is that when markdown cells are run, the text is formatted (when code cells run, code is executed). Markdown cells are run by clicking the [Run] button or by pressing <code class="docutils literal notranslate"><span class="pre">[Shift]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code>.</p>
 <p>Text in markdown cells can be formatted using <em>markdown syntax</em>. An example of markdown syntax is putting an underscore before and after a word to cause the word to be formatted in <em>italics</em>.</p>
 <div class="section" id="headings">
-<h3><span class="section-number">3.6.4.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.1. </span>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
 <p>Headings are created in markdown cells using the hash symbol <code class="docutils literal notranslate"><span class="pre">#</span></code>. One <code class="docutils literal notranslate"><span class="pre">#</span></code> is the largest heading. Four hashes <code class="docutils literal notranslate"><span class="pre">####</span></code> is the smallest heading.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># H1 Heading</span>
 </pre></div>
@@ -1074,7 +908,7 @@
 </div>
 </div>
 <div class="section" id="code-blocks">
-<h3><span class="section-number">3.6.4.2. </span>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.2. </span>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
 <p>Code blocks can be inserted in Jupyter notebook markdown cells. For inline code blocks use the ` left quote character, the character to the left of the number <code class="docutils literal notranslate"><span class="pre">[1]</span></code> and above <code class="docutils literal notranslate"><span class="pre">[Tab]</span></code> on most keyboards.</p>
 <p>This is inline code:  ` ` ` Inline code block ` ` ` within a paragraph</p>
 <p>For a separated code block use three ` left quote characters on one line, followed by the code block on separate lines. Terminate the separate code block with a line of three ` left quote characters.</p>
@@ -1084,14 +918,14 @@
 <p>The code in markdown cell code blocks do not execute when the markdown cell is run. A code block in a markdown cell is formatted when the markdown cell executes.</p>
 </div>
 <div class="section" id="bold-and-italics">
-<h3><span class="section-number">3.6.4.3. </span>Bold and Italics<a class="headerlink" href="#bold-and-italics" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.3. </span>Bold and Italics<a class="headerlink" href="#bold-and-italics" title="Permalink to this headline">¶</a></h3>
 <p><strong>Bold</strong> and <em>italic font</em> is displayed by surrounding text with a double asterisk for <code class="docutils literal notranslate"><span class="pre">**bold**</span></code> and a single underscore for <code class="docutils literal notranslate"><span class="pre">_italics_</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">**bold**</span></code> produces <strong>bold</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">_italics_</span></code> produces <em>italics</em></p>
 <p><code class="docutils literal notranslate"><span class="pre">**_bold</span> <span class="pre">and</span> <span class="pre">italic_**</span></code> produces <strong><em>bold and italic</em></strong></p>
 </div>
 <div class="section" id="tables">
-<h3><span class="section-number">3.6.4.4. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.4. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
 <p>Tables are displayed using the pipe <code class="docutils literal notranslate"><span class="pre">|</span></code> character, which is <code class="docutils literal notranslate"><span class="pre">[Shift]</span></code> + <code class="docutils literal notranslate"><span class="pre">[\]</span></code> on most keyboards. Columns are separated by pipes <code class="docutils literal notranslate"><span class="pre">|</span></code> and rows are separated by lines. After the header row, a row of pipes and dashes <code class="docutils literal notranslate"><span class="pre">---</span></code> are needed to define the table.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| header1 | header 2 | header 3 |
 | --- | --- | --- |
@@ -1120,7 +954,7 @@
 </table>
 </div>
 <div class="section" id="bullet-points-and-lists">
-<h3><span class="section-number">3.6.4.5. </span>Bullet Points and Lists<a class="headerlink" href="#bullet-points-and-lists" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.5. </span>Bullet Points and Lists<a class="headerlink" href="#bullet-points-and-lists" title="Permalink to this headline">¶</a></h3>
 <p>Bullet points are produced using the asterisk character <code class="docutils literal notranslate"><span class="pre">*</span></code></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span> * item 1
  * item 2
@@ -1155,7 +989,7 @@
 </ol>
 </div>
 <div class="section" id="horizontal-rule">
-<h3><span class="section-number">3.6.4.6. </span>Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.6. </span>Horizontal Rule<a class="headerlink" href="#horizontal-rule" title="Permalink to this headline">¶</a></h3>
 <p>A horizontal rule is specified with three asterisks <code class="docutils literal notranslate"><span class="pre">***</span></code> on a single line.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">***</span>
 </pre></div>
@@ -1164,7 +998,7 @@
 </div>
 <hr class="docutils" />
 <div class="section" id="links">
-<h3><span class="section-number">3.6.4.7. </span>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.7. </span>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
 <p>Hyperlinks are specified using a set of square brackets <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code> followed by a pair of parenthesis <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code> The text inside the square brackets will be the link, the link address goes in the parenthesis.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Python.org](https://python.org/)
 </pre></div>
@@ -1173,7 +1007,7 @@
 <p><a class="reference external" href="https://python.org">Python.org</a></p>
 </div>
 <div class="section" id="images">
-<h3><span class="section-number">3.6.4.8. </span>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.8. </span>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h3>
 <p>Images are embedded in Jupyter Notebook markdown using the exclamation point and square brackets <code class="docutils literal notranslate"><span class="pre">![</span> <span class="pre">]</span></code>, followed by the image file path in parenthesis <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code>. If the image can not be displayed, the text in square brackets will be shown. The image can be in the same directory as the notebook, or a relative path can be specified. In this case, the image <code class="docutils literal notranslate"><span class="pre">engineering.png</span></code> is stored in the <code class="docutils literal notranslate"><span class="pre">images</span></code> directory, which is a subdirectory of the directory the notebook is saved in.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>![Engineering Image](images/engineering.png)
 </pre></div>
@@ -1182,7 +1016,7 @@
 <p><img alt="Image displayed in a Jupyter notebook markdown cell" src="../_images/engineering.png" /></p>
 </div>
 <div class="section" id="latex-math">
-<h3><span class="section-number">3.6.4.9. </span>LaTeX Math<a class="headerlink" href="#latex-math" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.9. </span>LaTeX Math<a class="headerlink" href="#latex-math" title="Permalink to this headline">¶</a></h3>
 <p>LaTeX Math equations and symbols are rendered by markdown cells. A more extensive list of LaTeX commands can be found in the appendix.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$$ \int_{a}^{b} \frac{1}{x^2} dx $$
 </pre></div>
@@ -1192,7 +1026,7 @@
 \[ \int_{a}^{b} \frac{1}{x^2} dx \]</div>
 </div>
 <div class="section" id="html">
-<h3><span class="section-number">3.6.4.10. </span>html<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.10. </span>html<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h3>
 <p>Because Jupyter notebooks are rendered by web browsers, just about any HTML tag can be included in the markdown portion of a notebook. An example of an HTML tag is the <code class="docutils literal notranslate"><span class="pre">&lt;sup&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;/sup&gt;</span></code> tags that surround superscript text.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x&lt;sup&gt;2&lt;/sup&gt;
 </pre></div>
@@ -1207,7 +1041,7 @@
 <p><font color=red>Red Text</font></p>
 </div>
 <div class="section" id="warning-boxes">
-<h3><span class="section-number">3.6.4.11. </span>Warning Boxes<a class="headerlink" href="#warning-boxes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.4.11. </span>Warning Boxes<a class="headerlink" href="#warning-boxes" title="Permalink to this headline">¶</a></h3>
 <p>bootstrap style warning boxes can be included in Jupyter notebook markdown using <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> tags</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
   &lt;strong&gt;Warning!&lt;/strong&gt; Python lists start at 0
@@ -1220,38 +1054,38 @@
 </div></div>
 </div>
 <div class="section" id="creating-a-new-cell">
-<h2><span class="section-number">3.6.5. </span>Creating a new cell<a class="headerlink" href="#creating-a-new-cell" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.5. </span>Creating a new cell<a class="headerlink" href="#creating-a-new-cell" title="Permalink to this headline">¶</a></h2>
 <p>You can create a new cell in a Jupyter Notebook by clicking the [+] button in the upper menu. Clicking the [+] button produces a new code cell below the active cell.</p>
 <p><img alt="Jupyter notebook New Cell Button and Insert Cell Above option shown" src="../_images/insert_cell_above.png" /></p>
 <p>You can also create a new cell using <strong>Insert</strong> –&gt; <strong>Insert Cell Above</strong> or <strong>Insert Cell Below</strong>. You can choose to insert a cell above or below the active cell.</p>
 </div>
 <div class="section" id="changing-the-cell-type">
-<h2><span class="section-number">3.6.6. </span>Changing the cell type<a class="headerlink" href="#changing-the-cell-type" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.6. </span>Changing the cell type<a class="headerlink" href="#changing-the-cell-type" title="Permalink to this headline">¶</a></h2>
 <p>The type of cell: code cell or markdown cell, is changed by clicking on a cell and selecting the cell type from the drop-down menu. Typing <code class="docutils literal notranslate"><span class="pre">[Esc]</span></code> + <code class="docutils literal notranslate"><span class="pre">[m]</span></code> changes the cell type to a markdown cell. Typing <code class="docutils literal notranslate"><span class="pre">[Esc]</span></code> + <code class="docutils literal notranslate"><span class="pre">[y]</span></code> changes the cell type to a code cell.</p>
 <p><img alt="Jupyter notebook cell type drop down menu. Note the Markdown cell type is selected" src="../_images/change_cell_type.png" /></p>
 </div>
 <div class="section" id="saving-a-jupyter-notebook">
-<h2><span class="section-number">3.6.7. </span>Saving a Jupyter Notebook<a class="headerlink" href="#saving-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.7. </span>Saving a Jupyter Notebook<a class="headerlink" href="#saving-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
 <p>Jupyter notebooks can be saved using the save icon in the upper menu or by pressing [Ctrl] + [s].</p>
 <p><img alt="Jupyter notebook Save button" src="../_images/save_notebook.png" /></p>
 <p>Jupyter notebooks can also be saved as a copy, similar to the Save As command common in many programs. To save a copy of a Jupyter notebook use <strong>File</strong> –&gt; <strong>Make a Copy…</strong></p>
 <p><img alt="Jupyter notebook File menu. Make a Copy... is selected" src="../_images/file_make_a_copy.png" /></p>
 </div>
 <div class="section" id="renaming-a-jupyter-notebook">
-<h2><span class="section-number">3.6.8. </span>Renaming a Jupyter Notebook<a class="headerlink" href="#renaming-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.8. </span>Renaming a Jupyter Notebook<a class="headerlink" href="#renaming-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
 <p>Jupyter notebooks are renamed by clicking on the notebook name above the upper menu and typing a new name into the dialog box.</p>
 <p><img alt="Jupyter notebook rename notebook" src="../_images/rename_notebook.png" /></p>
 <p><img alt="Jupyter notebook Rename Notebook dialog box" src="../_images/rename_dialog.png" /></p>
 </div>
 <div class="section" id="downloading-a-jupyter-notebook">
-<h2><span class="section-number">3.6.9. </span>Downloading a Jupyter Notebook<a class="headerlink" href="#downloading-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.9. </span>Downloading a Jupyter Notebook<a class="headerlink" href="#downloading-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
 <p>Jupyter notebooks can be downloaded and saved using <strong>File –&gt; Download As –&gt; Notebook (.ipynb)</strong>. Selecting this menu option will download the notebook as a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p><img alt="Jupyter notebook downloaded as .ipynb file" src="../_images/file_download_as_notebook.png" /></p>
 <p>Note that when a <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file is viewed in a text editor like notepad, the notebook is unformatted and looks like a confusing jumble of text. The notebook needs to be opened in a Jupyter notebook file browser in order for the code in the notebook to run and the markdown text to render.</p>
 <p><img alt="Jupyter notebook JSON in notepad" src="../_images/notebook_json.png" /></p>
 </div>
 <div class="section" id="saving-jupyter-notebooks-in-other-formats">
-<h2><span class="section-number">3.6.10. </span>Saving Jupyter Notebooks in Other Formats<a class="headerlink" href="#saving-jupyter-notebooks-in-other-formats" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4.10. </span>Saving Jupyter Notebooks in Other Formats<a class="headerlink" href="#saving-jupyter-notebooks-in-other-formats" title="Permalink to this headline">¶</a></h2>
 <p>Jupyter notebooks can be saved in other formats besides the native <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> format. These formats can be accessed using the <strong>[File] –&gt; [Download As]</strong> menu.</p>
 <p><img alt="Jupyter notebook Download As file-type options" src="../_images/jupyter_notebook_export_options.png" /></p>
 <p>The available file download types are:</p>
@@ -1292,12 +1126,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Opening-a-Jupyter-Notebook.html" title="previous page"><span class="section-number">3.5. </span>Opening a Jupyter Notebook</a>
-    <a class='right-next' id="next-link" href="Magic-Commands.html" title="next page"><span class="section-number">3.7. </span>Magic Commands</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="Why-Jupyter-Notebooks.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">3.3. </span>Why Jupyter Notebooks?</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="Getting-Help-in-a-Jupyter-Notebook.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">3.5. </span>Getting Help in a Jupyter Notebook</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
