@@ -319,18 +319,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Advanced-topics.html">
+     6.9. Advanced topics
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Systems-of-Linear-Equations.html">
-     6.9. Systems of Linear Equations
+     6.10. Systems of Linear Equations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Summary.html">
-     6.10. Summary
+     6.11. Summary
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Review-Questions.html">
-     6.11. Review Questions
+     6.12. Review Questions
     </a>
    </li>
   </ul>
@@ -786,17 +791,9 @@
 <p>The code below prints the data type of each value store in <code class="docutils literal notranslate"><span class="pre">python_list</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">python_list</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
-&lt;class &#39;float&#39;&gt;
-&lt;class &#39;str&#39;&gt;
-&lt;class &#39;bool&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -812,18 +809,10 @@
 <p>The code below prints the data type of each value stored in the NumPy array above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">5e-04</span><span class="p">,</span> <span class="mf">0.007</span><span class="p">]):</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;numpy.float64&#39;&gt;
-&lt;class &#39;numpy.float64&#39;&gt;
-&lt;class &#39;numpy.float64&#39;&gt;
-&lt;class &#39;numpy.float64&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -832,12 +821,7 @@
 <p>In the next code section, all four items are converted to type <code class="docutils literal notranslate"><span class="pre">'&lt;U32'</span></code>, which is a string data type in NumPy (the <code class="docutils literal notranslate"><span class="pre">U</span></code> refers Unicode strings; all strings in Python are Unicode by default).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;1&#39;, &#39;-0.038&#39;, &#39;gear&#39;, &#39;True&#39;], dtype=&#39;&lt;U32&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.038</span><span class="p">,</span> <span class="s1">&#39;gear&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -847,13 +831,8 @@
 <p>The code below demonstrates list repetition using the multiplication operator, <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">lst</span><span class="o">*</span><span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 1, 2, 3, 4]
 </pre></div>
 </div>
 </div>
@@ -861,15 +840,10 @@
 <p>To multiply each element in a Python list by the number <code class="docutils literal notranslate"><span class="pre">2</span></code>, a loop can be used:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
     <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
 <span class="n">lst</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 4, 6, 8]
 </pre></div>
 </div>
 </div>
@@ -882,13 +856,8 @@
 <p>An entire NumPy array can be multiplied by a scalar in one step. The scalar multiplication operation below produces an array with each element multiplied by the scalar <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nparray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nparray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
 <span class="mi">2</span><span class="o">*</span><span class="n">nparray</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 4, 6, 8])
 </pre></div>
 </div>
 </div>
@@ -901,26 +870,16 @@
 <p>We can use <code class="docutils literal notranslate"><span class="pre">%timit</span></code> to compare a mathematical operation on a Python list using a for loop to the same mathematical operation on a NumPy array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">))</span>
-<span class="o">%</span><span class="k">timeit</span> for i, item in enumerate(lst): lst[i] = lst[i]*2
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.73 ms ± 512 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">))</span>
+<span class="o">%</span><span class="n">timeit</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nparray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="o">%</span><span class="k">timeit</span> 2*nparray
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 µs ± 5.12 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nparray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">%</span><span class="n">timeit</span> <span class="mi">2</span><span class="o">*</span><span class="n">nparray</span>
 </pre></div>
 </div>
 </div>
