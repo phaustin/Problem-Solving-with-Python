@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,15 +42,15 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6.6. Array Indexing" href="Array-Indexing.html" />
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -728,7 +728,7 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://e211hub.eoastest5.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python&urlpath=tree/Problem-Solving-with-Python/notebooks/NumPy-and-Arrays/Array-Creation.md&branch=jb"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/Problem-Solving-with-Python&urlpath=tree/Problem-Solving-with-Python/notebooks/NumPy-and-Arrays/Array-Creation.md&branch=jb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -747,7 +747,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arrays-of-regularly-spaced-numbers">
@@ -959,7 +959,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/phil/mini39/envs/jb/lib/python3.8/site-packages/numpy/core/function_base.py:277: RuntimeWarning: overflow encountered in power
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/phil/mini39/envs/e211/lib/python3.8/site-packages/numpy/core/function_base.py:277: RuntimeWarning: overflow encountered in power
   return _nx.power(base, y)
 </pre></div>
 </div>
@@ -1032,7 +1032,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 4, 2, 7, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6, 8, 7, 2, 8])
 </pre></div>
 </div>
 </div>
@@ -1045,11 +1045,11 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5, 7, 7, 5, 9],
-       [6, 1, 8, 4, 7],
-       [5, 1, 0, 3, 9],
-       [3, 4, 7, 6, 0],
-       [6, 1, 0, 9, 9]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6, 1, 6, 7, 0],
+       [6, 6, 8, 2, 4],
+       [0, 5, 2, 7, 3],
+       [2, 5, 6, 6, 3],
+       [5, 5, 3, 8, 4]])
 </pre></div>
 </div>
 </div>
@@ -1069,7 +1069,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.80169651, 0.99490463, 0.35323096, 0.29592412, 0.85719713])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.33632073, 0.65838193, 0.60986656, 0.71821998, 0.33694312])
 </pre></div>
 </div>
 </div>
@@ -1083,7 +1083,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6.63309532, 6.52945862, 3.30135245, 6.72606465, 9.44616026])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.26018385, 3.07856758, 9.80139493, 4.95430847, 8.75774789])
 </pre></div>
 </div>
 </div>
@@ -1096,7 +1096,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([12.37450801, 12.71664541, 12.14162242, 11.33445012, 11.73504583])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([11.76761601, 12.45476681, 12.54547389, 11.82384134, 12.11405538])
 </pre></div>
 </div>
 </div>
@@ -1116,7 +1116,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 1, 5])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 5,  1, 11])
 </pre></div>
 </div>
 </div>
@@ -1135,8 +1135,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.27878059,  1.3344115 ,  0.92349318,  0.3454457 ,  1.34639712,
-        1.00745072,  1.66154531, -0.26723345,  0.80142856,  0.44649608])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.38767021,  0.27820102, -0.56167395, -1.95769933,  1.33134151,
+        1.45590389, -1.86363999, -0.55353212, -0.08112115, -1.06731073])
 </pre></div>
 </div>
 </div>
@@ -1152,8 +1152,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([62.99156226, 83.3713433 , 75.16315903, 68.51231079, 73.0118096 ,
-       70.56847754, 65.23233999, 78.95902908, 76.69331394, 75.23456159])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([62.61248082, 63.62589965, 73.37219431, 73.5991743 , 68.84945327,
+       65.05179612, 75.53317669, 79.6566239 , 65.96387206, 78.52962053])
 </pre></div>
 </div>
 </div>
@@ -1324,32 +1324,12 @@
               </div>
               
         
+        <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="Python-Lists-and-NumPy-Arrays.html" title="previous page"><span class="section-number">6.4. </span>Python Lists and NumPy Arrays</a>
+    <a class='right-next' id="next-link" href="Array-Indexing.html" title="next page"><span class="section-number">6.6. </span>Array Indexing</a>
 
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="Python-Lists-and-NumPy-Arrays.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">6.4. </span>Python Lists and NumPy Arrays</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="Array-Indexing.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">6.6. </span>Array Indexing</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
-</div>
+        </div>
         
         </div>
     </div>
