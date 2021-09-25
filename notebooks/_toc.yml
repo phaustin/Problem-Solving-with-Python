@@ -47,6 +47,7 @@ sections:
       - file: NumPy-and-Arrays/Array-Indexing.md
       - file: NumPy-and-Arrays/Array-Slicing.md
       - file: NumPy-and-Arrays/Array-Opperations.md
+      - file: NumPy-and-Arrays/Advanced-topics.md
       - file: NumPy-and-Arrays/Systems-of-Linear-Equations.md
       - file: NumPy-and-Arrays/Summary.md
       - file: NumPy-and-Arrays/Review-Questions.md
