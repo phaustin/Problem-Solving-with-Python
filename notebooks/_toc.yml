@@ -54,7 +54,6 @@ sections:
   - file: Plotting-with-Matplotlib/Introduction.md
     sections:
       - file: Plotting-with-Matplotlib/What-is-Matplotlib.md
-      - file: Plotting-with-Matplotlib/Installing-Matplotlib.md
       - file: Plotting-with-Matplotlib/Line-Plots.md
       - file: Plotting-with-Matplotlib/Saving-Plots.md
       - file: Plotting-with-Matplotlib/Multi-Line-Plots.md
