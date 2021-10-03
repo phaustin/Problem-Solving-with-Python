@@ -11,6 +11,7 @@ kernelspec:
   name: python3
 ---
 
+(sec:except)=
 ## Try-Except Statements
 
 +++
