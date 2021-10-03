@@ -39,7 +39,7 @@ Where ```var``` is the variable that stores the user's input and ```'message'```
 try:
     age = input('how old are you? ')
 except:
-    age= -5
+    age= '-5'
 ```
 
 Since the user's input is assigned to a variable, further operations can be run on it. Now, let's print the user's age back to them. This can be accomplished with an f-string. Note the ```f' '``` inserted before the string. A set of curly braces ```{  }``` surrounds the variable's name and the variable's value is printed back to the user.
@@ -48,7 +48,7 @@ Since the user's input is assigned to a variable, further operations can be run 
 try:
     age = input('how old are you? ')
 except:
-    age = -5
+    age = '-5'
 print(f'you are {age} years old')
 ```
 
