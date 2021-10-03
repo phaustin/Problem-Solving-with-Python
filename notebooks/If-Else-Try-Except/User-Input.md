@@ -21,7 +21,7 @@ To begin this chapter, Python's ```input()``` function is discussed.
 
 **Editorial note**:  When we turn this chapter into a website, the automated notebook
 runner will produce an error when asked for interactive input.  To get around this, we're going to
-use the `try/except` blocks that we will discuss in {ref}`sec:except`
+use the `try/except` blocks that we will discuss in Section 9.6
 to catch the error and substitute default values for the variables.  When you run this notebook
 on a jupyterhub you will be prompted for the values instead.
 
