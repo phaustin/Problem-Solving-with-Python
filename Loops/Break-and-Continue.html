@@ -799,8 +799,12 @@ Loop exited
 <p>An example using <code class="docutils literal notranslate"><span class="pre">break</span></code> in a while loop is below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;type q to exit the loop: &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="o">=</span> <span class="s1">&#39;-5&#39;</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;type q to exit the loop: &#39;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="s1">&#39;q&#39;</span>
     <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
         <span class="k">break</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loop exited&#39;</span><span class="p">)</span>
@@ -808,23 +812,7 @@ Loop exited
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_946110</span><span class="o">/</span><span class="mf">1106293409.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">out</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;type q to exit the loop: &#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="k">break</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loop exited&#39;</span><span class="p">)</span>
-
-<span class="nn">~/mini38/envs/jb/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop exited
 </pre></div>
 </div>
 </div>

@@ -46,8 +46,11 @@ The code below continues to ask a user for a positive number until a positive nu
 ```{code-cell} ipython3
 num_input = -1
 while num_input < 0:
-    str_input = input('Enter a positive number: ')
-    num_input = float(str_input)
+    try:
+       str_input = input('Enter a positive number: ')
+       num_input = float(str_input)
+    except:
+       num_input = 10
 ```
 
 In the section of code above, it is important to initialize the variable ```num_input``` with a value that causes the statement ```num_input < 0``` to evaluate as ```True```. ```num_input = -1``` causes the statement ```num_input < 0``` to evaluate as ```True```. Besides ```num_input = -1```, any other negative number would have worked.
