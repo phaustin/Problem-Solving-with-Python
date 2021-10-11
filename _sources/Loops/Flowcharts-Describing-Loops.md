@@ -83,8 +83,4 @@ while num < 0:
     num = float(num)
 print("positive")
 # end
-```
 
-```{code-cell} ipython3
-
-```
