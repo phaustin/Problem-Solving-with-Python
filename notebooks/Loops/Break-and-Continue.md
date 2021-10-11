@@ -38,8 +38,12 @@ When the loop hits ```i=3```, ```break``` is encountered and the program exits t
 An example using ```break``` in a while loop is below.
 
 ```{code-cell} ipython3
+age= '-5'
 while True:
-    out = input('type q to exit the loop: ')
+    try:
+        out = input('type q to exit the loop: ')
+    except:
+        out = 'q'
     if out == 'q':
         break
 print('Loop exited')

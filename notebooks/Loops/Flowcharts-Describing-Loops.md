@@ -79,7 +79,10 @@ The Python code that corresponds to this flow chart is:
 # start
 num = -1
 while num < 0:
-    num = input("Enter a positive number: ")
+    try:
+        num = input("Enter a positive number: ")
+    except:
+        num=10 
     num = float(num)
 print("positive")
 # end
